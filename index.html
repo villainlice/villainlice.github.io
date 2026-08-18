@@ -1,25 +1,15 @@
- <!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <title>Villas for Sale in Göcek İnlice | Direct from Owner</title>
+  <title>Villas for Sale in Göcek – İnlice | Direct from Owner</title>
 
   <meta name="description"
-        content="Two exclusive villas for sale in İnlice near Göcek, Fethiye, Turkey. Two villas on the same parcel, offered directly by the owner. Private garden, pool, modern interiors and excellent location near İnlice Beach and Göcek Marina.">
+        content="Two private villas for sale in İnlice near Göcek, Fethiye, Turkey. Private gardens, swimming pool and modern interiors. Direct sale from owner.">
 
   <style>
-    :root {
-      --green: #173d32;
-      --dark: #102a23;
-      --gold: #c5a25d;
-      --cream: #f8f6f1;
-      --light: #f3f6f4;
-      --text: #26332f;
-      --muted: #6e7975;
-    }
-
     * {
       box-sizing: border-box;
       margin: 0;
@@ -32,545 +22,469 @@
 
     body {
       font-family: Arial, Helvetica, sans-serif;
-      color: var(--text);
-      background: white;
+      color: #17231d;
+      background: #ffffff;
       line-height: 1.6;
     }
 
     img {
-      max-width: 100%;
+      display: block;
+      width: 100%;
     }
 
-    /* NAVIGATION */
+    a {
+      text-decoration: none;
+      color: inherit;
+    }
 
-    nav {
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 100%;
-      z-index: 20;
-      padding: 22px 7%;
+    /* =========================
+       HERO
+    ========================= */
+
+    .hero {
+      min-height: 820px;
+
+      background-image:
+        linear-gradient(
+          rgba(0, 0, 0, 0.38),
+          rgba(0, 0, 0, 0.38)
+        ),
+        url("villa-main.jpg");
+
+      background-size: cover;
+      background-position: center 35%;
+      background-repeat: no-repeat;
+
+      position: relative;
       display: flex;
-      justify-content: space-between;
-      align-items: center;
-      background: linear-gradient(
-        to bottom,
-        rgba(0,0,0,.72),
-        rgba(0,0,0,0)
-      );
+      flex-direction: column;
       color: white;
     }
 
+    .navbar {
+      width: 100%;
+      max-width: 1450px;
+      margin: 0 auto;
+      padding: 25px 45px;
+
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
     .logo {
-      font-size: 23px;
-      font-weight: 700;
-      letter-spacing: 1.5px;
+      font-size: 24px;
+      font-weight: 800;
+      letter-spacing: 1px;
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 34px;
+      align-items: center;
     }
 
     .nav-links a {
       color: white;
-      text-decoration: none;
-      margin-left: 25px;
-      font-size: 14px;
+      font-size: 15px;
       font-weight: 600;
     }
 
-    /* HERO */
-
-    .hero {
-      min-height: 95vh;
-      background:
-        linear-gradient(rgba(0,0,0,.25), rgba(0,0,0,.58)),
-        url("villa-main.jpg") center/cover no-repeat;
-
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      text-align: center;
-      color: white;
-      padding: 100px 25px 50px;
+    .nav-links a:hover {
+      opacity: 0.8;
     }
 
     .hero-content {
-      max-width: 1000px;
+      flex: 1;
+
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+
+      text-align: center;
+
+      max-width: 1050px;
+      width: 90%;
+      margin: 0 auto;
+
+      padding: 60px 20px 110px;
     }
 
-    .sale-badge {
-      display: inline-block;
-      border: 1px solid rgba(255,255,255,.8);
-      padding: 8px 18px;
+    .property-label {
+      border: 1px solid rgba(255,255,255,0.8);
+      padding: 7px 18px;
       margin-bottom: 22px;
+
       font-size: 13px;
       letter-spacing: 3px;
-      font-weight: bold;
+      font-weight: 700;
     }
 
     .hero h1 {
-      font-size: clamp(42px, 6.5vw, 78px);
-      line-height: 1.04;
-      margin-bottom: 20px;
-      text-shadow: 0 4px 15px rgba(0,0,0,.35);
+      font-size: clamp(46px, 5vw, 76px);
+      line-height: 1.05;
+      margin-bottom: 25px;
+      text-shadow: 0 2px 8px rgba(0,0,0,0.25);
     }
 
-    .hero .subtitle {
-      font-size: clamp(18px, 2vw, 25px);
-      margin: 0 auto 15px;
-      max-width: 800px;
+    .hero-subtitle {
+      max-width: 850px;
+      font-size: 22px;
+      line-height: 1.55;
+      margin-bottom: 12px;
     }
 
-    .hero .owner {
-      font-size: 16px;
-      margin-bottom: 32px;
-      color: #f0e6ce;
-      font-weight: bold;
+    .owner-sale {
+      font-weight: 700;
+      margin-bottom: 35px;
     }
 
-    .button {
+    .hero-buttons {
+      display: flex;
+      gap: 16px;
+      justify-content: center;
+      flex-wrap: wrap;
+    }
+
+    .btn {
       display: inline-block;
-      padding: 14px 27px;
-      margin: 6px;
+      padding: 15px 28px;
       border-radius: 3px;
-      text-decoration: none;
-      font-weight: bold;
-      transition: .2s ease;
+      font-weight: 700;
+      transition: 0.2s ease;
     }
 
-    .button-light {
+    .btn-light {
       background: white;
-      color: var(--green);
+      color: #17231d;
+      border: 2px solid white;
     }
 
-    .button-outline {
+    .btn-outline {
       border: 2px solid white;
       color: white;
     }
 
-    .button-gold {
-      background: var(--gold);
-      color: white;
-    }
-
-    .button:hover {
+    .btn:hover {
       transform: translateY(-2px);
     }
 
-    /* GENERAL */
+    /* =========================
+       INTRO
+    ========================= */
 
-    section {
-      padding: 85px 7%;
+    .section {
+      padding: 90px 7%;
     }
 
-    .container {
-      width: min(1200px, 100%);
-      margin: auto;
-    }
-
-    .section-heading {
+    .section-title {
       text-align: center;
-      margin-bottom: 48px;
+      max-width: 850px;
+      margin: 0 auto 45px;
     }
 
-    .eyebrow {
-      color: var(--gold);
-      font-size: 13px;
-      font-weight: 700;
-      letter-spacing: 2px;
-      text-transform: uppercase;
-      margin-bottom: 9px;
+    .section-title h2 {
+      font-size: 40px;
+      margin-bottom: 10px;
     }
 
-    .section-heading h2 {
-      color: var(--green);
-      font-size: clamp(32px, 4vw, 45px);
-      line-height: 1.15;
-      margin-bottom: 13px;
+    .section-title p {
+      color: #66736d;
+      font-size: 17px;
     }
 
-    .section-heading p {
-      color: var(--muted);
-      max-width: 750px;
-      margin: auto;
-    }
-
-    /* SALES SUMMARY */
-
-    .sales-summary {
-      background: var(--cream);
-    }
-
-    .summary-grid {
-      display: grid;
-      grid-template-columns: repeat(4, 1fr);
-      gap: 2px;
-      max-width: 1100px;
-      margin: auto;
-    }
-
-    .summary-item {
-      text-align: center;
-      background: white;
-      padding: 32px 15px;
-    }
-
-    .summary-item strong {
-      display: block;
-      color: var(--green);
-      font-size: 24px;
-      margin-bottom: 5px;
-    }
-
-    .summary-item span {
-      color: var(--muted);
-      font-size: 14px;
-    }
-
-    /* INTRO */
-
-    .intro-copy {
-      max-width: 930px;
-      margin: auto;
+    .intro-text {
+      max-width: 1000px;
+      margin: 0 auto 45px;
       text-align: center;
       font-size: 18px;
     }
 
-    .intro-copy strong {
-      color: var(--green);
-    }
+    .features {
+      max-width: 1400px;
+      margin: 0 auto;
 
-    /* VILLA CARDS */
-
-    .villa {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      min-height: 650px;
-      margin-bottom: 55px;
-      background: var(--light);
-    }
-
-    .villa.reverse .villa-image {
-      order: 2;
-    }
-
-    .villa.reverse .villa-info {
-      order: 1;
-    }
-
-    .villa-image img {
-      width: 100%;
-      height: 100%;
-      min-height: 650px;
-      object-fit: cover;
-      display: block;
-    }
-
-    .villa-info {
-      padding: 60px 55px;
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-    }
-
-    .villa-tag {
-      color: var(--gold);
-      text-transform: uppercase;
-      letter-spacing: 2px;
-      font-size: 13px;
-      font-weight: bold;
-      margin-bottom: 8px;
-    }
-
-    .villa-info h2 {
-      font-size: 43px;
-      line-height: 1.1;
-      color: var(--green);
-      margin-bottom: 8px;
-    }
-
-    .villa-stats {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 10px;
-      margin: 20px 0 25px;
-    }
-
-    .stat {
-      padding: 8px 14px;
-      background: white;
-      border: 1px solid #dde5e1;
-      font-size: 14px;
-      font-weight: bold;
-    }
-
-    .villa-info h3 {
-      color: var(--green);
-      margin: 22px 0 7px;
-      font-size: 18px;
-    }
-
-    .villa-info ul {
-      padding-left: 21px;
-    }
-
-    .villa-info li {
-      margin-bottom: 5px;
-    }
-
-    /* INVESTMENT */
-
-    .investment {
-      background: var(--green);
-      color: white;
-    }
-
-    .investment .section-heading h2 {
-      color: white;
-    }
-
-    .investment .section-heading p {
-      color: #d9e3df;
-    }
-
-    .benefit-grid {
       display: grid;
       grid-template-columns: repeat(4, 1fr);
       gap: 20px;
     }
 
-    .benefit {
-      border: 1px solid rgba(255,255,255,.18);
-      padding: 28px;
+    .feature {
+      background: #f4f7f5;
+      padding: 35px 25px;
+      text-align: center;
+      border-radius: 7px;
     }
 
-    .benefit h3 {
-      color: #e4c98e;
+    .feature h3 {
       margin-bottom: 8px;
+      font-size: 20px;
     }
 
-    /* AERIAL */
+    /* =========================
+       WIDE IMAGE
+    ========================= */
 
-    .aerial {
-      padding: 0;
-    }
-
-    .aerial img {
+    .wide-image {
       width: 100%;
-      max-height: 700px;
+      height: 650px;
       object-fit: cover;
-      display: block;
+      object-position: center;
     }
 
-    /* GALLERY */
+    /* =========================
+       TWO VILLAS
+    ========================= */
+
+    .villa-section {
+      background: #f7f7f3;
+    }
+
+    .villa-grid {
+      max-width: 1400px;
+      margin: 0 auto;
+
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 35px;
+    }
+
+    .villa-card {
+      background: white;
+      border-radius: 8px;
+      overflow: hidden;
+      box-shadow: 0 5px 25px rgba(0,0,0,0.08);
+    }
+
+    .villa-card img {
+      height: 420px;
+      object-fit: cover;
+    }
+
+    .villa-info {
+      padding: 35px;
+    }
+
+    .villa-info h3 {
+      font-size: 28px;
+      margin-bottom: 12px;
+    }
+
+    .villa-info p {
+      color: #59645f;
+      margin-bottom: 18px;
+    }
+
+    .villa-info ul {
+      padding-left: 20px;
+    }
+
+    .villa-info li {
+      margin-bottom: 7px;
+    }
+
+    /* =========================
+       GALLERY
+    ========================= */
 
     .gallery {
+      max-width: 1400px;
+      margin: 0 auto;
+
       display: grid;
       grid-template-columns: repeat(3, 1fr);
-      gap: 10px;
+      gap: 8px;
     }
 
     .gallery img {
-      width: 100%;
-      height: 300px;
+      height: 310px;
       object-fit: cover;
       cursor: pointer;
-      display: block;
-      transition: .2s ease;
+      transition: transform 0.25s ease;
     }
 
     .gallery img:hover {
-      opacity: .88;
-      transform: scale(1.01);
+      transform: scale(1.015);
     }
 
-    /* LIGHTBOX */
-
-    .lightbox {
-      display: none;
-      position: fixed;
-      z-index: 100;
-      inset: 0;
-      background: rgba(0,0,0,.92);
-      align-items: center;
-      justify-content: center;
-      padding: 25px;
-    }
-
-    .lightbox.active {
-      display: flex;
-    }
-
-    .lightbox img {
-      max-width: 95%;
-      max-height: 90vh;
-      object-fit: contain;
-    }
-
-    .close-lightbox {
-      position: absolute;
-      right: 28px;
-      top: 20px;
-      color: white;
-      font-size: 40px;
-      cursor: pointer;
-    }
-
-    /* LOCATION */
+    /* =========================
+       LOCATION
+    ========================= */
 
     .location {
-      background: var(--light);
+      background: #f4f7f5;
     }
 
     .location-grid {
+      max-width: 1300px;
+      margin: 0 auto;
+
       display: grid;
-      grid-template-columns: 1fr 1.1fr;
+      grid-template-columns: 1.2fr 0.8fr;
       gap: 50px;
       align-items: center;
     }
 
-    .location h2 {
-      color: var(--green);
-      font-size: 42px;
-      line-height: 1.15;
+    .location-grid img {
+      border-radius: 7px;
+    }
+
+    .location-text h2 {
+      font-size: 38px;
       margin-bottom: 20px;
     }
 
-    .location p {
+    .location-text p {
+      margin-bottom: 15px;
+      font-size: 17px;
+    }
+
+    .location-text ul {
+      padding-left: 20px;
+    }
+
+    .location-text li {
+      margin-bottom: 9px;
+    }
+
+    /* =========================
+       PRICE / CONTACT
+    ========================= */
+
+    .contact-section {
+      background: #15251d;
+      color: white;
+      text-align: center;
+    }
+
+    .contact-box {
+      max-width: 850px;
+      margin: 0 auto;
+    }
+
+    .contact-box h2 {
+      font-size: 42px;
       margin-bottom: 15px;
     }
 
-    .location img {
-      width: 100%;
-      border-radius: 4px;
+    .contact-box p {
+      font-size: 18px;
+      color: #d7ded9;
+      margin-bottom: 30px;
     }
 
-    .location-points {
-      margin-top: 25px;
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 10px;
+    .contact-details {
+      margin-top: 30px;
+      font-size: 18px;
+      line-height: 2;
     }
 
-    .location-point {
-      background: white;
-      padding: 14px;
-      font-weight: bold;
-      color: var(--green);
-    }
-
-    /* BEACH */
-
-    .beach-banner {
-      position: relative;
-      height: 500px;
-      background:
-        linear-gradient(rgba(0,0,0,.05), rgba(0,0,0,.38)),
-        url("ince-beach.jpg") center/cover no-repeat;
-
-      display: flex;
-      align-items: flex-end;
-      color: white;
-      padding: 55px 7%;
-    }
-
-    .beach-banner h2 {
-      font-size: 42px;
-      margin-bottom: 5px;
-    }
-
-    /* CONTACT */
-
-    .contact {
-      background: #0e2821;
-      color: white;
-      text-align: center;
-    }
-
-    .contact h2 {
-      font-size: clamp(36px, 5vw, 55px);
-      margin-bottom: 10px;
-    }
-
-    .contact .price {
-      color: #e1c581;
-      font-size: 22px;
-      font-weight: bold;
-      margin-bottom: 18px;
-    }
-
-    .contact p {
-      max-width: 650px;
-      margin: 0 auto 28px;
-      color: #d5dedb;
-    }
-
-    .direct-owner {
-      margin-top: 24px;
-      font-size: 14px;
-      color: #b9c7c2;
-    }
+    /* =========================
+       FOOTER
+    ========================= */
 
     footer {
-      background: #091b17;
-      color: #aebbb7;
+      background: #0d1712;
+      color: #cbd3ce;
       text-align: center;
-      padding: 24px;
-      font-size: 13px;
+      padding: 28px 20px;
+      font-size: 14px;
     }
 
-    /* MOBILE */
+    /* =========================
+       MOBILE
+    ========================= */
 
-    @media (max-width: 950px) {
-      .summary-grid,
-      .benefit-grid {
+    @media (max-width: 900px) {
+
+      .hero {
+        min-height: 720px;
+        background-position: center center;
+      }
+
+      .navbar {
+        padding: 20px;
+      }
+
+      .logo {
+        font-size: 19px;
+      }
+
+      .nav-links {
+        gap: 13px;
+      }
+
+      .nav-links a {
+        font-size: 12px;
+      }
+
+      .hero-content {
+        padding-bottom: 70px;
+      }
+
+      .hero h1 {
+        font-size: 48px;
+      }
+
+      .hero-subtitle {
+        font-size: 18px;
+      }
+
+      .features {
         grid-template-columns: repeat(2, 1fr);
       }
 
-      .villa,
-      .villa.reverse {
-        grid-template-columns: 1fr;
-      }
-
-      .villa.reverse .villa-image,
-      .villa.reverse .villa-info {
-        order: initial;
-      }
-
-      .villa-image img {
-        min-height: 450px;
-      }
-
-      .location-grid {
+      .villa-grid {
         grid-template-columns: 1fr;
       }
 
       .gallery {
         grid-template-columns: repeat(2, 1fr);
       }
+
+      .location-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .wide-image {
+        height: 450px;
+      }
     }
 
-    @media (max-width: 650px) {
-      section {
-        padding: 60px 6%;
+    @media (max-width: 600px) {
+
+      .hero {
+        min-height: 680px;
+        background-position: 55% center;
+      }
+
+      .navbar {
+        align-items: flex-start;
       }
 
       .nav-links {
         display: none;
       }
 
-      .summary-grid,
-      .benefit-grid {
+      .hero h1 {
+        font-size: 40px;
+      }
+
+      .hero-subtitle {
+        font-size: 17px;
+      }
+
+      .section {
+        padding: 65px 20px;
+      }
+
+      .section-title h2 {
+        font-size: 32px;
+      }
+
+      .features {
         grid-template-columns: 1fr;
-      }
-
-      .villa-info {
-        padding: 40px 25px;
-      }
-
-      .villa-info h2 {
-        font-size: 34px;
-      }
-
-      .villa-image img {
-        min-height: 350px;
       }
 
       .gallery {
@@ -578,563 +492,370 @@
       }
 
       .gallery img {
-        height: 280px;
+        height: auto;
       }
 
-      .location-points {
-        grid-template-columns: 1fr;
+      .villa-card img {
+        height: auto;
       }
 
-      .beach-banner {
-        height: 390px;
+      .wide-image {
+        height: 380px;
       }
     }
+
   </style>
 </head>
 
 <body>
 
-<nav>
-  <div class="logo">GÖCEK TWIN VILLAS</div>
+  <!-- HERO -->
+  <header class="hero">
 
-  <div class="nav-links">
-    <a href="#villas">Villas</a>
-    <a href="#gallery">Gallery</a>
-    <a href="#location">Location</a>
-    <a href="#contact">Price & Contact</a>
-  </div>
-</nav>
+    <nav class="navbar">
 
-
-<header class="hero">
-
-  <div class="hero-content">
-
-    <div class="sale-badge">EXCLUSIVE PROPERTY FOR SALE</div>
-
-    <h1>Two Villas for Sale<br>in Göcek – İnlice</h1>
-
-    <p class="subtitle">
-      Two distinctive villas on the same parcel in one of
-      Türkiye's most beautiful coastal regions.
-    </p>
-
-    <p class="owner">
-      Direct Sale from Owner
-    </p>
-
-    <a class="button button-light" href="#villas">
-      Explore the Villas
-    </a>
-
-    <a class="button button-outline" href="#contact">
-      Request Price
-    </a>
-
-  </div>
-
-</header>
-
-
-<section class="sales-summary">
-
-  <div class="summary-grid">
-
-    <div class="summary-item">
-      <strong>2 Villas</strong>
-      <span>On the same parcel</span>
-    </div>
-
-    <div class="summary-item">
-      <strong>240 m²</strong>
-      <span>Villa One living area</span>
-    </div>
-
-    <div class="summary-item">
-      <strong>100 m²</strong>
-      <span>Villa Two living area</span>
-    </div>
-
-    <div class="summary-item">
-      <strong>Göcek – İnlice</strong>
-      <span>Fethiye, Türkiye</span>
-    </div>
-
-  </div>
-
-</section>
-
-
-<section>
-
-  <div class="section-heading">
-
-    <div class="eyebrow">A Rare Opportunity</div>
-
-    <h2>Two Homes. One Exceptional Location.</h2>
-
-  </div>
-
-  <div class="intro-copy">
-
-    <p>
-      Discover a unique opportunity to own
-      <strong>two villas on the same parcel</strong>
-      in peaceful İnlice, just outside Göcek.
-      Surrounded by green hills and close to the coast,
-      the property combines privacy, generous living space
-      and easy access to Göcek Marina and İnlice Beach.
-    </p>
-
-    <br>
-
-    <p>
-      The villas are offered
-      <strong>directly by the owner</strong>
-      and can be ideal for private family use,
-      multi-generational living or investment purposes.
-    </p>
-
-  </div>
-
-</section>
-
-
-<section id="villas">
-
-  <div class="container">
-
-    <!-- FIRST VILLA -->
-
-    <div class="villa">
-
-      <div class="villa-image">
-        <img src="villa-garden-exterior.jpg"
-             alt="Large villa for sale in İnlice Göcek">
+      <div class="logo">
+        GÖCEK TWIN VILLAS
       </div>
 
-      <div class="villa-info">
+      <div class="nav-links">
+        <a href="#villas">Villas</a>
+        <a href="#gallery">Gallery</a>
+        <a href="#location">Location</a>
+        <a href="#contact">Price &amp; Contact</a>
+      </div>
 
-        <div class="villa-tag">Villa One</div>
+    </nav>
 
-        <h2>Spacious Triplex Villa</h2>
+    <div class="hero-content">
 
-        <div class="villa-stats">
-          <div class="stat">240 m² Living Area</div>
-          <div class="stat">550 m² Plot</div>
-          <div class="stat">3 Floors</div>
-        </div>
+      <div class="property-label">
+        EXCLUSIVE PROPERTY FOR SALE
+      </div>
 
-        <h3>Ground Floor</h3>
+      <h1>
+        Two Villas for Sale<br>
+        in Göcek – İnlice
+      </h1>
 
-        <ul>
-          <li>Entrance hall</li>
-          <li>Living room</li>
-          <li>Kitchen and dining room</li>
-          <li>Laundry room</li>
-          <li>Fitness room</li>
-        </ul>
+      <p class="hero-subtitle">
+        Two distinctive villas on the same parcel in one of
+        Türkiye's most beautiful coastal regions.
+      </p>
 
-        <h3>First Floor</h3>
+      <p class="owner-sale">
+        Direct Sale from Owner
+      </p>
 
-        <ul>
-          <li>Study room</li>
-          <li>Master bedroom with ensuite bathroom</li>
-          <li>Children's room with ensuite bathroom</li>
-        </ul>
+      <div class="hero-buttons">
 
-        <h3>Second Floor</h3>
+        <a href="#villas" class="btn btn-light">
+          Explore the Villas
+        </a>
 
-        <ul>
-          <li>Two large bedrooms</li>
-          <li>Balcony</li>
-          <li>Bathroom</li>
-        </ul>
-
-        <h3>Additional Features</h3>
-
-        <ul>
-          <li>Underfloor heating</li>
-          <li>Heat pump system</li>
-          <li>Air conditioning</li>
-          <li>Large private garden</li>
-        </ul>
+        <a href="#contact" class="btn btn-outline">
+          Request Price
+        </a>
 
       </div>
 
     </div>
 
-
-    <!-- SECOND VILLA -->
-
-    <div class="villa reverse">
-
-      <div class="villa-image">
-        <img src="villa-pool-exterior.jpg"
-             alt="Villa with private pool for sale in İnlice Göcek">
-      </div>
-
-      <div class="villa-info">
-
-        <div class="villa-tag">Villa Two</div>
-
-        <h2>Private Pool Duplex Villa</h2>
-
-        <div class="villa-stats">
-          <div class="stat">100 m² Living Area</div>
-          <div class="stat">275 m² Plot</div>
-          <div class="stat">Private Pool</div>
-        </div>
-
-        <h3>Ground Floor</h3>
-
-        <ul>
-          <li>Bedroom – approximately 15 m²</li>
-          <li>Living room and kitchen – approximately 30 m²</li>
-          <li>Sitting room / additional bedroom and bathroom – approximately 17 m²</li>
-        </ul>
-
-        <h3>First Floor</h3>
-
-        <ul>
-          <li>Bedroom and bathroom – approximately 30 m²</li>
-        </ul>
-
-        <h3>Additional Features</h3>
-
-        <ul>
-          <li>Private swimming pool approximately 3.5 × 4.5 m</li>
-          <li>Open-plan kitchen</li>
-          <li>Direct access from living area to pool</li>
-          <li>Modern appliances and white goods</li>
-          <li>Air conditioning</li>
-          <li>Smart TV</li>
-        </ul>
-
-      </div>
-
-    </div>
-
-  </div>
-
-</section>
+  </header>
 
 
-<section class="investment">
+  <!-- INTRODUCTION -->
+  <section class="section">
 
-  <div class="container">
+    <div class="section-title">
 
-    <div class="section-heading">
-
-      <div class="eyebrow">Property Highlights</div>
-
-      <h2>Why This Property Stands Out</h2>
+      <h2>Two Private Villas in İnlice</h2>
 
       <p>
-        A versatile property in the Göcek region,
-        suitable for lifestyle ownership as well as investment.
+        Privacy, space and Mediterranean living between
+        the forests of İnlice and the beautiful bays of Göcek.
       </p>
 
     </div>
 
-    <div class="benefit-grid">
+    <p class="intro-text">
+      A unique opportunity to acquire two private villas located
+      on the same parcel near Göcek. The property combines generous
+      outdoor areas, modern interiors, a private swimming pool and
+      convenient access to İnlice Beach, Göcek and Fethiye.
+    </p>
 
-      <div class="benefit">
+    <div class="features">
+
+      <div class="feature">
         <h3>Two Villas</h3>
-        <p>
-          Two separate homes provide flexibility for family,
-          guests or different uses.
-        </p>
+        <p>Two separate residences located on the same property.</p>
       </div>
 
-      <div class="benefit">
-        <h3>Direct from Owner</h3>
-        <p>
-          Enquire directly about the property,
-          viewing arrangements and sales details.
-        </p>
+      <div class="feature">
+        <h3>Private Garden</h3>
+        <p>Spacious landscaped outdoor areas surrounded by greenery.</p>
       </div>
 
-      <div class="benefit">
-        <h3>Coastal Location</h3>
-        <p>
-          Close to İnlice Beach and the world-renowned
-          Göcek coastline.
-        </p>
+      <div class="feature">
+        <h3>Private Pool</h3>
+        <p>Swimming pool and outdoor relaxation areas.</p>
       </div>
 
-      <div class="benefit">
-        <h3>Investment Potential</h3>
-        <p>
-          Suitable for private use, holiday-home ownership
-          or potential rental use subject to local regulations.
-        </p>
+      <div class="feature">
+        <h3>Near Göcek</h3>
+        <p>Easy access to Göcek, İnlice Beach and surrounding bays.</p>
       </div>
 
     </div>
 
-  </div>
-
-</section>
+  </section>
 
 
-<section class="aerial">
+  <!-- AERIAL -->
+  <img
+    src="villa-drone-view.jpg"
+    alt="Aerial view of villas in Inlice near Gocek"
+    class="wide-image"
+  >
 
-  <img src="villa-aerial-overview.jpg"
-       alt="Aerial view of two villas on the same parcel in İnlice">
 
-</section>
+  <!-- VILLAS -->
+  <section class="section villa-section" id="villas">
 
+    <div class="section-title">
 
-<section id="gallery">
-
-  <div class="container">
-
-    <div class="section-heading">
-
-      <div class="eyebrow">Property Gallery</div>
-
-      <h2>Explore the Villas</h2>
+      <h2>The Villas</h2>
 
       <p>
-        Click any photo for a larger view.
+        Two distinctive homes offering privacy,
+        comfortable interiors and generous outdoor space.
       </p>
 
     </div>
 
+    <div class="villa-grid">
+
+      <article class="villa-card">
+
+        <img
+          src="villa-garden-exterior.jpg"
+          alt="Villa with private garden and swimming pool"
+        >
+
+        <div class="villa-info">
+
+          <h3>Villa One</h3>
+
+          <p>
+            A private villa surrounded by a spacious garden,
+            with its own swimming pool and outdoor living areas.
+          </p>
+
+          <ul>
+            <li>Private swimming pool</li>
+            <li>Large private garden</li>
+            <li>Outdoor terrace</li>
+            <li>Modern interior spaces</li>
+            <li>Peaceful residential setting</li>
+          </ul>
+
+        </div>
+
+      </article>
+
+
+      <article class="villa-card">
+
+        <img
+          src="villa-aerial-overview.jpg"
+          alt="Second villa and garden in Inlice"
+        >
+
+        <div class="villa-info">
+
+          <h3>Villa Two</h3>
+
+          <p>
+            A spacious second residence providing additional
+            accommodation and excellent potential for family use,
+            investment or guest living.
+          </p>
+
+          <ul>
+            <li>Separate residence</li>
+            <li>Private outdoor space</li>
+            <li>Modern kitchen and living areas</li>
+            <li>Multiple bedrooms</li>
+            <li>Excellent investment potential</li>
+          </ul>
+
+        </div>
+
+      </article>
+
+    </div>
+
+  </section>
+
+
+  <!-- GALLERY -->
+  <section class="section" id="gallery">
+
+    <div class="section-title">
+
+      <h2>Explore the Property</h2>
+
+      <p>
+        A closer look at the villas, gardens,
+        swimming pool and interiors.
+      </p>
+
+    </div>
 
     <div class="gallery">
 
-      <img src="villa-garden-exterior.jpg"
-           alt="Large villa garden">
+      <img
+        src="villa-main.jpg"
+        alt="Main villa exterior"
+      >
 
-      <img src="villa-pool-exterior.jpg"
-           alt="Second villa with private pool">
+      <img
+        src="villa-garden-exterior.jpg"
+        alt="Villa garden exterior"
+      >
 
-      <img src="villa-pool-terrace.jpg"
-           alt="Private pool terrace">
+      <img
+        src="villa-pool-terrace.jpg"
+        alt="Private swimming pool terrace"
+      >
 
-      <img src="villa-interior-living.jpg"
-           alt="Modern villa interior">
+      <img
+        src="villa-interior-living.jpg"
+        alt="Villa living room and kitchen"
+      >
 
-      <img src="villa-interior-collage.jpg"
-           alt="Villa interior rooms">
+      <img
+        src="villa-interior-collage.jpg"
+        alt="Villa interior rooms"
+      >
 
-      <img src="villa-bedroom-bathroom.jpg"
-           alt="Bedroom and bathroom">
+      <img
+        src="villa-bedroom-bathroom.jpg"
+        alt="Bedroom and bathroom"
+      >
 
-      <img src="villa-drone-view.jpg"
-           alt="Drone view of the villas">
+      <img
+        src="villa-aerial-overview.jpg"
+        alt="Aerial overview of property"
+      >
 
-      <img src="villa-aerial-overview.jpg"
-           alt="Aerial property view">
+      <img
+        src="villa-drone-view.jpg"
+        alt="Drone view of the villas"
+      >
 
-      <img src="ince-beach.jpg"
-           alt="İnlice Beach">
+      <img
+        src="inlice-beach.jpg"
+        alt="Inlice Beach near Gocek"
+      >
 
     </div>
 
-  </div>
-
-</section>
+  </section>
 
 
-<section id="location" class="location">
+  <!-- LOCATION -->
+  <section class="section location" id="location">
 
-  <div class="container location-grid">
+    <div class="location-grid">
 
-    <div>
+      <div>
 
-      <div class="eyebrow">Location</div>
+        <img
+          src="villa-location-map.jpg"
+          alt="Location map showing villas, Inlice Beach and Gocek"
+        >
 
-      <h2>İnlice – Göcek</h2>
+      </div>
 
-      <p>
-        The villas are located in İnlice,
-        a peaceful green area between Göcek and the coast
-        in Fethiye, Muğla.
-      </p>
+      <div class="location-text">
 
-      <p>
-        The setting offers a combination of privacy and nature
-        while remaining conveniently positioned for Göcek,
-        its marinas, restaurants, shops and beautiful bays.
-      </p>
+        <h2>Göcek – İnlice</h2>
 
-      <p>
-        İnlice Beach is nearby and Dalaman International Airport
-        provides convenient access for international buyers.
-      </p>
+        <p>
+          The villas are located in İnlice, surrounded by
+          Mediterranean forests and close to some of the
+          most attractive coastal destinations in the Göcek region.
+        </p>
 
-      <div class="location-points">
+        <p>
+          The location offers a peaceful residential environment
+          while remaining within convenient reach of Göcek,
+          İnlice Beach and Fethiye.
+        </p>
 
-        <div class="location-point">
-          İnlice Beach
-        </div>
-
-        <div class="location-point">
-          Göcek Marina
-        </div>
-
-        <div class="location-point">
-          Dalaman Airport
-        </div>
-
-        <div class="location-point">
-          Fethiye
-        </div>
+        <ul>
+          <li>Close to İnlice Beach</li>
+          <li>Easy access to Göcek</li>
+          <li>Surrounded by nature and forest</li>
+          <li>Convenient road connections</li>
+          <li>Close to Göcek's marinas and bays</li>
+        </ul>
 
       </div>
 
     </div>
 
+  </section>
 
-    <div>
 
-      <img src="villa-location-map.jpg"
-           alt="Location of villas near Göcek and İnlice Beach">
+  <!-- CONTACT -->
+  <section class="section contact-section" id="contact">
+
+    <div class="contact-box">
+
+      <h2>Price &amp; Private Viewing</h2>
+
+      <p>
+        The property is offered directly by the owner.
+        For the asking price, additional property information
+        or to arrange a private viewing, please contact us.
+      </p>
+
+      <div class="contact-details">
+
+        <strong>Direct Sale from Owner</strong>
+
+        <br>
+
+        Göcek – İnlice, Fethiye, Muğla, Türkiye
+
+        <br><br>
+
+        <!--
+        TELEFON / WHATSAPP EKLEMEK İSTERSEN:
+        aşağıdaki satırı düzenleyip yorum işaretlerini kaldır.
+
+        <a href="https://wa.me/90XXXXXXXXXX"
+           class="btn btn-light">
+           WhatsApp
+        </a>
+        -->
+
+      </div>
 
     </div>
 
-  </div>
+  </section>
 
-</section>
 
+  <footer>
 
-<div class="beach-banner">
+    © 2026 Göcek Twin Villas · İnlice, Fethiye, Türkiye
+    · Direct Sale from Owner
 
-  <div>
-
-    <h2>Life Near the Turquoise Coast</h2>
-
-    <p>
-      İnlice Beach · Göcek · Fethiye · Türkiye
-    </p>
-
-  </div>
-
-</div>
-
-
-<section id="contact" class="contact">
-
-  <div class="container">
-
-    <div class="eyebrow">
-      Private Sale
-    </div>
-
-    <h2>Interested in the Property?</h2>
-
-    <div class="price">
-      Price on Request
-    </div>
-
-    <p>
-      Contact the owner directly for the asking price,
-      further property information and viewing arrangements.
-    </p>
-
-    <a class="button button-gold"
-       href="mailto:elitvillasingocekinlice@gmail.com?subject=Göcek Twin Villas - Price Request">
-
-       Request Price
-
-    </a>
-
-    <a class="button button-outline"
-       href="mailto:elitvillasingocekinlice@gmail.com?subject=Göcek Twin Villas - Viewing Request">
-
-       Arrange a Viewing
-
-    </a>
-
-    <div class="direct-owner">
-      Direct sale from owner · Göcek / İnlice / Fethiye, Türkiye
-    </div>
-
-  </div>
-
-</section>
-
-
-<footer>
-
-  © 2026 Göcek Twin Villas · İnlice, Göcek / Fethiye, Türkiye
-
-</footer>
-
-
-<!-- IMAGE LIGHTBOX -->
-
-<div class="lightbox" id="lightbox">
-
-  <span class="close-lightbox" id="closeLightbox">
-    &times;
-  </span>
-
-  <img id="lightboxImage" src="" alt="Property photo">
-
-</div>
-
-
-<script>
-
-  const galleryImages =
-    document.querySelectorAll(".gallery img");
-
-  const lightbox =
-    document.getElementById("lightbox");
-
-  const lightboxImage =
-    document.getElementById("lightboxImage");
-
-  const closeLightbox =
-    document.getElementById("closeLightbox");
-
-
-  galleryImages.forEach(image => {
-
-    image.addEventListener("click", () => {
-
-      lightboxImage.src = image.src;
-
-      lightbox.classList.add("active");
-
-    });
-
-  });
-
-
-  closeLightbox.addEventListener("click", () => {
-
-    lightbox.classList.remove("active");
-
-  });
-
-
-  lightbox.addEventListener("click", event => {
-
-    if (event.target === lightbox) {
-
-      lightbox.classList.remove("active");
-
-    }
-
-  });
-
-
-  document.addEventListener("keydown", event => {
-
-    if (event.key === "Escape") {
-
-      lightbox.classList.remove("active");
-
-    }
-
-  });
-
-</script>
+  </footer>
 
 </body>
 </html>
