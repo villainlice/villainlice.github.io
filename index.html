@@ -1,0 +1,475 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Villa İnlice | Private Villas near Göcek, Fethiye</title>
+
+  <meta name="description" content="Private villas in İnlice near Göcek and Fethiye, Turkey. Spacious gardens, private pool, modern interiors and easy access to İnlice Beach.">
+
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: Arial, Helvetica, sans-serif;
+      color: #1f2933;
+      background: #ffffff;
+      line-height: 1.6;
+    }
+
+    nav {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      z-index: 10;
+      padding: 22px 7%;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      color: white;
+      background: linear-gradient(
+        to bottom,
+        rgba(0,0,0,.55),
+        transparent
+      );
+    }
+
+    .logo {
+      font-size: 25px;
+      font-weight: bold;
+      letter-spacing: 1px;
+    }
+
+    nav a {
+      color: white;
+      text-decoration: none;
+      margin-left: 25px;
+      font-size: 15px;
+    }
+
+    .hero {
+      min-height: 92vh;
+      background:
+        linear-gradient(rgba(0,0,0,.25), rgba(0,0,0,.45)),
+        url("villa-main.jpg") center/cover no-repeat;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      color: white;
+      padding: 30px;
+    }
+
+    .hero-content {
+      max-width: 900px;
+    }
+
+    .hero h1 {
+      font-size: clamp(42px, 7vw, 78px);
+      line-height: 1.05;
+      margin-bottom: 20px;
+      text-shadow: 0 3px 15px rgba(0,0,0,.35);
+    }
+
+    .hero p {
+      font-size: clamp(18px, 2vw, 25px);
+      margin-bottom: 32px;
+    }
+
+    .button {
+      display: inline-block;
+      background: #ffffff;
+      color: #18332c;
+      padding: 14px 28px;
+      border-radius: 4px;
+      text-decoration: none;
+      font-weight: bold;
+      margin: 6px;
+    }
+
+    .button.secondary {
+      background: transparent;
+      border: 2px solid white;
+      color: white;
+    }
+
+    section {
+      padding: 85px 7%;
+    }
+
+    .section-title {
+      text-align: center;
+      margin-bottom: 45px;
+    }
+
+    .section-title h2 {
+      font-size: 38px;
+      margin-bottom: 10px;
+      color: #18332c;
+    }
+
+    .section-title p {
+      color: #68757a;
+      max-width: 720px;
+      margin: auto;
+    }
+
+    .intro {
+      max-width: 950px;
+      margin: auto;
+      text-align: center;
+      font-size: 18px;
+    }
+
+    .features {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 25px;
+      margin-top: 45px;
+    }
+
+    .feature {
+      padding: 30px 20px;
+      background: #f5f8f6;
+      text-align: center;
+      border-radius: 8px;
+    }
+
+    .feature strong {
+      display: block;
+      font-size: 20px;
+      margin-bottom: 8px;
+      color: #18332c;
+    }
+
+    .large-photo {
+      width: 100%;
+      height: 620px;
+      object-fit: cover;
+      display: block;
+    }
+
+    .gallery {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 12px;
+    }
+
+    .gallery img {
+      width: 100%;
+      height: 320px;
+      object-fit: cover;
+      display: block;
+      transition: transform .25s ease;
+    }
+
+    .gallery img:hover {
+      transform: scale(1.015);
+    }
+
+    .location {
+      background: #f4f7f5;
+    }
+
+    .location-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 45px;
+      align-items: center;
+      max-width: 1200px;
+      margin: auto;
+    }
+
+    .location img {
+      width: 100%;
+      border-radius: 8px;
+    }
+
+    .location h2 {
+      font-size: 38px;
+      color: #18332c;
+      margin-bottom: 20px;
+    }
+
+    .location p {
+      margin-bottom: 15px;
+    }
+
+    .contact {
+      text-align: center;
+      background: #18332c;
+      color: white;
+    }
+
+    .contact h2 {
+      font-size: 40px;
+      margin-bottom: 15px;
+    }
+
+    .contact p {
+      max-width: 700px;
+      margin: 0 auto 30px;
+      color: #d9e4df;
+    }
+
+    footer {
+      background: #10241f;
+      color: #c8d3cf;
+      text-align: center;
+      padding: 25px;
+      font-size: 14px;
+    }
+
+    @media (max-width: 900px) {
+      .features {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      .gallery {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      .location-grid {
+        grid-template-columns: 1fr;
+      }
+
+      nav .links {
+        display: none;
+      }
+
+      .large-photo {
+        height: 430px;
+      }
+    }
+
+    @media (max-width: 600px) {
+      section {
+        padding: 60px 6%;
+      }
+
+      .features,
+      .gallery {
+        grid-template-columns: 1fr;
+      }
+
+      .gallery img {
+        height: 270px;
+      }
+
+      .hero {
+        min-height: 82vh;
+      }
+
+      .section-title h2,
+      .location h2 {
+        font-size: 31px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+<nav>
+  <div class="logo">VILLA İNLİCE</div>
+
+  <div class="links">
+    <a href="#villas">The Villas</a>
+    <a href="#gallery">Gallery</a>
+    <a href="#location">Location</a>
+    <a href="#contact">Contact</a>
+  </div>
+</nav>
+
+
+<header class="hero">
+
+  <div class="hero-content">
+
+    <h1>Your Private Escape<br>near Göcek</h1>
+
+    <p>
+      Private villas surrounded by nature in İnlice,
+      just minutes from the beach and Göcek.
+    </p>
+
+    <a class="button" href="#villas">
+      Discover the Villas
+    </a>
+
+    <a class="button secondary" href="#contact">
+      Contact Us
+    </a>
+
+  </div>
+
+</header>
+
+
+<section id="villas">
+
+  <div class="section-title">
+    <h2>Villa İnlice</h2>
+
+    <p>
+      Space, privacy and Mediterranean living between
+      the forests of İnlice and the beautiful bays of Göcek.
+    </p>
+  </div>
+
+  <div class="intro">
+
+    <p>
+      Enjoy a peaceful stay in a private villa with spacious
+      outdoor areas, modern interiors and easy access to
+      İnlice Beach and Göcek. An ideal setting for families
+      and guests looking for privacy, comfort and nature.
+    </p>
+
+  </div>
+
+  <div class="features">
+
+    <div class="feature">
+      <strong>Private Garden</strong>
+      Relax in your own spacious outdoor area.
+    </div>
+
+    <div class="feature">
+      <strong>Private Pool</strong>
+      Enjoy your own swimming pool and sun terrace.
+    </div>
+
+    <div class="feature">
+      <strong>Modern Living</strong>
+      Bright interiors designed for comfortable stays.
+    </div>
+
+    <div class="feature">
+      <strong>Near Göcek</strong>
+      Easy access to Göcek, İnlice Beach and the surrounding bays.
+    </div>
+
+  </div>
+
+</section>
+
+
+<img
+  class="large-photo"
+  src="villa-drone-view.jpg"
+  alt="Villa İnlice private villa and garden">
+
+
+<section id="gallery">
+
+  <div class="section-title">
+    <h2>Explore the Villa</h2>
+
+    <p>
+      A closer look at the villa, garden, pool and interiors.
+    </p>
+  </div>
+
+  <div class="gallery">
+
+    <img src="villa-garden-exterior.jpg"
+         alt="Villa garden">
+
+    <img src="villa-pool-exterior.jpg"
+         alt="Private pool">
+
+    <img src="villa-pool-terrace.jpg"
+         alt="Pool terrace">
+
+    <img src="villa-interior-living.jpg"
+         alt="Villa interior">
+
+    <img src="villa-interior-collage.jpg"
+         alt="Villa kitchen and living area">
+
+    <img src="villa-bedroom-bathroom.jpg"
+         alt="Bedroom and bathroom">
+
+    <img src="villa-aerial-overview.jpg"
+         alt="Aerial view of the villas">
+
+    <img src="villa-main.jpg"
+         alt="Villa İnlice">
+
+    <img src="ince-beach.jpg"
+         alt="İnlice Beach">
+
+  </div>
+
+</section>
+
+
+<section id="location" class="location">
+
+  <div class="location-grid">
+
+    <div>
+
+      <h2>Between İnlice Beach & Göcek</h2>
+
+      <p>
+        Villa İnlice is located in the peaceful İnlice area
+        on Turkey's beautiful Turquoise Coast.
+      </p>
+
+      <p>
+        The location combines privacy and nature with convenient
+        access to Göcek, its marina, restaurants and beautiful
+        surrounding bays.
+      </p>
+
+      <p>
+        İnlice Beach is also nearby, making the villa an excellent
+        base for enjoying the sea, nature and the Göcek region.
+      </p>
+
+    </div>
+
+    <img
+      src="villa-location-map.jpg"
+      alt="Villa İnlice location near Göcek">
+
+  </div>
+
+</section>
+
+
+<section id="contact" class="contact">
+
+  <h2>Interested in Villa İnlice?</h2>
+
+  <p>
+    Contact us for information about the villas,
+    availability and further details.
+  </p>
+
+  <a class="button"
+     href="mailto:info@villainlice.com">
+     Contact Us
+  </a>
+
+</section>
+
+
+<footer>
+  © 2026 Villa İnlice · İnlice, Göcek / Fethiye, Türkiye
+</footer>
+
+</body>
+</html>
