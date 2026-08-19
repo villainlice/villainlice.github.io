@@ -16,10 +16,6 @@
 
 <style>
 
-/* =========================================================
-   COLORS
-========================================================= */
-
 :root{
     --green:#153b31;
     --dark:#0b2d25;
@@ -31,11 +27,6 @@
     --muted:#697970;
     --white:#ffffff;
 }
-
-
-/* =========================================================
-   RESET
-========================================================= */
 
 *{
     margin:0;
@@ -81,45 +72,37 @@ nav{
 
     gap:20px;
 
-    padding:16px 5%;
+    padding:14px 5%;
 
     background:var(--dark);
 
-    box-shadow:
-        0 4px 20px rgba(0,0,0,.12);
+    box-shadow:0 4px 20px rgba(0,0,0,.12);
 }
 
 .logo{
     color:#fff;
-
     font-size:21px;
     font-weight:800;
-
     letter-spacing:1.8px;
-
     white-space:nowrap;
 }
 
 .nav-right{
     display:flex;
     align-items:center;
-
-    gap:25px;
+    gap:23px;
 }
 
 .nav-links{
     display:flex;
     align-items:center;
-
     gap:24px;
 }
 
 .nav-links a{
     color:white;
-
     font-size:14px;
     font-weight:700;
-
     transition:.2s;
 }
 
@@ -129,45 +112,41 @@ nav{
 
 
 /* =========================================================
-   LANGUAGE BUTTONS
+   LANGUAGE
 ========================================================= */
 
 .language-switcher{
     display:flex;
     align-items:center;
-
     gap:4px;
 
     padding:4px;
 
-    border:1px solid rgba(255,255,255,.22);
-
+    border:1px solid rgba(255,255,255,.16);
     border-radius:7px;
 
-    background:rgba(255,255,255,.06);
+    background:rgba(255,255,255,.05);
 }
 
 .lang-btn{
     border:none;
-
-    padding:7px 9px;
+    padding:6px 9px;
 
     border-radius:4px;
 
     cursor:pointer;
 
-    font-size:12px;
+    font-size:11px;
     font-weight:800;
 
     color:#fff;
-
     background:transparent;
 
     transition:.2s;
 }
 
 .lang-btn:hover{
-    background:rgba(255,255,255,.16);
+    background:rgba(255,255,255,.14);
 }
 
 .lang-btn.active{
@@ -177,7 +156,7 @@ nav{
 
 
 /* =========================================================
-   HERO
+   HERO - DAHA KISA
 ========================================================= */
 
 .hero{
@@ -189,24 +168,21 @@ nav{
         );
 
     color:white;
-
     text-align:center;
 
-    padding:
-        70px 20px 64px;
+    padding:40px 20px 36px;
 }
 
 .sale-badge{
     display:inline-block;
 
-    padding:8px 18px;
+    padding:7px 17px;
 
-    margin-bottom:17px;
+    margin-bottom:12px;
 
-    border:
-        1px solid rgba(255,255,255,.45);
+    border:1px solid rgba(255,255,255,.45);
 
-    font-size:12px;
+    font-size:11px;
     font-weight:700;
 
     letter-spacing:3px;
@@ -215,34 +191,30 @@ nav{
 .hero-kicker{
     color:#e2c377;
 
-    font-size:14px;
+    font-size:13px;
     font-weight:800;
 
     letter-spacing:3px;
 
-    margin-bottom:10px;
+    margin-bottom:7px;
 }
 
 .hero h1{
-    max-width:920px;
+    max-width:850px;
 
-    margin:
-        0 auto 20px;
+    margin:0 auto 14px;
 
-    font-size:
-        clamp(42px,5vw,68px);
+    font-size:clamp(36px,4.2vw,56px);
 
-    line-height:1.06;
+    line-height:1.07;
 }
 
 .hero-description{
-    max-width:800px;
+    max-width:760px;
 
-    margin:
-        0 auto 10px;
+    margin:0 auto 7px;
 
-    font-size:
-        clamp(17px,2vw,21px);
+    font-size:clamp(15px,1.6vw,18px);
 
     color:#e8efec;
 }
@@ -252,25 +224,19 @@ nav{
 
     font-weight:800;
 
-    margin-top:10px;
+    margin-top:8px;
 }
 
-
-/* =========================================================
-   BUTTONS
-========================================================= */
-
 .hero-buttons{
-    margin-top:26px;
+    margin-top:17px;
 }
 
 .button{
     display:inline-block;
 
-    margin:6px;
+    margin:5px;
 
-    padding:
-        14px 27px;
+    padding:12px 24px;
 
     border-radius:5px;
 
@@ -306,8 +272,7 @@ nav{
 .main-villas{
     background:var(--cream);
 
-    padding:
-        42px 5% 64px;
+    padding:34px 5% 55px;
 }
 
 .main-villa-grid{
@@ -317,11 +282,15 @@ nav{
 
     display:grid;
 
-    grid-template-columns:
-        repeat(2,1fr);
+    grid-template-columns:repeat(2,minmax(0,1fr));
 
     gap:25px;
+
+    align-items:stretch;
 }
+
+
+/* Kartların yükseklikleri eşit */
 
 .property-card{
     background:white;
@@ -330,18 +299,60 @@ nav{
 
     border-radius:14px;
 
-    box-shadow:
-        0 15px 40px rgba(28,58,46,.12);
+    box-shadow:0 15px 40px rgba(28,58,46,.12);
+
+    display:flex;
+    flex-direction:column;
+
+    min-width:0;
+    height:100%;
 }
 
-.property-card img{
+
+/* İKİ RESİM AYNI HİZADA */
+
+.property-image-wrap{
     width:100%;
-    height:auto;
+
+    height:360px;
+
+    overflow:hidden;
+
+    background:#e7ece9;
 }
+
+.property-image-wrap img{
+    width:100%;
+    height:100%;
+
+    object-fit:cover;
+    object-position:center center;
+
+    display:block;
+}
+
+
+/* Villa 1 resmi için çok hafif konum ayarı */
+
+.property-card.villa-one-card .property-image-wrap img{
+    object-position:center 52%;
+}
+
+
+/* Villa 2 havuz ve ev birlikte görünsün */
+
+.property-card.villa-two-card .property-image-wrap img{
+    object-position:center 55%;
+}
+
 
 .property-content{
-    padding:
-        25px 27px 29px;
+    padding:23px 25px 27px;
+
+    display:flex;
+    flex-direction:column;
+
+    flex:1;
 }
 
 .property-label{
@@ -358,23 +369,26 @@ nav{
 .property-content h2{
     color:var(--green);
 
-    font-size:29px;
+    font-size:28px;
 
-    margin-bottom:7px;
+    margin-bottom:6px;
+
+    line-height:1.2;
 }
 
 .property-content p{
     color:var(--muted);
 
-    margin-bottom:16px;
+    margin-bottom:15px;
 }
 
 .property-stats{
     display:flex;
-
     flex-wrap:wrap;
 
     gap:8px;
+
+    margin-top:auto;
 }
 
 .property-stat{
@@ -382,8 +396,7 @@ nav{
 
     background:var(--light);
 
-    border:
-        1px solid #dce5e0;
+    border:1px solid #dce5e0;
 
     border-radius:5px;
 
@@ -399,9 +412,7 @@ nav{
 ========================================================= */
 
 .summary{
-    padding:
-        44px 6%;
-
+    padding:42px 6%;
     background:white;
 }
 
@@ -412,25 +423,21 @@ nav{
 
     display:grid;
 
-    grid-template-columns:
-        repeat(4,1fr);
+    grid-template-columns:repeat(4,1fr);
 
     border-radius:10px;
 
     overflow:hidden;
 
-    box-shadow:
-        0 8px 28px rgba(20,50,40,.08);
+    box-shadow:0 8px 28px rgba(20,50,40,.08);
 }
 
 .summary-item{
     text-align:center;
 
-    padding:
-        28px 12px;
+    padding:27px 12px;
 
-    border-right:
-        1px solid #e9eeeb;
+    border-right:1px solid #e9eeeb;
 }
 
 .summary-item:last-child{
@@ -459,8 +466,7 @@ nav{
 ========================================================= */
 
 .aerial-section{
-    padding:
-        70px 6%;
+    padding:70px 6%;
 
     background:var(--light);
 }
@@ -472,8 +478,7 @@ nav{
 
     display:grid;
 
-    grid-template-columns:
-        1.65fr .75fr;
+    grid-template-columns:1.65fr .75fr;
 
     gap:48px;
 
@@ -487,13 +492,11 @@ nav{
 
     border-radius:14px;
 
-    box-shadow:
-        0 14px 38px rgba(20,50,40,.11);
+    box-shadow:0 14px 38px rgba(20,50,40,.11);
 }
 
 .aerial-photo img{
     width:100%;
-
     border-radius:8px;
 }
 
@@ -511,8 +514,7 @@ nav{
 .aerial-text h2{
     color:var(--green);
 
-    font-size:
-        clamp(32px,3vw,45px);
+    font-size:clamp(32px,3vw,45px);
 
     line-height:1.12;
 
@@ -529,31 +531,27 @@ nav{
 
 
 /* =========================================================
-   GENERAL SECTIONS
+   GENERAL
 ========================================================= */
 
 section{
-    padding:
-        78px 7%;
+    padding:78px 7%;
 }
 
 .container{
     width:min(1200px,100%);
-
     margin:auto;
 }
 
 .section-heading{
     text-align:center;
-
     margin-bottom:45px;
 }
 
 .section-heading h2{
     color:var(--green);
 
-    font-size:
-        clamp(32px,4vw,45px);
+    font-size:clamp(32px,4vw,45px);
 
     line-height:1.15;
 
@@ -586,14 +584,13 @@ section{
 
 
 /* =========================================================
-   VILLA DETAIL CARDS
+   VILLA DETAILS
 ========================================================= */
 
 .villa-detail{
     display:grid;
 
-    grid-template-columns:
-        1fr 1fr;
+    grid-template-columns:1fr 1fr;
 
     margin-bottom:55px;
 
@@ -603,8 +600,7 @@ section{
 
     background:var(--light);
 
-    box-shadow:
-        0 12px 36px rgba(20,50,40,.08);
+    box-shadow:0 12px 36px rgba(20,50,40,.08);
 }
 
 .villa-detail.reverse .villa-photo{
@@ -621,16 +617,19 @@ section{
     align-items:center;
 
     background:#e4e9e6;
+
+    min-height:500px;
 }
 
 .villa-photo img{
     width:100%;
-    height:auto;
+    height:100%;
+
+    object-fit:cover;
 }
 
 .villa-info{
-    padding:
-        45px 42px;
+    padding:45px 42px;
 }
 
 .villa-label{
@@ -647,8 +646,7 @@ section{
 .villa-info h2{
     color:var(--green);
 
-    font-size:
-        clamp(30px,3vw,40px);
+    font-size:clamp(30px,3vw,40px);
 
     line-height:1.1;
 
@@ -662,18 +660,15 @@ section{
 
     gap:8px;
 
-    margin:
-        18px 0 22px;
+    margin:18px 0 22px;
 }
 
 .stat{
-    padding:
-        7px 11px;
+    padding:7px 11px;
 
     background:white;
 
-    border:
-        1px solid #dce4e0;
+    border:1px solid #dce4e0;
 
     font-size:13px;
     font-weight:700;
@@ -684,8 +679,7 @@ section{
 
     font-size:17px;
 
-    margin:
-        18px 0 6px;
+    margin:18px 0 6px;
 }
 
 .villa-info ul{
@@ -723,8 +717,7 @@ section{
 .highlight-grid{
     display:grid;
 
-    grid-template-columns:
-        repeat(4,1fr);
+    grid-template-columns:repeat(4,1fr);
 
     gap:18px;
 }
@@ -732,13 +725,11 @@ section{
 .highlight-card{
     padding:27px;
 
-    border:
-        1px solid rgba(255,255,255,.16);
+    border:1px solid rgba(255,255,255,.16);
 
     border-radius:9px;
 
-    background:
-        rgba(255,255,255,.025);
+    background:rgba(255,255,255,.025);
 }
 
 .highlight-card h3{
@@ -773,15 +764,13 @@ section{
 
     break-inside:avoid;
 
-    box-shadow:
-        0 5px 18px rgba(0,0,0,.08);
+    box-shadow:0 5px 18px rgba(0,0,0,.08);
 
     transition:.2s;
 }
 
 .gallery img:hover{
-    transform:
-        translateY(-2px);
+    transform:translateY(-2px);
 }
 
 
@@ -803,8 +792,7 @@ section{
 
     padding:25px;
 
-    background:
-        rgba(0,0,0,.94);
+    background:rgba(0,0,0,.94);
 }
 
 .lightbox.active{
@@ -844,8 +832,7 @@ section{
 .location-grid{
     display:grid;
 
-    grid-template-columns:
-        .85fr 1.15fr;
+    grid-template-columns:.85fr 1.15fr;
 
     gap:48px;
 
@@ -855,8 +842,7 @@ section{
 .location h2{
     color:var(--green);
 
-    font-size:
-        clamp(32px,4vw,43px);
+    font-size:clamp(32px,4vw,43px);
 
     margin-bottom:15px;
 }
@@ -872,15 +858,13 @@ section{
 
     border-radius:10px;
 
-    box-shadow:
-        0 12px 30px rgba(20,50,40,.10);
+    box-shadow:0 12px 30px rgba(20,50,40,.10);
 }
 
 .location-points{
     display:grid;
 
-    grid-template-columns:
-        1fr 1fr;
+    grid-template-columns:1fr 1fr;
 
     gap:8px;
 
@@ -909,8 +893,7 @@ section{
 
     align-items:flex-end;
 
-    padding:
-        50px 7%;
+    padding:50px 7%;
 
     color:white;
 
@@ -919,13 +902,12 @@ section{
             rgba(0,0,0,.05),
             rgba(0,0,0,.44)
         ),
-        url("ince-beach.jpg?v=20")
+        url("ince-beach.jpg?v=31")
         center / cover no-repeat;
 }
 
 .beach-banner h2{
-    font-size:
-        clamp(31px,4vw,45px);
+    font-size:clamp(31px,4vw,45px);
 }
 
 
@@ -942,8 +924,7 @@ section{
 }
 
 .contact h2{
-    font-size:
-        clamp(36px,5vw,54px);
+    font-size:clamp(36px,5vw,54px);
 
     margin-bottom:8px;
 }
@@ -960,8 +941,7 @@ section{
 .contact-description{
     max-width:690px;
 
-    margin:
-        0 auto 25px;
+    margin:0 auto 25px;
 
     color:#d5dfdb;
 }
@@ -993,7 +973,7 @@ footer{
 
 
 /* =========================================================
-   RESPONSIVE
+   TABLET
 ========================================================= */
 
 @media(max-width:1100px){
@@ -1010,9 +990,12 @@ footer{
         grid-template-columns:1fr;
     }
 
+    .property-image-wrap{
+        height:420px;
+    }
+
     .summary-grid{
-        grid-template-columns:
-            repeat(2,1fr);
+        grid-template-columns:repeat(2,1fr);
     }
 
     .aerial-grid{
@@ -1033,8 +1016,7 @@ footer{
     }
 
     .highlight-grid{
-        grid-template-columns:
-            repeat(2,1fr);
+        grid-template-columns:repeat(2,1fr);
     }
 
     .gallery{
@@ -1047,11 +1029,15 @@ footer{
 
 }
 
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
 @media(max-width:650px){
 
     nav{
-        padding:
-            13px 3%;
+        padding:12px 3%;
     }
 
     .logo{
@@ -1060,7 +1046,7 @@ footer{
     }
 
     .nav-right{
-        gap:7px;
+        gap:6px;
     }
 
     .language-switcher{
@@ -1069,33 +1055,56 @@ footer{
     }
 
     .lang-btn{
-        padding:
-            5px 5px;
-
+        padding:5px;
         font-size:10px;
     }
 
     .hero{
-        padding:
-            52px 16px 47px;
+        padding:31px 15px 29px;
+    }
+
+    .sale-badge{
+        font-size:9px;
+        letter-spacing:2px;
+        padding:6px 12px;
+    }
+
+    .hero-kicker{
+        font-size:11px;
+        letter-spacing:2px;
     }
 
     .hero h1{
-        font-size:38px;
+        font-size:32px;
+        margin-bottom:12px;
     }
 
     .hero-description{
-        font-size:16px;
+        font-size:15px;
+    }
+
+    .hero-buttons{
+        margin-top:14px;
+    }
+
+    .button{
+        padding:11px 18px;
     }
 
     .main-villas{
-        padding:
-            25px 4% 45px;
+        padding:22px 4% 42px;
+    }
+
+    .property-image-wrap{
+        height:260px;
     }
 
     .property-content{
-        padding:
-            20px 18px 23px;
+        padding:20px 18px 23px;
+    }
+
+    .property-content h2{
+        font-size:24px;
     }
 
     .summary-grid{
@@ -1105,23 +1114,23 @@ footer{
     .summary-item{
         border-right:none;
 
-        border-bottom:
-            1px solid #e9eeeb;
+        border-bottom:1px solid #e9eeeb;
     }
 
     section{
-        padding:
-            58px 6%;
+        padding:58px 6%;
     }
 
     .aerial-section{
-        padding:
-            50px 5%;
+        padding:50px 5%;
+    }
+
+    .villa-photo{
+        min-height:300px;
     }
 
     .villa-info{
-        padding:
-            32px 22px;
+        padding:32px 22px;
     }
 
     .highlight-grid{
@@ -1143,7 +1152,6 @@ footer{
 }
 
 </style>
-
 </head>
 
 
@@ -1151,7 +1159,7 @@ footer{
 
 
 <!-- =========================================================
-     NAVIGATION
+     NAV
 ========================================================= -->
 
 <nav>
@@ -1163,86 +1171,50 @@ footer{
 
     <div class="nav-right">
 
-
         <div class="nav-links">
 
-            <a
-                href="#villas"
-                data-i18n="navVillas"
-            >
+            <a href="#villas" data-i18n="navVillas">
                 Villas
             </a>
 
-            <a
-                href="#gallery"
-                data-i18n="navGallery"
-            >
+            <a href="#gallery" data-i18n="navGallery">
                 Gallery
             </a>
 
-            <a
-                href="#location"
-                data-i18n="navLocation"
-            >
+            <a href="#location" data-i18n="navLocation">
                 Location
             </a>
 
-            <a
-                href="#contact"
-                data-i18n="navContact"
-            >
+            <a href="#contact" data-i18n="navContact">
                 Price & Contact
             </a>
 
         </div>
 
 
-        <!-- LANGUAGE BUTTONS -->
-
         <div class="language-switcher">
 
-            <button
-                type="button"
-                class="lang-btn active"
-                data-lang="en"
-            >
+            <button type="button" class="lang-btn active" data-lang="en">
                 EN
             </button>
 
-            <button
-                type="button"
-                class="lang-btn"
-                data-lang="de"
-            >
+            <button type="button" class="lang-btn" data-lang="de">
                 DE
             </button>
 
-            <button
-                type="button"
-                class="lang-btn"
-                data-lang="ru"
-            >
+            <button type="button" class="lang-btn" data-lang="ru">
                 RU
             </button>
 
-            <button
-                type="button"
-                class="lang-btn"
-                data-lang="uk"
-            >
+            <button type="button" class="lang-btn" data-lang="uk">
                 UA
             </button>
 
-            <button
-                type="button"
-                class="lang-btn"
-                data-lang="tr"
-            >
+            <button type="button" class="lang-btn" data-lang="tr">
                 TR
             </button>
 
         </div>
-
 
     </div>
 
@@ -1256,44 +1228,26 @@ footer{
 
 <header class="hero">
 
-    <div
-        class="sale-badge"
-        data-i18n="exclusive"
-    >
+    <div class="sale-badge" data-i18n="exclusive">
         EXCLUSIVE PROPERTY FOR SALE
     </div>
 
-
-    <div
-        class="hero-kicker"
-        data-i18n="twoOne"
-    >
+    <div class="hero-kicker" data-i18n="twoOne">
         TWO VILLAS · ONE PROPERTY
     </div>
-
 
     <h1 data-i18n="mainTitle">
         Two Villas for Sale in Göcek – İnlice
     </h1>
 
-
-    <p
-        class="hero-description"
-        data-i18n="heroText"
-    >
-        Two distinctive private residences
-        on the same property in one of
-        Türkiye's most beautiful coastal regions.
+    <p class="hero-description" data-i18n="heroText">
+        Two distinctive private residences on the same property
+        in one of Türkiye's most beautiful coastal regions.
     </p>
 
-
-    <div
-        class="owner-text"
-        data-i18n="directOwner"
-    >
+    <div class="owner-text" data-i18n="directOwner">
         Direct Sale from Owner
     </div>
-
 
     <div class="hero-buttons">
 
@@ -1320,7 +1274,7 @@ footer{
 
 
 <!-- =========================================================
-     MAIN VILLAS
+     TWO MAIN VILLAS
 ========================================================= -->
 
 <div class="main-villas">
@@ -1330,34 +1284,31 @@ footer{
 
 <!-- VILLA ONE -->
 
-<article class="property-card">
+<article class="property-card villa-one-card">
 
-    <img
-        src="villa-garden-exterior.jpg?v=20"
-        alt="Villa One in Göcek İnlice"
-    >
+    <div class="property-image-wrap">
+
+        <img
+            src="villa-garden-exterior.jpg?v=31"
+            alt="Villa One in Göcek İnlice"
+        >
+
+    </div>
 
     <div class="property-content">
 
-        <div
-            class="property-label"
-            data-i18n="villaOne"
-        >
+        <div class="property-label" data-i18n="villaOne">
             VILLA ONE
         </div>
-
 
         <h2 data-i18n="villaOneTitle">
             Spacious Triplex Villa
         </h2>
 
-
         <p data-i18n="villaOneShort">
-            Large private garden,
-            generous living areas
+            Large private garden, generous living areas
             and peaceful natural surroundings.
         </p>
-
 
         <div class="property-stats">
 
@@ -1369,10 +1320,7 @@ footer{
                 550 m² Plot
             </div>
 
-            <div
-                class="property-stat"
-                data-i18n="threeFloors"
-            >
+            <div class="property-stat" data-i18n="threeFloors">
                 3 Floors
             </div>
 
@@ -1386,34 +1334,31 @@ footer{
 
 <!-- VILLA TWO -->
 
-<article class="property-card">
+<article class="property-card villa-two-card">
 
-    <img
-        src="villa-two-new.jpg?v=20"
-        alt="Villa Two with private pool in Göcek İnlice"
-    >
+    <div class="property-image-wrap">
+
+        <img
+            src="villa-two-new.jpg?v=31"
+            alt="Villa Two with private pool in Göcek İnlice"
+        >
+
+    </div>
 
     <div class="property-content">
 
-        <div
-            class="property-label"
-            data-i18n="villaTwo"
-        >
+        <div class="property-label" data-i18n="villaTwo">
             VILLA TWO
         </div>
-
 
         <h2 data-i18n="villaTwoTitle">
             Private Pool Duplex Villa
         </h2>
 
-
         <p data-i18n="villaTwoShort">
-            A private duplex residence
-            with swimming pool,
+            A private duplex residence with swimming pool,
             garden and outdoor living space.
         </p>
-
 
         <div class="property-stats">
 
@@ -1425,10 +1370,7 @@ footer{
                 275 m² Plot
             </div>
 
-            <div
-                class="property-stat"
-                data-i18n="privatePool"
-            >
+            <div class="property-stat" data-i18n="privatePool">
                 Private Pool
             </div>
 
@@ -1453,58 +1395,31 @@ footer{
 
 <div class="summary-grid">
 
+    <div class="summary-item">
+        <strong>2 Villas</strong>
+        <span data-i18n="summaryVillas">
+            On the same property
+        </span>
+    </div>
 
-<div class="summary-item">
+    <div class="summary-item">
+        <strong>240 m²</strong>
+        <span data-i18n="villaOneArea">
+            Villa One living area
+        </span>
+    </div>
 
-    <strong>
-        2 Villas
-    </strong>
+    <div class="summary-item">
+        <strong>100 m²</strong>
+        <span data-i18n="villaTwoArea">
+            Villa Two living area
+        </span>
+    </div>
 
-    <span data-i18n="summaryVillas">
-        On the same property
-    </span>
-
-</div>
-
-
-<div class="summary-item">
-
-    <strong>
-        240 m²
-    </strong>
-
-    <span data-i18n="villaOneArea">
-        Villa One living area
-    </span>
-
-</div>
-
-
-<div class="summary-item">
-
-    <strong>
-        100 m²
-    </strong>
-
-    <span data-i18n="villaTwoArea">
-        Villa Two living area
-    </span>
-
-</div>
-
-
-<div class="summary-item">
-
-    <strong>
-        Göcek – İnlice
-    </strong>
-
-    <span>
-        Fethiye, Türkiye
-    </span>
-
-</div>
-
+    <div class="summary-item">
+        <strong>Göcek – İnlice</strong>
+        <span>Fethiye, Türkiye</span>
+    </div>
 
 </div>
 
@@ -1520,47 +1435,37 @@ footer{
 
 <div class="aerial-grid">
 
+    <div class="aerial-photo">
 
-<div class="aerial-photo">
+        <img
+            src="villa-aerial-overview.jpg?v=31"
+            alt="Two villas on the same property"
+        >
 
-    <img
-        src="villa-aerial-overview.jpg?v=20"
-        alt="Two villas on the same property"
-    >
-
-</div>
-
-
-<div class="aerial-text">
-
-    <div
-        class="eyebrow"
-        data-i18n="completeProperty"
-    >
-        THE COMPLETE PROPERTY
     </div>
 
 
-    <h2 data-i18n="sameProperty">
-        Two Villas on the Same Property
-    </h2>
+    <div class="aerial-text">
 
+        <div class="eyebrow" data-i18n="completeProperty">
+            THE COMPLETE PROPERTY
+        </div>
 
-    <p data-i18n="aerialText1">
-        A distinctive opportunity combining
-        two separate homes in one private setting
-        in İnlice, near Göcek.
-    </p>
+        <h2 data-i18n="sameProperty">
+            Two Villas on the Same Property
+        </h2>
 
+        <p data-i18n="aerialText1">
+            A distinctive opportunity combining two separate homes
+            in one private setting in İnlice, near Göcek.
+        </p>
 
-    <p data-i18n="aerialText2">
-        The two residences provide flexibility
-        for family living, guest accommodation
-        or investment use.
-    </p>
+        <p data-i18n="aerialText2">
+            The two residences provide flexibility for family living,
+            guest accommodation or investment use.
+        </p>
 
-</div>
-
+    </div>
 
 </div>
 
@@ -1576,48 +1481,40 @@ footer{
 
 <div class="container">
 
+    <div class="section-heading">
 
-<div class="section-heading">
+        <div class="eyebrow" data-i18n="rare">
+            A RARE OPPORTUNITY
+        </div>
 
-    <div
-        class="eyebrow"
-        data-i18n="rare"
-    >
-        A RARE OPPORTUNITY
+        <h2 data-i18n="exceptional">
+            Two Homes. One Exceptional Location.
+        </h2>
+
     </div>
 
-    <h2 data-i18n="exceptional">
-        Two Homes. One Exceptional Location.
-    </h2>
 
-</div>
+    <div class="intro-copy">
 
+        <p data-i18n="intro1">
+            Discover a unique opportunity to own two villas
+            on the same property in peaceful İnlice,
+            just outside Göcek.
+        </p>
 
-<div class="intro-copy">
+        <p data-i18n="intro2">
+            Surrounded by green hills and close to the coast,
+            the property combines privacy, generous living space
+            and convenient access to Göcek Marina and İnlice Beach.
+        </p>
 
-    <p data-i18n="intro1">
-        Discover a unique opportunity
-        to own two villas on the same property
-        in peaceful İnlice, just outside Göcek.
-    </p>
+        <p>
+            <strong data-i18n="directOwner">
+                Direct Sale from Owner
+            </strong>
+        </p>
 
-    <p data-i18n="intro2">
-        Surrounded by green hills
-        and close to the coast,
-        the property combines privacy,
-        generous living space
-        and convenient access
-        to Göcek Marina and İnlice Beach.
-    </p>
-
-    <p>
-        <strong data-i18n="directOwner">
-            Direct Sale from Owner
-        </strong>
-    </p>
-
-</div>
-
+    </div>
 
 </div>
 
@@ -1634,276 +1531,204 @@ footer{
 <div class="container">
 
 
-<!-- VILLA 1 -->
-
 <div class="villa-detail">
 
-<div class="villa-photo">
+    <div class="villa-photo">
 
-    <img
-        src="villa-garden-exterior.jpg?v=20"
-        alt="Villa One"
-    >
-
-</div>
-
-
-<div class="villa-info">
-
-    <div
-        class="villa-label"
-        data-i18n="villaOne"
-    >
-        VILLA ONE
-    </div>
-
-
-    <h2 data-i18n="villaOneTitle">
-        Spacious Triplex Villa
-    </h2>
-
-
-    <div class="stats">
-
-        <div class="stat">
-            240 m² Living Area
-        </div>
-
-        <div class="stat">
-            550 m² Plot
-        </div>
-
-        <div
-            class="stat"
-            data-i18n="threeFloors"
+        <img
+            src="villa-garden-exterior.jpg?v=31"
+            alt="Villa One"
         >
-            3 Floors
-        </div>
 
     </div>
 
 
-    <h3 data-i18n="groundFloor">
-        Ground Floor
-    </h3>
+    <div class="villa-info">
 
-    <ul>
+        <div class="villa-label" data-i18n="villaOne">
+            VILLA ONE
+        </div>
 
-        <li data-i18n="v1g1">
-            Entrance hall
-        </li>
+        <h2 data-i18n="villaOneTitle">
+            Spacious Triplex Villa
+        </h2>
 
-        <li data-i18n="v1g2">
-            Living room
-        </li>
+        <div class="stats">
 
-        <li data-i18n="v1g3">
-            Kitchen and dining room
-        </li>
+            <div class="stat">
+                240 m² Living Area
+            </div>
 
-        <li data-i18n="v1g4">
-            Laundry room
-        </li>
+            <div class="stat">
+                550 m² Plot
+            </div>
 
-        <li data-i18n="v1g5">
-            Fitness room
-        </li>
+            <div class="stat" data-i18n="threeFloors">
+                3 Floors
+            </div>
 
-    </ul>
+        </div>
 
+        <h3 data-i18n="groundFloor">
+            Ground Floor
+        </h3>
 
-    <h3 data-i18n="firstFloor">
-        First Floor
-    </h3>
-
-    <ul>
-
-        <li data-i18n="v1f1">
-            Study room
-        </li>
-
-        <li data-i18n="v1f2">
-            Master bedroom with ensuite bathroom
-        </li>
-
-        <li data-i18n="v1f3">
-            Children's room with ensuite bathroom
-        </li>
-
-    </ul>
+        <ul>
+            <li data-i18n="v1g1">Entrance hall</li>
+            <li data-i18n="v1g2">Living room</li>
+            <li data-i18n="v1g3">Kitchen and dining room</li>
+            <li data-i18n="v1g4">Laundry room</li>
+            <li data-i18n="v1g5">Fitness room</li>
+        </ul>
 
 
-    <h3 data-i18n="secondFloor">
-        Second Floor
-    </h3>
+        <h3 data-i18n="firstFloor">
+            First Floor
+        </h3>
 
-    <ul>
+        <ul>
+            <li data-i18n="v1f1">Study room</li>
 
-        <li data-i18n="v1s1">
-            Two large bedrooms
-        </li>
+            <li data-i18n="v1f2">
+                Master bedroom with ensuite bathroom
+            </li>
 
-        <li data-i18n="balcony">
-            Balcony
-        </li>
-
-        <li data-i18n="bathroom">
-            Bathroom
-        </li>
-
-    </ul>
+            <li data-i18n="v1f3">
+                Children's room with ensuite bathroom
+            </li>
+        </ul>
 
 
-    <h3 data-i18n="features">
-        Features
-    </h3>
+        <h3 data-i18n="secondFloor">
+            Second Floor
+        </h3>
 
-    <ul>
-
-        <li data-i18n="v1feature1">
-            Underfloor heating
-        </li>
-
-        <li data-i18n="v1feature2">
-            Heat pump
-        </li>
-
-        <li data-i18n="airConditioning">
-            Air conditioning
-        </li>
-
-        <li data-i18n="largeGarden">
-            Large private garden
-        </li>
-
-    </ul>
+        <ul>
+            <li data-i18n="v1s1">Two large bedrooms</li>
+            <li data-i18n="balcony">Balcony</li>
+            <li data-i18n="bathroom">Bathroom</li>
+        </ul>
 
 
-</div>
+        <h3 data-i18n="features">
+            Features
+        </h3>
+
+        <ul>
+            <li data-i18n="v1feature1">Underfloor heating</li>
+            <li data-i18n="v1feature2">Heat pump</li>
+            <li data-i18n="airConditioning">Air conditioning</li>
+            <li data-i18n="largeGarden">Large private garden</li>
+        </ul>
+
+    </div>
 
 </div>
 
 
-
-<!-- VILLA 2 -->
 
 <div class="villa-detail reverse">
 
+    <div class="villa-photo">
 
-<div class="villa-photo">
-
-    <img
-        src="villa-two-new.jpg?v=20"
-        alt="Villa Two private pool"
-    >
-
-</div>
-
-
-<div class="villa-info">
-
-    <div
-        class="villa-label"
-        data-i18n="villaTwo"
-    >
-        VILLA TWO
-    </div>
-
-
-    <h2 data-i18n="villaTwoTitle">
-        Private Pool Duplex Villa
-    </h2>
-
-
-    <div class="stats">
-
-        <div class="stat">
-            100 m² Living Area
-        </div>
-
-        <div class="stat">
-            275 m² Plot
-        </div>
-
-        <div
-            class="stat"
-            data-i18n="privatePool"
+        <img
+            src="villa-two-new.jpg?v=31"
+            alt="Villa Two private pool"
         >
-            Private Pool
-        </div>
 
     </div>
 
 
-    <h3 data-i18n="groundFloor">
-        Ground Floor
-    </h3>
+    <div class="villa-info">
 
-    <ul>
+        <div class="villa-label" data-i18n="villaTwo">
+            VILLA TWO
+        </div>
 
-        <li data-i18n="v2g1">
-            Bedroom – approximately 15 m²
-        </li>
+        <h2 data-i18n="villaTwoTitle">
+            Private Pool Duplex Villa
+        </h2>
 
-        <li data-i18n="v2g2">
-            Living room and kitchen – approximately 30 m²
-        </li>
+        <div class="stats">
 
-        <li data-i18n="v2g3">
-            Sitting room / additional bedroom
-            and bathroom – approximately 17 m²
-        </li>
+            <div class="stat">
+                100 m² Living Area
+            </div>
 
-    </ul>
+            <div class="stat">
+                275 m² Plot
+            </div>
 
+            <div class="stat" data-i18n="privatePool">
+                Private Pool
+            </div>
 
-    <h3 data-i18n="firstFloor">
-        First Floor
-    </h3>
-
-    <ul>
-
-        <li data-i18n="v2f1">
-            Bedroom and bathroom – approximately 30 m²
-        </li>
-
-    </ul>
+        </div>
 
 
-    <h3 data-i18n="features">
-        Features
-    </h3>
+        <h3 data-i18n="groundFloor">
+            Ground Floor
+        </h3>
 
-    <ul>
+        <ul>
+            <li data-i18n="v2g1">
+                Bedroom – approximately 15 m²
+            </li>
 
-        <li data-i18n="v2feature1">
-            Private swimming pool approximately 3.5 × 4.5 m
-        </li>
+            <li data-i18n="v2g2">
+                Living room and kitchen – approximately 30 m²
+            </li>
 
-        <li data-i18n="v2feature2">
-            Open-plan kitchen
-        </li>
-
-        <li data-i18n="v2feature3">
-            Direct access to pool area
-        </li>
-
-        <li data-i18n="v2feature4">
-            Modern appliances and white goods
-        </li>
-
-        <li data-i18n="airConditioning">
-            Air conditioning
-        </li>
-
-        <li>
-            Smart TV
-        </li>
-
-    </ul>
+            <li data-i18n="v2g3">
+                Sitting room / additional bedroom and bathroom –
+                approximately 17 m²
+            </li>
+        </ul>
 
 
-</div>
+        <h3 data-i18n="firstFloor">
+            First Floor
+        </h3>
+
+        <ul>
+            <li data-i18n="v2f1">
+                Bedroom and bathroom – approximately 30 m²
+            </li>
+        </ul>
+
+
+        <h3 data-i18n="features">
+            Features
+        </h3>
+
+        <ul>
+            <li data-i18n="v2feature1">
+                Private swimming pool approximately 3.5 × 4.5 m
+            </li>
+
+            <li data-i18n="v2feature2">
+                Open-plan kitchen
+            </li>
+
+            <li data-i18n="v2feature3">
+                Direct access to pool area
+            </li>
+
+            <li data-i18n="v2feature4">
+                Modern appliances and white goods
+            </li>
+
+            <li data-i18n="airConditioning">
+                Air conditioning
+            </li>
+
+            <li>
+                Smart TV
+            </li>
+
+        </ul>
+
+    </div>
 
 </div>
 
@@ -1922,94 +1747,83 @@ footer{
 
 <div class="container">
 
+    <div class="section-heading">
 
-<div class="section-heading">
+        <div class="eyebrow" data-i18n="highlights">
+            PROPERTY HIGHLIGHTS
+        </div>
 
-    <div
-        class="eyebrow"
-        data-i18n="highlights"
-    >
-        PROPERTY HIGHLIGHTS
+        <h2 data-i18n="whyStandOut">
+            Why This Property Stands Out
+        </h2>
+
+        <p data-i18n="highlightIntro">
+            A distinctive two-villa property near Göcek
+            combining lifestyle and investment potential.
+        </p>
+
     </div>
 
 
-    <h2 data-i18n="whyStandOut">
-        Why This Property Stands Out
-    </h2>
+    <div class="highlight-grid">
 
 
-    <p data-i18n="highlightIntro">
-        A distinctive two-villa property
-        near Göcek combining lifestyle
-        and investment potential.
-    </p>
+        <div class="highlight-card">
 
-</div>
+            <h3 data-i18n="twoVillasTitle">
+                Two Villas
+            </h3>
 
+            <p data-i18n="twoVillasText">
+                Two separate residences provide flexibility
+                for family and guests.
+            </p>
 
-<div class="highlight-grid">
-
-
-<div class="highlight-card">
-
-    <h3 data-i18n="twoVillasTitle">
-        Two Villas
-    </h3>
-
-    <p data-i18n="twoVillasText">
-        Two separate residences provide
-        flexibility for family and guests.
-    </p>
-
-</div>
+        </div>
 
 
-<div class="highlight-card">
+        <div class="highlight-card">
 
-    <h3 data-i18n="directTitle">
-        Direct from Owner
-    </h3>
+            <h3 data-i18n="directTitle">
+                Direct from Owner
+            </h3>
 
-    <p data-i18n="directText">
-        Contact the owner directly
-        for property details,
-        price and viewing arrangements.
-    </p>
+            <p data-i18n="directText">
+                Contact the owner directly for property details,
+                price and viewing arrangements.
+            </p>
 
-</div>
-
-
-<div class="highlight-card">
-
-    <h3 data-i18n="coastalTitle">
-        Coastal Location
-    </h3>
-
-    <p data-i18n="coastalText">
-        Conveniently located near
-        İnlice Beach and Göcek.
-    </p>
-
-</div>
+        </div>
 
 
-<div class="highlight-card">
+        <div class="highlight-card">
 
-    <h3 data-i18n="investmentTitle">
-        Investment Potential
-    </h3>
+            <h3 data-i18n="coastalTitle">
+                Coastal Location
+            </h3>
 
-    <p data-i18n="investmentText">
-        Suitable for private use
-        or potential rental use,
-        subject to local regulations.
-    </p>
+            <p data-i18n="coastalText">
+                Conveniently located near İnlice Beach and Göcek.
+            </p>
 
-</div>
+        </div>
 
 
-</div>
+        <div class="highlight-card">
 
+            <h3 data-i18n="investmentTitle">
+                Investment Potential
+            </h3>
+
+            <p data-i18n="investmentText">
+                Suitable for private use or potential rental use,
+                subject to local regulations.
+            </p>
+
+        </div>
+
+
+    </div>
 
 </div>
 
@@ -2025,78 +1839,71 @@ footer{
 
 <div class="container">
 
+    <div class="section-heading">
 
-<div class="section-heading">
+        <div class="eyebrow" data-i18n="galleryEyebrow">
+            PROPERTY GALLERY
+        </div>
 
-    <div
-        class="eyebrow"
-        data-i18n="galleryEyebrow"
-    >
-        PROPERTY GALLERY
+        <h2 data-i18n="exploreGallery">
+            Explore the Villas
+        </h2>
+
+        <p data-i18n="clickPhoto">
+            Click a photograph to view it larger.
+        </p>
+
     </div>
 
 
-    <h2 data-i18n="exploreGallery">
-        Explore the Villas
-    </h2>
+    <div class="gallery">
 
+        <img
+            src="villa-garden-exterior.jpg?v=31"
+            alt="Villa One exterior"
+        >
 
-    <p data-i18n="clickPhoto">
-        Click a photograph to view it larger.
-    </p>
+        <img
+            src="villa-two-new.jpg?v=31"
+            alt="Villa Two exterior"
+        >
 
-</div>
+        <img
+            src="villa-pool-terrace.jpg?v=31"
+            alt="Pool terrace"
+        >
 
+        <img
+            src="villa-interior-living.jpg?v=31"
+            alt="Living room"
+        >
 
-<div class="gallery">
+        <img
+            src="villa-interior-collage.jpg?v=31"
+            alt="Interior rooms"
+        >
 
-    <img
-        src="villa-garden-exterior.jpg?v=20"
-        alt="Villa One exterior"
-    >
+        <img
+            src="villa-bedroom-bathroom.jpg?v=31"
+            alt="Bedroom and bathroom"
+        >
 
-    <img
-        src="villa-two-new.jpg?v=20"
-        alt="Villa Two exterior"
-    >
+        <img
+            src="villa-drone-view.jpg?v=31"
+            alt="Drone view"
+        >
 
-    <img
-        src="villa-pool-terrace.jpg?v=20"
-        alt="Pool terrace"
-    >
+        <img
+            src="villa-aerial-overview.jpg?v=31"
+            alt="Aerial overview"
+        >
 
-    <img
-        src="villa-interior-living.jpg?v=20"
-        alt="Living room"
-    >
+        <img
+            src="ince-beach.jpg?v=31"
+            alt="İnlice Beach"
+        >
 
-    <img
-        src="villa-interior-collage.jpg?v=20"
-        alt="Interior rooms"
-    >
-
-    <img
-        src="villa-bedroom-bathroom.jpg?v=20"
-        alt="Bedroom and bathroom"
-    >
-
-    <img
-        src="villa-drone-view.jpg?v=20"
-        alt="Drone view"
-    >
-
-    <img
-        src="villa-aerial-overview.jpg?v=20"
-        alt="Aerial overview"
-    >
-
-    <img
-        src="ince-beach.jpg?v=20"
-        alt="İnlice Beach"
-    >
-
-</div>
-
+    </div>
 
 </div>
 
@@ -2108,83 +1915,68 @@ footer{
      LOCATION
 ========================================================= -->
 
-<section
-    id="location"
-    class="location"
->
+<section id="location" class="location">
 
 <div class="container location-grid">
 
 
-<div>
+    <div>
 
-    <div
-        class="eyebrow"
-        data-i18n="locationLabel"
-    >
-        LOCATION
-    </div>
-
-
-    <h2>
-        İnlice – Göcek
-    </h2>
-
-
-    <p data-i18n="location1">
-        The villas are located
-        in peaceful İnlice,
-        in the Fethiye district
-        of Muğla, Türkiye.
-    </p>
-
-
-    <p data-i18n="location2">
-        The property combines privacy
-        and nature with convenient access
-        to Göcek and the coastline.
-    </p>
-
-
-    <p data-i18n="location3">
-        İnlice Beach,
-        Göcek Marina
-        and Dalaman International Airport
-        are all within convenient reach.
-    </p>
-
-
-    <div class="location-points">
-
-        <div class="location-point">
-            İnlice Beach
+        <div class="eyebrow" data-i18n="locationLabel">
+            LOCATION
         </div>
 
-        <div class="location-point">
-            Göcek Marina
-        </div>
+        <h2>
+            İnlice – Göcek
+        </h2>
 
-        <div class="location-point">
-            Dalaman Airport
-        </div>
+        <p data-i18n="location1">
+            The villas are located in peaceful İnlice,
+            in the Fethiye district of Muğla, Türkiye.
+        </p>
 
-        <div class="location-point">
-            Fethiye
+        <p data-i18n="location2">
+            The property combines privacy and nature
+            with convenient access to Göcek and the coastline.
+        </p>
+
+        <p data-i18n="location3">
+            İnlice Beach, Göcek Marina and Dalaman International Airport
+            are all within convenient reach.
+        </p>
+
+
+        <div class="location-points">
+
+            <div class="location-point">
+                İnlice Beach
+            </div>
+
+            <div class="location-point">
+                Göcek Marina
+            </div>
+
+            <div class="location-point">
+                Dalaman Airport
+            </div>
+
+            <div class="location-point">
+                Fethiye
+            </div>
+
         </div>
 
     </div>
 
-</div>
 
+    <div>
 
-<div>
+        <img
+            src="villa-location-map.jpg?v=31"
+            alt="Göcek İnlice location map"
+        >
 
-    <img
-        src="villa-location-map.jpg?v=20"
-        alt="Göcek İnlice location map"
-    >
-
-</div>
+    </div>
 
 
 </div>
@@ -2219,71 +2011,51 @@ footer{
      CONTACT
 ========================================================= -->
 
-<section
-    id="contact"
-    class="contact"
->
+<section id="contact" class="contact">
 
 <div class="container">
 
 
-<div
-    class="eyebrow"
-    data-i18n="privateSale"
->
-    PRIVATE SALE
-</div>
+    <div class="eyebrow" data-i18n="privateSale">
+        PRIVATE SALE
+    </div>
+
+    <h2 data-i18n="interested">
+        Interested in the Property?
+    </h2>
+
+    <div class="price" data-i18n="priceRequest">
+        Price on Request
+    </div>
+
+    <p class="contact-description" data-i18n="contactText">
+        Contact the owner directly for the asking price,
+        additional information and viewing arrangements.
+    </p>
 
 
-<h2 data-i18n="interested">
-    Interested in the Property?
-</h2>
+    <a
+        class="button button-gold"
+        href="mailto:elitvillasingocekinlice@gmail.com?subject=Göcek Twin Villas - Price Request"
+        data-i18n="requestPrice"
+    >
+        Request Price
+    </a>
 
 
-<div
-    class="price"
-    data-i18n="priceRequest"
->
-    Price on Request
-</div>
+    <a
+        class="button button-outline"
+        href="mailto:elitvillasingocekinlice@gmail.com?subject=Göcek Twin Villas - Viewing Request"
+        data-i18n="arrangeViewing"
+    >
+        Arrange a Viewing
+    </a>
 
 
-<p
-    class="contact-description"
-    data-i18n="contactText"
->
-    Contact the owner directly
-    for the asking price,
-    additional information
-    and viewing arrangements.
-</p>
-
-
-<a
-    class="button button-gold"
-    href="mailto:elitvillasingocekinlice@gmail.com?subject=Göcek Twin Villas - Price Request"
-    data-i18n="requestPrice"
->
-    Request Price
-</a>
-
-
-<a
-    class="button button-outline"
-    href="mailto:elitvillasingocekinlice@gmail.com?subject=Göcek Twin Villas - Viewing Request"
-    data-i18n="arrangeViewing"
->
-    Arrange a Viewing
-</a>
-
-
-<div
-    class="direct-owner-footer"
-    data-i18n="footerOwner"
->
-    Direct sale from owner ·
-    Göcek / İnlice / Fethiye, Türkiye
-</div>
+    <div class="direct-owner-footer" data-i18n="footerOwner">
+        Direct sale from owner ·
+        Göcek / İnlice / Fethiye, Türkiye
+    </div>
 
 
 </div>
@@ -2293,10 +2065,7 @@ footer{
 
 
 <footer>
-
-© 2026 Göcek Twin Villas ·
-İnlice, Göcek / Fethiye, Türkiye
-
+    © 2026 Göcek Twin Villas · İnlice, Göcek / Fethiye, Türkiye
 </footer>
 
 
@@ -2305,23 +2074,17 @@ footer{
      LIGHTBOX
 ========================================================= -->
 
-<div
-    class="lightbox"
-    id="lightbox"
->
+<div class="lightbox" id="lightbox">
 
-<span
-    class="close-lightbox"
-    id="closeLightbox"
->
-    &times;
-</span>
+    <span class="close-lightbox" id="closeLightbox">
+        &times;
+    </span>
 
-<img
-    id="lightboxImage"
-    src=""
-    alt="Villa photograph"
->
+    <img
+        id="lightboxImage"
+        src=""
+        alt="Villa photograph"
+    >
 
 </div>
 
@@ -2335,7 +2098,7 @@ footer{
 
 const translations = {
 
-en: {
+en:{
 
 pageTitle:
 "Göcek Twin Villas for Sale | İnlice, Fethiye",
@@ -2349,6 +2112,7 @@ navLocation:"Location",
 navContact:"Price & Contact",
 
 exclusive:"EXCLUSIVE PROPERTY FOR SALE",
+
 twoOne:"TWO VILLAS · ONE PROPERTY",
 
 mainTitle:
@@ -2357,11 +2121,14 @@ mainTitle:
 heroText:
 "Two distinctive private residences on the same property in one of Türkiye's most beautiful coastal regions.",
 
-directOwner:"Direct Sale from Owner",
+directOwner:
+"Direct Sale from Owner",
 
-explore:"Explore the Villas",
+explore:
+"Explore the Villas",
 
-requestPrice:"Request Price",
+requestPrice:
+"Request Price",
 
 villaOne:"VILLA ONE",
 villaTwo:"VILLA TWO",
@@ -2403,7 +2170,8 @@ aerialText1:
 aerialText2:
 "The two residences provide flexibility for family living, guest accommodation or investment use.",
 
-rare:"A RARE OPPORTUNITY",
+rare:
+"A RARE OPPORTUNITY",
 
 exceptional:
 "Two Homes. One Exceptional Location.",
@@ -2415,11 +2183,8 @@ intro2:
 "Surrounded by green hills and close to the coast, the property combines privacy, generous living space and convenient access to Göcek Marina and İnlice Beach.",
 
 groundFloor:"Ground Floor",
-
 firstFloor:"First Floor",
-
 secondFloor:"Second Floor",
-
 features:"Features",
 
 v1g1:"Entrance hall",
@@ -2440,7 +2205,6 @@ v1s1:
 "Two large bedrooms",
 
 balcony:"Balcony",
-
 bathroom:"Bathroom",
 
 v1feature1:
@@ -2557,12 +2321,7 @@ footerOwner:
 },
 
 
-
-/* =========================================================
-   GERMAN
-========================================================= */
-
-de: {
+de:{
 
 pageTitle:
 "Zwei Villen zum Verkauf in Göcek – İnlice",
@@ -2597,7 +2356,6 @@ requestPrice:
 "Preis anfragen",
 
 villaOne:"VILLA EINS",
-
 villaTwo:"VILLA ZWEI",
 
 villaOneTitle:
@@ -2612,11 +2370,9 @@ villaOneShort:
 villaTwoShort:
 "Private Duplex-Villa mit Swimmingpool, Garten und Außenwohnbereich.",
 
-threeFloors:
-"3 Etagen",
+threeFloors:"3 Etagen",
 
-privatePool:
-"Privater Pool",
+privatePool:"Privater Pool",
 
 summaryVillas:
 "Auf demselben Grundstück",
@@ -2651,26 +2407,15 @@ intro1:
 intro2:
 "Umgeben von grünen Hügeln und nahe der Küste verbindet die Immobilie Privatsphäre, großzügige Wohnflächen und eine gute Erreichbarkeit von Göcek Marina und İnlice Beach.",
 
-groundFloor:
-"Erdgeschoss",
-
-firstFloor:
-"Erster Stock",
-
-secondFloor:
-"Zweiter Stock",
-
-features:
-"Ausstattung",
+groundFloor:"Erdgeschoss",
+firstFloor:"Erster Stock",
+secondFloor:"Zweiter Stock",
+features:"Ausstattung",
 
 v1g1:"Eingangsbereich",
-
 v1g2:"Wohnzimmer",
-
 v1g3:"Küche und Essbereich",
-
 v1g4:"Waschküche",
-
 v1g5:"Fitnessraum",
 
 v1f1:"Arbeitszimmer",
@@ -2685,7 +2430,6 @@ v1s1:
 "Zwei große Schlafzimmer",
 
 balcony:"Balkon",
-
 bathroom:"Badezimmer",
 
 v1feature1:
@@ -2802,12 +2546,7 @@ footerOwner:
 },
 
 
-
-/* =========================================================
-   RUSSIAN
-========================================================= */
-
-ru: {
+ru:{
 
 pageTitle:
 "Две виллы на продажу в Гёджеке – Инджлидже",
@@ -2841,11 +2580,8 @@ explore:
 requestPrice:
 "Узнать цену",
 
-villaOne:
-"ВИЛЛА 1",
-
-villaTwo:
-"ВИЛЛА 2",
+villaOne:"ВИЛЛА 1",
+villaTwo:"ВИЛЛА 2",
 
 villaOneTitle:
 "Просторная трёхэтажная вилла",
@@ -2859,11 +2595,9 @@ villaOneShort:
 villaTwoShort:
 "Частная двухэтажная вилла с бассейном, садом и зоной отдыха на открытом воздухе.",
 
-threeFloors:
-"3 этажа",
+threeFloors:"3 этажа",
 
-privatePool:
-"Частный бассейн",
+privatePool:"Частный бассейн",
 
 summaryVillas:
 "На одном участке",
@@ -2898,35 +2632,18 @@ intro1:
 intro2:
 "В окружении зелёных холмов и недалеко от побережья объект сочетает приватность, простор и удобный доступ к марине Гёджека и пляжу Инджлидже.",
 
-groundFloor:
-"Первый уровень",
+groundFloor:"Первый уровень",
+firstFloor:"Второй уровень",
+secondFloor:"Третий уровень",
+features:"Особенности",
 
-firstFloor:
-"Второй уровень",
+v1g1:"Прихожая",
+v1g2:"Гостиная",
+v1g3:"Кухня и столовая",
+v1g4:"Прачечная",
+v1g5:"Фитнес-комната",
 
-secondFloor:
-"Третий уровень",
-
-features:
-"Особенности",
-
-v1g1:
-"Прихожая",
-
-v1g2:
-"Гостиная",
-
-v1g3:
-"Кухня и столовая",
-
-v1g4:
-"Прачечная",
-
-v1g5:
-"Фитнес-комната",
-
-v1f1:
-"Кабинет",
+v1f1:"Кабинет",
 
 v1f2:
 "Главная спальня с собственной ванной",
@@ -2937,17 +2654,11 @@ v1f3:
 v1s1:
 "Две большие спальни",
 
-balcony:
-"Балкон",
+balcony:"Балкон",
+bathroom:"Ванная комната",
 
-bathroom:
-"Ванная комната",
-
-v1feature1:
-"Тёплые полы",
-
-v1feature2:
-"Тепловой насос",
+v1feature1:"Тёплые полы",
+v1feature2:"Тепловой насос",
 
 airConditioning:
 "Кондиционирование",
@@ -3012,8 +2723,7 @@ investmentTitle:
 investmentText:
 "Подходит для личного использования или потенциальной аренды в соответствии с местными правилами.",
 
-galleryEyebrow:
-"ГАЛЕРЕЯ",
+galleryEyebrow:"ГАЛЕРЕЯ",
 
 exploreGallery:
 "Посмотреть виллы",
@@ -3057,12 +2767,7 @@ footerOwner:
 },
 
 
-
-/* =========================================================
-   UKRAINIAN
-========================================================= */
-
-uk: {
+uk:{
 
 pageTitle:
 "Дві вілли на продаж у Гьоджеку – Інджлідже",
@@ -3096,11 +2801,8 @@ explore:
 requestPrice:
 "Дізнатися ціну",
 
-villaOne:
-"ВІЛЛА 1",
-
-villaTwo:
-"ВІЛЛА 2",
+villaOne:"ВІЛЛА 1",
+villaTwo:"ВІЛЛА 2",
 
 villaOneTitle:
 "Простора триповерхова вілла",
@@ -3114,11 +2816,9 @@ villaOneShort:
 villaTwoShort:
 "Приватна дворівнева вілла з басейном, садом та відкритою зоною відпочинку.",
 
-threeFloors:
-"3 поверхи",
+threeFloors:"3 поверхи",
 
-privatePool:
-"Приватний басейн",
+privatePool:"Приватний басейн",
 
 summaryVillas:
 "На одній ділянці",
@@ -3153,35 +2853,18 @@ intro1:
 intro2:
 "Оточений зеленими пагорбами та розташований неподалік узбережжя, об'єкт поєднує приватність, простір і зручний доступ до марини Гьоджека та пляжу Інджлідже.",
 
-groundFloor:
-"Перший рівень",
+groundFloor:"Перший рівень",
+firstFloor:"Другий рівень",
+secondFloor:"Третій рівень",
+features:"Особливості",
 
-firstFloor:
-"Другий рівень",
+v1g1:"Передпокій",
+v1g2:"Вітальня",
+v1g3:"Кухня та їдальня",
+v1g4:"Пральня",
+v1g5:"Фітнес-кімната",
 
-secondFloor:
-"Третій рівень",
-
-features:
-"Особливості",
-
-v1g1:
-"Передпокій",
-
-v1g2:
-"Вітальня",
-
-v1g3:
-"Кухня та їдальня",
-
-v1g4:
-"Пральня",
-
-v1g5:
-"Фітнес-кімната",
-
-v1f1:
-"Кабінет",
+v1f1:"Кабінет",
 
 v1f2:
 "Головна спальня з власною ванною",
@@ -3192,11 +2875,8 @@ v1f3:
 v1s1:
 "Дві великі спальні",
 
-balcony:
-"Балкон",
-
-bathroom:
-"Ванна кімната",
+balcony:"Балкон",
+bathroom:"Ванна кімната",
 
 v1feature1:
 "Підігрів підлоги",
@@ -3267,8 +2947,7 @@ investmentTitle:
 investmentText:
 "Підходить для приватного використання або потенційної оренди відповідно до місцевих правил.",
 
-galleryEyebrow:
-"ГАЛЕРЕЯ",
+galleryEyebrow:"ГАЛЕРЕЯ",
 
 exploreGallery:
 "Переглянути вілли",
@@ -3312,12 +2991,7 @@ footerOwner:
 },
 
 
-
-/* =========================================================
-   TURKISH
-========================================================= */
-
-tr: {
+tr:{
 
 pageTitle:
 "Göcek İnlice Satılık İki Villa | Sahibinden",
@@ -3351,11 +3025,8 @@ explore:
 requestPrice:
 "Fiyat Sor",
 
-villaOne:
-"VİLLA 1",
-
-villaTwo:
-"VİLLA 2",
+villaOne:"VİLLA 1",
+villaTwo:"VİLLA 2",
 
 villaOneTitle:
 "Geniş Triplex Villa",
@@ -3369,11 +3040,9 @@ villaOneShort:
 villaTwoShort:
 "Özel yüzme havuzu, bahçe ve açık yaşam alanlarına sahip dubleks villa.",
 
-threeFloors:
-"3 Kat",
+threeFloors:"3 Kat",
 
-privatePool:
-"Özel Havuz",
+privatePool:"Özel Havuz",
 
 summaryVillas:
 "Aynı mülk üzerinde",
@@ -3408,35 +3077,18 @@ intro1:
 intro2:
 "Yeşil tepelerle çevrili ve sahile yakın olan mülk; mahremiyet, geniş yaşam alanları ve Göcek Marina ile İnlice Plajı'na kolay ulaşımı bir arada sunuyor.",
 
-groundFloor:
-"Zemin Kat",
+groundFloor:"Zemin Kat",
+firstFloor:"Birinci Kat",
+secondFloor:"İkinci Kat",
+features:"Özellikler",
 
-firstFloor:
-"Birinci Kat",
+v1g1:"Giriş holü",
+v1g2:"Salon",
+v1g3:"Mutfak ve yemek odası",
+v1g4:"Çamaşır odası",
+v1g5:"Fitness odası",
 
-secondFloor:
-"İkinci Kat",
-
-features:
-"Özellikler",
-
-v1g1:
-"Giriş holü",
-
-v1g2:
-"Salon",
-
-v1g3:
-"Mutfak ve yemek odası",
-
-v1g4:
-"Çamaşır odası",
-
-v1g5:
-"Fitness odası",
-
-v1f1:
-"Çalışma odası",
+v1f1:"Çalışma odası",
 
 v1f2:
 "Ebeveyn banyolu ana yatak odası",
@@ -3447,11 +3099,8 @@ v1f3:
 v1s1:
 "İki büyük yatak odası",
 
-balcony:
-"Balkon",
-
-bathroom:
-"Banyo",
+balcony:"Balkon",
+bathroom:"Banyo",
 
 v1feature1:
 "Yerden ısıtma",
@@ -3569,6 +3218,7 @@ footerOwner:
 };
 
 
+
 /* =========================================================
    LANGUAGE CHANGE
 ========================================================= */
@@ -3581,17 +3231,12 @@ function setLanguage(lang){
 
     const t = translations[lang];
 
-
     document.documentElement.lang = lang;
-
 
     document.title = t.pageTitle;
 
-
     const metaDescription =
-        document.getElementById(
-            "metaDescription"
-        );
+        document.getElementById("metaDescription");
 
     if(metaDescription){
 
@@ -3602,48 +3247,35 @@ function setLanguage(lang){
 
     }
 
-
     document
-    .querySelectorAll("[data-i18n]")
-    .forEach(element => {
+        .querySelectorAll("[data-i18n]")
+        .forEach(element => {
 
-        const key =
-            element.dataset.i18n;
+            const key = element.dataset.i18n;
 
-        if(
-            Object.prototype.hasOwnProperty.call(
-                t,
-                key
-            )
-        ){
+            if(
+                Object.prototype.hasOwnProperty.call(
+                    t,
+                    key
+                )
+            ){
+                element.textContent = t[key];
+            }
 
-            element.textContent =
-                t[key];
-
-        }
-
-    });
+        });
 
 
     document
-    .querySelectorAll(".lang-btn")
-    .forEach(button => {
+        .querySelectorAll(".lang-btn")
+        .forEach(button => {
 
-        button.classList.remove(
-            "active"
-        );
+            button.classList.remove("active");
 
-        if(
-            button.dataset.lang === lang
-        ){
+            if(button.dataset.lang === lang){
+                button.classList.add("active");
+            }
 
-            button.classList.add(
-                "active"
-            );
-
-        }
-
-    });
+        });
 
 
     try{
@@ -3653,42 +3285,30 @@ function setLanguage(lang){
             lang
         );
 
-    }catch(error){
-
-        console.log(
-            "Language storage unavailable"
-        );
-
-    }
+    }catch(error){}
 
 }
 
 
-/* =========================================================
-   LANGUAGE BUTTON CLICKS
-========================================================= */
 
 document
-.querySelectorAll(".lang-btn")
-.forEach(button => {
+    .querySelectorAll(".lang-btn")
+    .forEach(button => {
 
-    button.addEventListener(
-        "click",
-        function(){
+        button.addEventListener(
+            "click",
+            function(){
 
-            setLanguage(
-                this.dataset.lang
-            );
+                setLanguage(
+                    this.dataset.lang
+                );
 
-        }
-    );
+            }
+        );
 
-});
+    });
 
 
-/* =========================================================
-   START LANGUAGE
-========================================================= */
 
 let initialLanguage = "en";
 
@@ -3699,28 +3319,18 @@ try{
             "villaLanguage"
         );
 
-    if(
-        saved &&
-        translations[saved]
-    ){
-
+    if(saved && translations[saved]){
         initialLanguage = saved;
-
     }
 
-}catch(error){
+}catch(error){}
 
-    initialLanguage = "en";
+setLanguage(initialLanguage);
 
-}
-
-setLanguage(
-    initialLanguage
-);
 
 
 /* =========================================================
-   GALLERY LIGHTBOX
+   LIGHTBOX
 ========================================================= */
 
 const lightbox =
@@ -3740,24 +3350,24 @@ const closeLightbox =
 
 
 document
-.querySelectorAll(".gallery img")
-.forEach(image => {
+    .querySelectorAll(".gallery img")
+    .forEach(image => {
 
-    image.addEventListener(
-        "click",
-        function(){
+        image.addEventListener(
+            "click",
+            function(){
 
-            lightboxImage.src =
-                this.src;
+                lightboxImage.src =
+                    this.src;
 
-            lightbox.classList.add(
-                "active"
-            );
+                lightbox.classList.add(
+                    "active"
+                );
 
-        }
-    );
+            }
+        );
 
-});
+    });
 
 
 closeLightbox.addEventListener(
@@ -3776,9 +3386,7 @@ lightbox.addEventListener(
     "click",
     function(event){
 
-        if(
-            event.target === lightbox
-        ){
+        if(event.target === lightbox){
 
             lightbox.classList.remove(
                 "active"
@@ -3794,9 +3402,7 @@ document.addEventListener(
     "keydown",
     function(event){
 
-        if(
-            event.key === "Escape"
-        ){
+        if(event.key === "Escape"){
 
             lightbox.classList.remove(
                 "active"
