@@ -1,6 +1,8 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
+
 <meta charset="UTF-8">
 
 <meta name="viewport"
@@ -8,14 +10,11 @@
 
 <title>Göcek Twin Villas for Sale | İnlice, Fethiye</title>
 
-<meta name="description"
+<meta id="metaDescription"
+      name="description"
       content="Two private villas for sale in İnlice near Göcek, Fethiye, Türkiye. Two residences on the same property, direct sale from owner.">
 
 <style>
-
-/* =========================================================
-   COLORS
-========================================================= */
 
 :root{
     --green:#153b31;
@@ -67,25 +66,30 @@ nav{
     justify-content:space-between;
     align-items:center;
 
-    padding:22px 6%;
+    padding:18px 5%;
 
     position:sticky;
     top:0;
     z-index:1000;
 
-    box-shadow:
-        0 4px 18px rgba(0,0,0,.10);
+    box-shadow:0 4px 18px rgba(0,0,0,.10);
 }
 
 .logo{
-    font-size:22px;
+    font-size:21px;
     font-weight:800;
-    letter-spacing:1.7px;
+    letter-spacing:1.6px;
+}
+
+.nav-right{
+    display:flex;
+    align-items:center;
+    gap:28px;
 }
 
 .nav-links{
     display:flex;
-    gap:28px;
+    gap:25px;
 }
 
 .nav-links a{
@@ -100,7 +104,44 @@ nav{
 
 
 /* =========================================================
-   TOP SALES INTRO
+   LANGUAGE SWITCHER
+========================================================= */
+
+.language-switcher{
+    display:flex;
+    gap:5px;
+    padding:4px;
+    background:rgba(255,255,255,.08);
+    border-radius:6px;
+}
+
+.lang-btn{
+    border:none;
+    background:transparent;
+    color:#dce5e1;
+
+    padding:6px 8px;
+
+    cursor:pointer;
+
+    font-size:12px;
+    font-weight:700;
+
+    border-radius:4px;
+}
+
+.lang-btn:hover{
+    background:rgba(255,255,255,.10);
+}
+
+.lang-btn.active{
+    background:var(--gold);
+    color:white;
+}
+
+
+/* =========================================================
+   HERO INTRO
 ========================================================= */
 
 .hero-intro{
@@ -112,26 +153,21 @@ nav{
         );
 
     color:white;
-
     text-align:center;
 
-    padding:
-        68px 20px 58px;
+    padding:65px 20px 56px;
 }
 
 .sale-badge{
     display:inline-block;
 
-    border:
-        1px solid rgba(255,255,255,.45);
+    border:1px solid rgba(255,255,255,.45);
 
     padding:8px 18px;
-
     margin-bottom:16px;
 
     font-size:12px;
     font-weight:700;
-
     letter-spacing:3px;
 }
 
@@ -147,34 +183,27 @@ nav{
 }
 
 .hero-intro h1{
-    font-size:
-        clamp(42px,5vw,70px);
-
+    font-size:clamp(42px,5vw,70px);
     line-height:1.05;
 
     max-width:950px;
 
-    margin:
-        0 auto 18px;
+    margin:0 auto 18px;
 }
 
 .hero-intro p{
-    max-width:790px;
+    max-width:800px;
 
-    margin:
-        0 auto 11px;
+    margin:0 auto 11px;
 
-    font-size:
-        clamp(17px,2vw,21px);
+    font-size:clamp(17px,2vw,21px);
 
     color:#e5ece9;
 }
 
 .owner{
     color:#ecd7a6 !important;
-
     font-weight:bold;
-
     margin-top:10px !important;
 }
 
@@ -190,9 +219,7 @@ nav{
 .button{
     display:inline-block;
 
-    padding:
-        14px 27px;
-
+    padding:14px 27px;
     margin:6px;
 
     border-radius:4px;
@@ -203,12 +230,11 @@ nav{
 }
 
 .button:hover{
-    transform:
-        translateY(-2px);
+    transform:translateY(-2px);
 }
 
 .button-light{
-    background:#fff;
+    background:white;
     color:var(--green);
 }
 
@@ -224,14 +250,13 @@ nav{
 
 
 /* =========================================================
-   TWO MAIN VILLA PHOTOS
+   MAIN VILLAS
 ========================================================= */
 
 .main-villas{
     background:var(--cream);
 
-    padding:
-        42px 5% 62px;
+    padding:42px 5% 62px;
 }
 
 .main-villa-grid{
@@ -240,9 +265,7 @@ nav{
     margin:auto;
 
     display:grid;
-
-    grid-template-columns:
-        1fr 1fr;
+    grid-template-columns:1fr 1fr;
 
     gap:24px;
 }
@@ -254,19 +277,8 @@ nav{
 
     overflow:hidden;
 
-    box-shadow:
-        0 14px 38px rgba(25,55,43,.12);
+    box-shadow:0 14px 38px rgba(25,55,43,.12);
 }
-
-
-/*
-IMPORTANT:
-
-No fixed height here.
-
-The photos retain their actual aspect ratio,
-so roofs, pools and gardens are not cut off.
-*/
 
 .property-photo{
     width:100%;
@@ -274,8 +286,7 @@ so roofs, pools and gardens are not cut off.
 }
 
 .property-photo-info{
-    padding:
-        24px 26px 27px;
+    padding:24px 26px 27px;
 }
 
 .property-number{
@@ -307,25 +318,20 @@ so roofs, pools and gardens are not cut off.
 
 .quick-details{
     display:flex;
-
     flex-wrap:wrap;
-
     gap:8px;
 }
 
 .quick-detail{
     background:var(--light);
 
-    border:
-        1px solid #e1e7e4;
+    border:1px solid #e1e7e4;
 
-    padding:
-        7px 11px;
+    padding:7px 11px;
 
     border-radius:4px;
 
     font-size:13px;
-
     font-weight:700;
 
     color:var(--green);
@@ -333,21 +339,18 @@ so roofs, pools and gardens are not cut off.
 
 
 /* =========================================================
-   PROPERTY SUMMARY
+   SUMMARY
 ========================================================= */
 
 .sales-summary{
-    padding:
-        45px 6%;
-
-    background:#fff;
+    padding:45px 6%;
+    background:white;
 }
 
 .summary-grid{
     display:grid;
 
-    grid-template-columns:
-        repeat(4,1fr);
+    grid-template-columns:repeat(4,1fr);
 
     max-width:1100px;
 
@@ -357,20 +360,17 @@ so roofs, pools and gardens are not cut off.
 
     overflow:hidden;
 
-    box-shadow:
-        0 8px 30px rgba(20,50,40,.08);
+    box-shadow:0 8px 30px rgba(20,50,40,.08);
 }
 
 .summary-item{
-    padding:
-        28px 15px;
+    padding:28px 15px;
 
     text-align:center;
 
     background:white;
 
-    border-right:
-        1px solid #edf0ee;
+    border-right:1px solid #edf0ee;
 }
 
 .summary-item:last-child{
@@ -389,20 +389,18 @@ so roofs, pools and gardens are not cut off.
 
 .summary-item span{
     color:var(--muted);
-
     font-size:14px;
 }
 
 
 /* =========================================================
-   AERIAL PHOTO
+   AERIAL
 ========================================================= */
 
 .aerial-section{
     background:var(--light);
 
-    padding:
-        70px 6%;
+    padding:70px 6%;
 }
 
 .aerial-grid{
@@ -412,8 +410,7 @@ so roofs, pools and gardens are not cut off.
 
     display:grid;
 
-    grid-template-columns:
-        1.7fr .7fr;
+    grid-template-columns:1.7fr .7fr;
 
     gap:48px;
 
@@ -427,8 +424,7 @@ so roofs, pools and gardens are not cut off.
 
     border-radius:14px;
 
-    box-shadow:
-        0 14px 38px rgba(30,60,48,.11);
+    box-shadow:0 14px 38px rgba(30,60,48,.11);
 }
 
 .aerial-image img{
@@ -454,9 +450,7 @@ so roofs, pools and gardens are not cut off.
 .aerial-text h2{
     color:var(--green);
 
-    font-size:
-        clamp(31px,3vw,44px);
-
+    font-size:clamp(31px,3vw,44px);
     line-height:1.14;
 
     margin-bottom:17px;
@@ -472,12 +466,11 @@ so roofs, pools and gardens are not cut off.
 
 
 /* =========================================================
-   GENERAL SECTIONS
+   GENERAL
 ========================================================= */
 
 section{
-    padding:
-        78px 7%;
+    padding:78px 7%;
 }
 
 .container{
@@ -487,15 +480,13 @@ section{
 
 .section-heading{
     text-align:center;
-
     margin-bottom:46px;
 }
 
 .section-heading h2{
     color:var(--green);
 
-    font-size:
-        clamp(32px,4vw,45px);
+    font-size:clamp(32px,4vw,45px);
 
     line-height:1.15;
 
@@ -509,11 +500,6 @@ section{
 
     margin:auto;
 }
-
-
-/* =========================================================
-   INTRO TEXT
-========================================================= */
 
 .intro-copy{
     max-width:930px;
@@ -531,14 +517,13 @@ section{
 
 
 /* =========================================================
-   VILLA INFORMATION CARDS
+   VILLA DETAILS
 ========================================================= */
 
 .villa{
     display:grid;
 
-    grid-template-columns:
-        1fr 1fr;
+    grid-template-columns:1fr 1fr;
 
     background:var(--light);
 
@@ -548,8 +533,7 @@ section{
 
     border-radius:12px;
 
-    box-shadow:
-        0 12px 35px rgba(20,50,40,.07);
+    box-shadow:0 12px 35px rgba(20,50,40,.07);
 }
 
 .villa.reverse .villa-image{
@@ -559,11 +543,6 @@ section{
 .villa.reverse .villa-info{
     order:1;
 }
-
-
-/*
-Again, photos are not forced into a fixed crop.
-*/
 
 .villa-image{
     background:#e8ece9;
@@ -578,15 +557,13 @@ Again, photos are not forced into a fixed crop.
 }
 
 .villa-info{
-    padding:
-        48px 44px;
+    padding:48px 44px;
 }
 
 .villa-tag{
     color:var(--gold);
 
     font-size:12px;
-
     font-weight:800;
 
     letter-spacing:2px;
@@ -599,8 +576,7 @@ Again, photos are not forced into a fixed crop.
 .villa-info h2{
     color:var(--green);
 
-    font-size:
-        clamp(31px,3vw,40px);
+    font-size:clamp(31px,3vw,40px);
 
     line-height:1.1;
 
@@ -609,26 +585,21 @@ Again, photos are not forced into a fixed crop.
 
 .villa-stats{
     display:flex;
-
     flex-wrap:wrap;
 
     gap:8px;
 
-    margin:
-        18px 0 22px;
+    margin:18px 0 22px;
 }
 
 .stat{
     background:white;
 
-    border:
-        1px solid #dde5e1;
+    border:1px solid #dde5e1;
 
-    padding:
-        7px 11px;
+    padding:7px 11px;
 
     font-size:13px;
-
     font-weight:700;
 }
 
@@ -637,8 +608,7 @@ Again, photos are not forced into a fixed crop.
 
     font-size:17px;
 
-    margin:
-        17px 0 6px;
+    margin:17px 0 6px;
 }
 
 .villa-info ul{
@@ -665,28 +635,24 @@ Again, photos are not forced into a fixed crop.
     color:white;
 }
 
-.investment
-.section-heading h2{
+.investment .section-heading h2{
     color:white;
 }
 
-.investment
-.section-heading p{
+.investment .section-heading p{
     color:#d5e0dc;
 }
 
 .benefit-grid{
     display:grid;
 
-    grid-template-columns:
-        repeat(4,1fr);
+    grid-template-columns:repeat(4,1fr);
 
     gap:18px;
 }
 
 .benefit{
-    border:
-        1px solid rgba(255,255,255,.16);
+    border:1px solid rgba(255,255,255,.16);
 
     padding:27px;
 
@@ -695,7 +661,6 @@ Again, photos are not forced into a fixed crop.
 
 .benefit h3{
     color:#e1c584;
-
     margin-bottom:8px;
 }
 
@@ -706,7 +671,6 @@ Again, photos are not forced into a fixed crop.
 
 .gallery{
     columns:3;
-
     column-gap:12px;
 }
 
@@ -722,16 +686,13 @@ Again, photos are not forced into a fixed crop.
 
     cursor:pointer;
 
-    box-shadow:
-        0 5px 18px rgba(0,0,0,.07);
+    box-shadow:0 5px 18px rgba(0,0,0,.07);
 
     transition:.2s;
 }
 
 .gallery img:hover{
-    transform:
-        translateY(-2px);
-
+    transform:translateY(-2px);
     opacity:.93;
 }
 
@@ -749,8 +710,7 @@ Again, photos are not forced into a fixed crop.
 
     z-index:2000;
 
-    background:
-        rgba(0,0,0,.94);
+    background:rgba(0,0,0,.94);
 
     justify-content:center;
     align-items:center;
@@ -795,8 +755,7 @@ Again, photos are not forced into a fixed crop.
 .location-grid{
     display:grid;
 
-    grid-template-columns:
-        .85fr 1.15fr;
+    grid-template-columns:.85fr 1.15fr;
 
     gap:48px;
 
@@ -820,15 +779,13 @@ Again, photos are not forced into a fixed crop.
 
     border-radius:9px;
 
-    box-shadow:
-        0 12px 30px rgba(20,50,40,.10);
+    box-shadow:0 12px 30px rgba(20,50,40,.10);
 }
 
 .location-points{
     display:grid;
 
-    grid-template-columns:
-        1fr 1fr;
+    grid-template-columns:1fr 1fr;
 
     gap:8px;
 
@@ -853,8 +810,7 @@ Again, photos are not forced into a fixed crop.
 .beach-banner{
     min-height:430px;
 
-    padding:
-        50px 7%;
+    padding:50px 7%;
 
     color:white;
 
@@ -867,14 +823,13 @@ Again, photos are not forced into a fixed crop.
             rgba(0,0,0,.04),
             rgba(0,0,0,.42)
         ),
-        url("ince-beach.jpg?v=3")
+        url("ince-beach.jpg?v=10")
         center / cover
         no-repeat;
 }
 
 .beach-banner h2{
-    font-size:
-        clamp(30px,4vw,42px);
+    font-size:clamp(30px,4vw,42px);
 }
 
 
@@ -891,8 +846,7 @@ Again, photos are not forced into a fixed crop.
 }
 
 .contact h2{
-    font-size:
-        clamp(36px,5vw,54px);
+    font-size:clamp(36px,5vw,54px);
 
     margin-bottom:8px;
 }
@@ -910,8 +864,7 @@ Again, photos are not forced into a fixed crop.
 .contact p{
     max-width:670px;
 
-    margin:
-        0 auto 27px;
+    margin:0 auto 27px;
 
     color:#d4dfdb;
 }
@@ -923,11 +876,6 @@ Again, photos are not forced into a fixed crop.
 
     font-size:14px;
 }
-
-
-/* =========================================================
-   FOOTER
-========================================================= */
 
 footer{
     background:var(--dark2);
@@ -943,8 +891,16 @@ footer{
 
 
 /* =========================================================
-   TABLET
+   RESPONSIVE
 ========================================================= */
+
+@media(max-width:1050px){
+
+    .nav-links{
+        display:none;
+    }
+
+}
 
 @media(max-width:950px){
 
@@ -953,8 +909,7 @@ footer{
     }
 
     .summary-grid{
-        grid-template-columns:
-            repeat(2,1fr);
+        grid-template-columns:repeat(2,1fr);
     }
 
     .aerial-grid{
@@ -976,8 +931,7 @@ footer{
     }
 
     .benefit-grid{
-        grid-template-columns:
-            repeat(2,1fr);
+        grid-template-columns:repeat(2,1fr);
     }
 
     .gallery{
@@ -987,49 +941,42 @@ footer{
     .location-grid{
         grid-template-columns:1fr;
     }
+
 }
-
-
-/* =========================================================
-   MOBILE
-========================================================= */
 
 @media(max-width:650px){
 
     nav{
-        padding:
-            18px 5%;
+        padding:15px 4%;
     }
 
     .logo{
-        font-size:17px;
+        font-size:15px;
     }
 
-    .nav-links{
-        display:none;
+    .language-switcher{
+        gap:2px;
+    }
+
+    .lang-btn{
+        padding:5px 5px;
+        font-size:11px;
     }
 
     .hero-intro{
-        padding:
-            50px 18px 43px;
+        padding:50px 18px 43px;
     }
 
     .hero-intro h1{
-        font-size:38px;
-    }
-
-    .hero-intro p{
-        font-size:16px;
+        font-size:37px;
     }
 
     .main-villas{
-        padding:
-            25px 4% 45px;
+        padding:25px 4% 45px;
     }
 
     .property-photo-info{
-        padding:
-            20px 18px 22px;
+        padding:20px 18px 22px;
     }
 
     .summary-grid{
@@ -1038,24 +985,19 @@ footer{
 
     .summary-item{
         border-right:none;
-
-        border-bottom:
-            1px solid #edf0ee;
-    }
-
-    .aerial-section{
-        padding:
-            48px 5%;
+        border-bottom:1px solid #edf0ee;
     }
 
     section{
-        padding:
-            57px 6%;
+        padding:57px 6%;
+    }
+
+    .aerial-section{
+        padding:48px 5%;
     }
 
     .villa-info{
-        padding:
-            34px 22px;
+        padding:34px 22px;
     }
 
     .benefit-grid{
@@ -1073,9 +1015,11 @@ footer{
     .beach-banner{
         min-height:340px;
     }
+
 }
 
 </style>
+
 </head>
 
 
@@ -1088,193 +1032,257 @@ footer{
 
 <nav>
 
-    <div class="logo">
-        GÖCEK TWIN VILLAS
-    </div>
+<div class="logo">
+    GÖCEK TWIN VILLAS
+</div>
+
+
+<div class="nav-right">
 
     <div class="nav-links">
 
-        <a href="#villas">
+        <a href="#villas" data-i18n="navVillas">
             Villas
         </a>
 
-        <a href="#gallery">
+        <a href="#gallery" data-i18n="navGallery">
             Gallery
         </a>
 
-        <a href="#location">
+        <a href="#location" data-i18n="navLocation">
             Location
         </a>
 
-        <a href="#contact">
-            Price &amp; Contact
+        <a href="#contact" data-i18n="navContact">
+            Price & Contact
         </a>
 
     </div>
+
+
+    <div class="language-switcher">
+
+        <button class="lang-btn active" data-lang="en">
+            EN
+        </button>
+
+        <button class="lang-btn" data-lang="de">
+            DE
+        </button>
+
+        <button class="lang-btn" data-lang="ru">
+            RU
+        </button>
+
+        <button class="lang-btn" data-lang="uk">
+            UA
+        </button>
+
+        <button class="lang-btn" data-lang="tr">
+            TR
+        </button>
+
+    </div>
+
+</div>
 
 </nav>
 
 
 
 <!-- =====================================================
-     SALES INTRO
+     HERO
 ===================================================== -->
 
 <header class="hero-intro">
 
-    <div class="sale-badge">
-        EXCLUSIVE PROPERTY FOR SALE
-    </div>
+<div class="sale-badge"
+     data-i18n="exclusive">
 
-    <div class="hero-kicker">
-        TWO VILLAS · ONE PROPERTY
-    </div>
+    EXCLUSIVE PROPERTY FOR SALE
 
-    <h1>
-        Two Villas for Sale
-        <br>
-        in Göcek – İnlice
-    </h1>
+</div>
 
-    <p>
-        Two distinctive private residences
-        on the same property in one of
-        Türkiye's most beautiful coastal regions.
-    </p>
 
-    <p class="owner">
-        Direct Sale from Owner
-    </p>
+<div class="hero-kicker"
+     data-i18n="twoOne">
 
-    <div class="hero-buttons">
+    TWO VILLAS · ONE PROPERTY
 
-        <a
-          class="button button-light"
-          href="#villas">
+</div>
 
-            Explore the Villas
 
-        </a>
+<h1 data-i18n="mainTitle">
 
-        <a
-          class="button button-outline"
-          href="#contact">
+    Two Villas for Sale in Göcek – İnlice
 
-            Request Price
+</h1>
 
-        </a>
 
-    </div>
+<p data-i18n="heroText">
+
+    Two distinctive private residences
+    on the same property in one of
+    Türkiye's most beautiful coastal regions.
+
+</p>
+
+
+<p class="owner"
+   data-i18n="directOwner">
+
+    Direct Sale from Owner
+
+</p>
+
+
+<div class="hero-buttons">
+
+    <a class="button button-light"
+       href="#villas"
+       data-i18n="explore">
+
+        Explore the Villas
+
+    </a>
+
+    <a class="button button-outline"
+       href="#contact"
+       data-i18n="requestPrice">
+
+        Request Price
+
+    </a>
+
+</div>
 
 </header>
 
 
 
 <!-- =====================================================
-     TWO MAIN VILLAS
+     MAIN VILLAS
 ===================================================== -->
 
 <div class="main-villas">
 
-    <div class="main-villa-grid">
+<div class="main-villa-grid">
 
 
-        <!-- VILLA ONE -->
+<!-- VILLA ONE -->
 
-        <article class="property-photo-card">
+<article class="property-photo-card">
 
-            <img
-              class="property-photo"
-              src="villa-garden-exterior.jpg?v=3"
-              alt="Villa One in İnlice Göcek">
-
-            <div class="property-photo-info">
-
-                <div class="property-number">
-                    VILLA ONE
-                </div>
-
-                <h2>
-                    Spacious Triplex Villa
-                </h2>
-
-                <p>
-                    Large private garden,
-                    generous living areas
-                    and a peaceful natural setting.
-                </p>
-
-                <div class="quick-details">
-
-                    <div class="quick-detail">
-                        240 m² Living Area
-                    </div>
-
-                    <div class="quick-detail">
-                        550 m² Plot
-                    </div>
-
-                    <div class="quick-detail">
-                        3 Floors
-                    </div>
-
-                </div>
-
-            </div>
-
-        </article>
+<img class="property-photo"
+     src="villa-garden-exterior.jpg?v=10"
+     alt="Villa One">
 
 
+<div class="property-photo-info">
 
-        <!-- VILLA TWO
-             THIS USES YOUR NEW PHOTO -->
+<div class="property-number"
+     data-i18n="villaOne">
 
-        <article class="property-photo-card">
+    VILLA ONE
 
-            <img
-              class="property-photo"
-              src="villa-two-new.jpg?v=3"
-              alt="Villa Two with private pool in İnlice Göcek">
+</div>
 
-            <div class="property-photo-info">
+<h2 data-i18n="villaOneTitle">
 
-                <div class="property-number">
-                    VILLA TWO
-                </div>
+    Spacious Triplex Villa
 
-                <h2>
-                    Private Pool Duplex Villa
-                </h2>
+</h2>
 
-                <p>
-                    A private duplex residence
-                    with swimming pool,
-                    garden and outdoor living space.
-                </p>
+<p data-i18n="villaOneShort">
 
-                <div class="quick-details">
+    Large private garden, generous living areas
+    and a peaceful natural setting.
 
-                    <div class="quick-detail">
-                        100 m² Living Area
-                    </div>
-
-                    <div class="quick-detail">
-                        275 m² Plot
-                    </div>
-
-                    <div class="quick-detail">
-                        Private Pool
-                    </div>
-
-                </div>
-
-            </div>
-
-        </article>
+</p>
 
 
-    </div>
+<div class="quick-details">
 
+<div class="quick-detail">
+    240 m²
+</div>
+
+<div class="quick-detail">
+    550 m² Plot
+</div>
+
+<div class="quick-detail"
+     data-i18n="threeFloors">
+    3 Floors
+</div>
+
+</div>
+
+</div>
+
+</article>
+
+
+
+<!-- VILLA TWO -->
+
+<article class="property-photo-card">
+
+<img class="property-photo"
+     src="villa-two-new.jpg?v=10"
+     alt="Villa Two">
+
+
+<div class="property-photo-info">
+
+<div class="property-number"
+     data-i18n="villaTwo">
+
+    VILLA TWO
+
+</div>
+
+
+<h2 data-i18n="villaTwoTitle">
+
+    Private Pool Duplex Villa
+
+</h2>
+
+
+<p data-i18n="villaTwoShort">
+
+    A private duplex residence with swimming pool,
+    garden and outdoor living space.
+
+</p>
+
+
+<div class="quick-details">
+
+<div class="quick-detail">
+    100 m²
+</div>
+
+<div class="quick-detail">
+    275 m² Plot
+</div>
+
+<div class="quick-detail"
+     data-i18n="privatePool">
+
+    Private Pool
+
+</div>
+
+</div>
+
+</div>
+
+</article>
+
+
+</div>
 </div>
 
 
@@ -1285,181 +1293,188 @@ footer{
 
 <section class="sales-summary">
 
-    <div class="summary-grid">
+<div class="summary-grid">
 
 
-        <div class="summary-item">
+<div class="summary-item">
 
-            <strong>
-                2 Villas
-            </strong>
+<strong>
+    2
+</strong>
 
-            <span>
-                On the same property
-            </span>
+<span data-i18n="summaryVillas">
+    Villas on the same property
+</span>
 
-        </div>
-
-
-        <div class="summary-item">
-
-            <strong>
-                240 m²
-            </strong>
-
-            <span>
-                Villa One living area
-            </span>
-
-        </div>
+</div>
 
 
-        <div class="summary-item">
+<div class="summary-item">
 
-            <strong>
-                100 m²
-            </strong>
+<strong>
+    240 m²
+</strong>
 
-            <span>
-                Villa Two living area
-            </span>
+<span data-i18n="villaOneArea">
+    Villa One living area
+</span>
 
-        </div>
-
-
-        <div class="summary-item">
-
-            <strong>
-                Göcek – İnlice
-            </strong>
-
-            <span>
-                Fethiye, Türkiye
-            </span>
-
-        </div>
+</div>
 
 
-    </div>
+<div class="summary-item">
+
+<strong>
+    100 m²
+</strong>
+
+<span data-i18n="villaTwoArea">
+    Villa Two living area
+</span>
+
+</div>
+
+
+<div class="summary-item">
+
+<strong>
+    Göcek – İnlice
+</strong>
+
+<span>
+    Fethiye, Türkiye
+</span>
+
+</div>
+
+
+</div>
 
 </section>
 
 
 
 <!-- =====================================================
-     AERIAL VIEW
+     AERIAL
 ===================================================== -->
 
 <div class="aerial-section">
 
-    <div class="aerial-grid">
+<div class="aerial-grid">
 
 
-        <div class="aerial-image">
+<div class="aerial-image">
 
-            <img
-              src="villa-aerial-overview.jpg?v=3"
-              alt="Two villas on the same property">
+<img src="villa-aerial-overview.jpg?v=10"
+     alt="Two villas aerial view">
 
-        </div>
-
-
-        <div class="aerial-text">
-
-            <div class="eyebrow">
-                THE COMPLETE PROPERTY
-            </div>
-
-            <h2>
-                Two Villas on the Same Property
-            </h2>
-
-            <p>
-                A distinctive opportunity
-                combining two separate homes
-                in one private setting in İnlice,
-                near Göcek.
-            </p>
-
-            <p>
-                The two residences provide flexibility
-                for family living,
-                guest accommodation
-                or investment use.
-            </p>
-
-        </div>
+</div>
 
 
-    </div>
+<div class="aerial-text">
+
+<div class="eyebrow"
+     data-i18n="completeProperty">
+
+    THE COMPLETE PROPERTY
+
+</div>
+
+
+<h2 data-i18n="sameProperty">
+
+    Two Villas on the Same Property
+
+</h2>
+
+
+<p data-i18n="aerialText1">
+
+    A distinctive opportunity combining
+    two separate homes in one private
+    setting in İnlice, near Göcek.
+
+</p>
+
+
+<p data-i18n="aerialText2">
+
+    The residences provide flexibility
+    for family living, guest accommodation
+    or investment use.
+
+</p>
+
+</div>
+
+
+</div>
 
 </div>
 
 
 
 <!-- =====================================================
-     INTRODUCTION
+     INTRO
 ===================================================== -->
 
 <section>
 
-    <div class="section-heading">
+<div class="section-heading">
 
-        <div class="eyebrow">
-            A RARE OPPORTUNITY
-        </div>
+<div class="eyebrow"
+     data-i18n="rare">
 
-        <h2>
-            Two Homes.
-            One Exceptional Location.
-        </h2>
+    A RARE OPPORTUNITY
 
-    </div>
+</div>
 
 
-    <div class="intro-copy">
+<h2 data-i18n="exceptional">
 
-        <p>
-            Discover a unique opportunity to own
+    Two Homes. One Exceptional Location.
 
-            <strong>
-                two villas on the same property
-            </strong>
+</h2>
 
-            in peaceful İnlice,
-            just outside Göcek.
-        </p>
+</div>
 
-        <br>
 
-        <p>
-            Surrounded by green hills
-            and close to the coast,
-            the property combines privacy,
-            generous living space
-            and convenient access
-            to Göcek Marina
-            and İnlice Beach.
-        </p>
+<div class="intro-copy">
 
-        <br>
+<p data-i18n="intro1">
 
-        <p>
-            The property is offered
+    Discover a unique opportunity to own two villas
+    on the same property in peaceful İnlice,
+    just outside Göcek.
 
-            <strong>
-                directly by the owner.
-            </strong>
-        </p>
+</p>
 
-    </div>
+<br>
+
+<p data-i18n="intro2">
+
+    Surrounded by green hills and close to the coast,
+    the property combines privacy, generous living space
+    and convenient access to Göcek Marina and İnlice Beach.
+
+</p>
+
+<br>
+
+<p>
+<strong data-i18n="directOwner">
+    Direct Sale from Owner
+</strong>
+</p>
+
+</div>
 
 </section>
 
 
 
 <!-- =====================================================
-     VILLA DETAILS
+     DETAILS
 ===================================================== -->
 
 <section id="villas">
@@ -1471,98 +1486,145 @@ footer{
 
 <div class="villa">
 
-    <div class="villa-image">
+<div class="villa-image">
 
-        <img
-          src="villa-garden-exterior.jpg?v=3"
-          alt="Villa One Göcek İnlice">
+<img src="villa-garden-exterior.jpg?v=10"
+     alt="Villa One">
 
-    </div>
-
-
-    <div class="villa-info">
-
-        <div class="villa-tag">
-            VILLA ONE
-        </div>
-
-        <h2>
-            Spacious Triplex Villa
-        </h2>
+</div>
 
 
-        <div class="villa-stats">
+<div class="villa-info">
 
-            <div class="stat">
-                240 m² Living Area
-            </div>
+<div class="villa-tag"
+     data-i18n="villaOne">
 
-            <div class="stat">
-                550 m² Plot
-            </div>
+    VILLA ONE
 
-            <div class="stat">
-                3 Floors
-            </div>
-
-        </div>
+</div>
 
 
-        <h3>
-            Ground Floor
-        </h3>
+<h2 data-i18n="villaOneTitle">
 
-        <ul>
-            <li>Entrance hall</li>
-            <li>Living room</li>
-            <li>Kitchen and dining room</li>
-            <li>Laundry room</li>
-            <li>Fitness room</li>
-        </ul>
+    Spacious Triplex Villa
+
+</h2>
 
 
-        <h3>
-            First Floor
-        </h3>
+<div class="villa-stats">
 
-        <ul>
-            <li>Study room</li>
+<div class="stat">
+    240 m²
+</div>
 
-            <li>
-                Master bedroom
-                with ensuite bathroom
-            </li>
+<div class="stat">
+    550 m² Plot
+</div>
 
-            <li>
-                Children's room
-                with ensuite bathroom
-            </li>
-        </ul>
+<div class="stat"
+     data-i18n="threeFloors">
+    3 Floors
+</div>
 
-
-        <h3>
-            Second Floor
-        </h3>
-
-        <ul>
-            <li>Two large bedrooms</li>
-            <li>Balcony</li>
-            <li>Bathroom</li>
-        </ul>
+</div>
 
 
-        <h3>
-            Features
-        </h3>
+<h3 data-i18n="groundFloor">
+    Ground Floor
+</h3>
 
-        <ul>
-            <li>Underfloor heating</li>
-            <li>Heat pump</li>
-            <li>Air conditioning</li>
-            <li>Large private garden</li>
-        </ul>
+<ul>
 
-    </div>
+<li data-i18n="v1g1">
+    Entrance hall
+</li>
+
+<li data-i18n="v1g2">
+    Living room
+</li>
+
+<li data-i18n="v1g3">
+    Kitchen and dining room
+</li>
+
+<li data-i18n="v1g4">
+    Laundry room
+</li>
+
+<li data-i18n="v1g5">
+    Fitness room
+</li>
+
+</ul>
+
+
+<h3 data-i18n="firstFloor">
+    First Floor
+</h3>
+
+<ul>
+
+<li data-i18n="v1f1">
+    Study room
+</li>
+
+<li data-i18n="v1f2">
+    Master bedroom with ensuite bathroom
+</li>
+
+<li data-i18n="v1f3">
+    Children's room with ensuite bathroom
+</li>
+
+</ul>
+
+
+<h3 data-i18n="secondFloor">
+    Second Floor
+</h3>
+
+<ul>
+
+<li data-i18n="v1s1">
+    Two large bedrooms
+</li>
+
+<li data-i18n="balcony">
+    Balcony
+</li>
+
+<li data-i18n="bathroom">
+    Bathroom
+</li>
+
+</ul>
+
+
+<h3 data-i18n="features">
+    Features
+</h3>
+
+<ul>
+
+<li data-i18n="v1feature1">
+    Underfloor heating
+</li>
+
+<li data-i18n="v1feature2">
+    Heat pump
+</li>
+
+<li data-i18n="airConditioning">
+    Air conditioning
+</li>
+
+<li data-i18n="largeGarden">
+    Large private garden
+</li>
+
+</ul>
+
+</div>
 
 </div>
 
@@ -1572,118 +1634,121 @@ footer{
 
 <div class="villa reverse">
 
-    <div class="villa-image">
+<div class="villa-image">
 
-        <img
-          src="villa-two-new.jpg?v=3"
-          alt="Villa Two private pool Göcek İnlice">
-
-    </div>
-
-
-    <div class="villa-info">
-
-        <div class="villa-tag">
-            VILLA TWO
-        </div>
-
-        <h2>
-            Private Pool Duplex Villa
-        </h2>
-
-
-        <div class="villa-stats">
-
-            <div class="stat">
-                100 m² Living Area
-            </div>
-
-            <div class="stat">
-                275 m² Plot
-            </div>
-
-            <div class="stat">
-                Private Pool
-            </div>
-
-        </div>
-
-
-        <h3>
-            Ground Floor
-        </h3>
-
-        <ul>
-
-            <li>
-                Bedroom – approximately 15 m²
-            </li>
-
-            <li>
-                Living room and kitchen –
-                approximately 30 m²
-            </li>
-
-            <li>
-                Sitting room / additional bedroom
-                and bathroom –
-                approximately 17 m²
-            </li>
-
-        </ul>
-
-
-        <h3>
-            First Floor
-        </h3>
-
-        <ul>
-
-            <li>
-                Bedroom and bathroom –
-                approximately 30 m²
-            </li>
-
-        </ul>
-
-
-        <h3>
-            Features
-        </h3>
-
-        <ul>
-
-            <li>
-                Private swimming pool
-                approximately 3.5 × 4.5 m
-            </li>
-
-            <li>
-                Open-plan kitchen
-            </li>
-
-            <li>
-                Direct access to the pool area
-            </li>
-
-            <li>
-                Modern appliances
-                and white goods
-            </li>
-
-            <li>
-                Air conditioning
-            </li>
-
-            <li>
-                Smart TV
-            </li>
-
-        </ul>
-
-    </div>
+<img src="villa-two-new.jpg?v=10"
+     alt="Villa Two">
 
 </div>
+
+
+<div class="villa-info">
+
+<div class="villa-tag"
+     data-i18n="villaTwo">
+
+    VILLA TWO
+
+</div>
+
+
+<h2 data-i18n="villaTwoTitle">
+
+    Private Pool Duplex Villa
+
+</h2>
+
+
+<div class="villa-stats">
+
+<div class="stat">
+    100 m²
+</div>
+
+<div class="stat">
+    275 m² Plot
+</div>
+
+<div class="stat"
+     data-i18n="privatePool">
+
+    Private Pool
+
+</div>
+
+</div>
+
+
+<h3 data-i18n="groundFloor">
+    Ground Floor
+</h3>
+
+<ul>
+
+<li data-i18n="v2g1">
+    Bedroom – approximately 15 m²
+</li>
+
+<li data-i18n="v2g2">
+    Living room and kitchen – approximately 30 m²
+</li>
+
+<li data-i18n="v2g3">
+    Sitting room / additional bedroom and bathroom – approximately 17 m²
+</li>
+
+</ul>
+
+
+<h3 data-i18n="firstFloor">
+    First Floor
+</h3>
+
+<ul>
+
+<li data-i18n="v2f1">
+    Bedroom and bathroom – approximately 30 m²
+</li>
+
+</ul>
+
+
+<h3 data-i18n="features">
+    Features
+</h3>
+
+<ul>
+
+<li data-i18n="v2feature1">
+    Private swimming pool approximately 3.5 × 4.5 m
+</li>
+
+<li data-i18n="v2feature2">
+    Open-plan kitchen
+</li>
+
+<li data-i18n="v2feature3">
+    Direct access to the pool area
+</li>
+
+<li data-i18n="v2feature4">
+    Modern appliances and white goods
+</li>
+
+<li data-i18n="airConditioning">
+    Air conditioning
+</li>
+
+<li>
+    Smart TV
+</li>
+
+</ul>
+
+</div>
+
+</div>
+
 
 </div>
 
@@ -1699,89 +1764,90 @@ footer{
 
 <div class="container">
 
-    <div class="section-heading">
+<div class="section-heading">
 
-        <div class="eyebrow">
-            PROPERTY HIGHLIGHTS
-        </div>
+<div class="eyebrow"
+     data-i18n="highlights">
 
-        <h2>
-            Why This Property Stands Out
-        </h2>
+    PROPERTY HIGHLIGHTS
 
-        <p>
-            A distinctive two-villa property
-            near Göcek combining
-            lifestyle and investment potential.
-        </p>
+</div>
 
-    </div>
+<h2 data-i18n="whyStandOut">
 
+    Why This Property Stands Out
 
-    <div class="benefit-grid">
+</h2>
 
+<p data-i18n="highlightIntro">
 
-        <div class="benefit">
+    A distinctive two-villa property near Göcek,
+    combining lifestyle and investment potential.
 
-            <h3>
-                Two Villas
-            </h3>
+</p>
 
-            <p>
-                Two separate residences
-                provide flexibility
-                for family and guests.
-            </p>
-
-        </div>
+</div>
 
 
-        <div class="benefit">
-
-            <h3>
-                Direct from Owner
-            </h3>
-
-            <p>
-                Contact the owner directly
-                for property details,
-                price and viewing arrangements.
-            </p>
-
-        </div>
+<div class="benefit-grid">
 
 
-        <div class="benefit">
+<div class="benefit">
 
-            <h3>
-                Coastal Location
-            </h3>
+<h3 data-i18n="twoVillasTitle">
+    Two Villas
+</h3>
 
-            <p>
-                Conveniently located
-                near İnlice Beach
-                and Göcek.
-            </p>
+<p data-i18n="twoVillasText">
+    Two separate residences provide flexibility
+    for family and guests.
+</p>
 
-        </div>
-
-
-        <div class="benefit">
-
-            <h3>
-                Investment Potential
-            </h3>
-
-            <p>
-                Suitable for private use
-                or potential rental use,
-                subject to local regulations.
-            </p>
-
-        </div>
+</div>
 
 
-    </div>
+<div class="benefit">
+
+<h3 data-i18n="directTitle">
+    Direct from Owner
+</h3>
+
+<p data-i18n="directText">
+    Contact the owner directly for property details,
+    price and viewing arrangements.
+</p>
+
+</div>
+
+
+<div class="benefit">
+
+<h3 data-i18n="coastalTitle">
+    Coastal Location
+</h3>
+
+<p data-i18n="coastalText">
+    Conveniently located near İnlice Beach and Göcek.
+</p>
+
+</div>
+
+
+<div class="benefit">
+
+<h3 data-i18n="investmentTitle">
+    Investment Potential
+</h3>
+
+<p data-i18n="investmentText">
+    Suitable for private use or potential rental use,
+    subject to local regulations.
+</p>
+
+</div>
+
+
+</div>
 
 </div>
 
@@ -1798,73 +1864,62 @@ footer{
 <div class="container">
 
 
-    <div class="section-heading">
+<div class="section-heading">
 
-        <div class="eyebrow">
-            PROPERTY GALLERY
-        </div>
+<div class="eyebrow"
+     data-i18n="galleryEyebrow">
 
-        <h2>
-            Explore the Villas
-        </h2>
+    PROPERTY GALLERY
 
-        <p>
-            Click a photograph
-            to view it larger.
-        </p>
-
-    </div>
+</div>
 
 
-    <div class="gallery">
+<h2 data-i18n="exploreGallery">
+
+    Explore the Villas
+
+</h2>
 
 
-        <img
-          src="villa-garden-exterior.jpg?v=3"
-          alt="Villa One garden">
+<p data-i18n="clickPhoto">
+
+    Click a photograph to view it larger.
+
+</p>
+
+</div>
 
 
-        <img
-          src="villa-two-new.jpg?v=3"
-          alt="Villa Two private pool">
+<div class="gallery">
 
+<img src="villa-garden-exterior.jpg?v=10"
+     alt="Villa One">
 
-        <img
-          src="villa-pool-terrace.jpg?v=3"
-          alt="Pool terrace">
+<img src="villa-two-new.jpg?v=10"
+     alt="Villa Two">
 
+<img src="villa-pool-terrace.jpg?v=10"
+     alt="Pool terrace">
 
-        <img
-          src="villa-interior-living.jpg?v=3"
-          alt="Villa living room">
+<img src="villa-interior-living.jpg?v=10"
+     alt="Living area">
 
+<img src="villa-interior-collage.jpg?v=10"
+     alt="Interior">
 
-        <img
-          src="villa-interior-collage.jpg?v=3"
-          alt="Villa interiors">
+<img src="villa-bedroom-bathroom.jpg?v=10"
+     alt="Bedroom">
 
+<img src="villa-drone-view.jpg?v=10"
+     alt="Drone view">
 
-        <img
-          src="villa-bedroom-bathroom.jpg?v=3"
-          alt="Bedroom and bathroom">
+<img src="villa-aerial-overview.jpg?v=10"
+     alt="Aerial view">
 
+<img src="ince-beach.jpg?v=10"
+     alt="İnlice Beach">
 
-        <img
-          src="villa-drone-view.jpg?v=3"
-          alt="Drone view">
-
-
-        <img
-          src="villa-aerial-overview.jpg?v=3"
-          alt="Two villas aerial view">
-
-
-        <img
-          src="ince-beach.jpg?v=3"
-          alt="İnlice Beach">
-
-
-    </div>
+</div>
 
 </div>
 
@@ -1876,75 +1931,80 @@ footer{
      LOCATION
 ===================================================== -->
 
-<section
-  id="location"
-  class="location">
+<section id="location"
+         class="location">
 
 <div class="container location-grid">
 
 
-    <div>
+<div>
 
-        <div class="eyebrow">
-            LOCATION
-        </div>
+<div class="eyebrow"
+     data-i18n="locationLabel">
 
-        <h2>
-            İnlice – Göcek
-        </h2>
+    LOCATION
 
-        <p>
-            The villas are located
-            in peaceful İnlice,
-            in the Fethiye district
-            of Muğla, Türkiye.
-        </p>
-
-        <p>
-            The property combines
-            privacy and nature
-            with convenient access
-            to Göcek and the coastline.
-        </p>
-
-        <p>
-            İnlice Beach,
-            Göcek Marina
-            and Dalaman International Airport
-            are all within convenient reach.
-        </p>
+</div>
 
 
-        <div class="location-points">
-
-            <div class="location-point">
-                İnlice Beach
-            </div>
-
-            <div class="location-point">
-                Göcek Marina
-            </div>
-
-            <div class="location-point">
-                Dalaman Airport
-            </div>
-
-            <div class="location-point">
-                Fethiye
-            </div>
-
-        </div>
-
-    </div>
+<h2>
+    İnlice – Göcek
+</h2>
 
 
-    <div>
+<p data-i18n="location1">
 
-        <img
-          src="villa-location-map.jpg?v=3"
-          alt="Location map Göcek İnlice">
+    The villas are located in peaceful İnlice,
+    in the Fethiye district of Muğla, Türkiye.
 
-    </div>
+</p>
+
+
+<p data-i18n="location2">
+
+    The property combines privacy and nature
+    with convenient access to Göcek and the coastline.
+
+</p>
+
+
+<p data-i18n="location3">
+
+    İnlice Beach, Göcek Marina and Dalaman International Airport
+    are all within convenient reach.
+
+</p>
+
+
+<div class="location-points">
+
+<div class="location-point">
+    İnlice Beach
+</div>
+
+<div class="location-point">
+    Göcek Marina
+</div>
+
+<div class="location-point">
+    Dalaman Airport
+</div>
+
+<div class="location-point">
+    Fethiye
+</div>
+
+</div>
+
+</div>
+
+
+<div>
+
+<img src="villa-location-map.jpg?v=10"
+     alt="Göcek İnlice Location Map">
+
+</div>
 
 
 </div>
@@ -1959,18 +2019,17 @@ footer{
 
 <div class="beach-banner">
 
-    <div>
+<div>
 
-        <h2>
-            Life Near the Turquoise Coast
-        </h2>
+<h2 data-i18n="turquoise">
+    Life Near the Turquoise Coast
+</h2>
 
-        <p>
-            İnlice Beach · Göcek ·
-            Fethiye · Türkiye
-        </p>
+<p>
+    İnlice Beach · Göcek · Fethiye · Türkiye
+</p>
 
-    </div>
+</div>
 
 </div>
 
@@ -1980,56 +2039,70 @@ footer{
      CONTACT
 ===================================================== -->
 
-<section
-  id="contact"
-  class="contact">
+<section id="contact"
+         class="contact">
 
 <div class="container">
 
 
-    <div class="eyebrow">
-        PRIVATE SALE
-    </div>
+<div class="eyebrow"
+     data-i18n="privateSale">
 
-    <h2>
-        Interested in the Property?
-    </h2>
+    PRIVATE SALE
 
-    <div class="price">
-        Price on Request
-    </div>
-
-    <p>
-        Contact the owner directly
-        for the asking price,
-        additional information
-        and viewing arrangements.
-    </p>
+</div>
 
 
-    <a
-      class="button button-gold"
-      href="mailto:elitvillasingocekinlice@gmail.com?subject=Göcek Twin Villas - Price Request">
+<h2 data-i18n="interested">
 
-        Request Price
+    Interested in the Property?
 
-    </a>
+</h2>
 
 
-    <a
-      class="button button-outline"
-      href="mailto:elitvillasingocekinlice@gmail.com?subject=Göcek Twin Villas - Viewing Request">
+<div class="price"
+     data-i18n="priceRequest">
 
-        Arrange a Viewing
+    Price on Request
 
-    </a>
+</div>
 
 
-    <div class="direct-owner">
-        Direct sale from owner ·
-        Göcek / İnlice /
-        Fethiye, Türkiye
-    </div>
+<p data-i18n="contactText">
+
+    Contact the owner directly for the asking price,
+    additional information and viewing arrangements.
+
+</p>
+
+
+<a class="button button-gold"
+   id="priceEmail"
+   href="mailto:elitvillasingocekinlice@gmail.com?subject=Göcek Twin Villas - Price Request"
+   data-i18n="requestPrice">
+
+    Request Price
+
+</a>
+
+
+<a class="button button-outline"
+   id="viewingEmail"
+   href="mailto:elitvillasingocekinlice@gmail.com?subject=Göcek Twin Villas - Viewing Request"
+   data-i18n="arrangeViewing">
+
+    Arrange a Viewing
+
+</a>
+
+
+<div class="direct-owner"
+     data-i18n="footerOwner">
+
+    Direct sale from owner · Göcek / İnlice / Fethiye, Türkiye
+
+</div>
+
 
 </div>
 
@@ -2037,39 +2110,32 @@ footer{
 
 
 
-<!-- =====================================================
-     FOOTER
-===================================================== -->
-
 <footer>
 
-    © 2026 Göcek Twin Villas ·
-    İnlice, Göcek / Fethiye, Türkiye
+© 2026 Göcek Twin Villas ·
+İnlice, Göcek / Fethiye, Türkiye
 
 </footer>
 
 
 
 <!-- =====================================================
-     PHOTO LIGHTBOX
+     LIGHTBOX
 ===================================================== -->
 
-<div
-  class="lightbox"
-  id="lightbox">
+<div class="lightbox"
+     id="lightbox">
 
-    <span
-      class="close-lightbox"
+<span class="close-lightbox"
       id="closeLightbox">
 
-        &times;
+    &times;
 
-    </span>
+</span>
 
-    <img
-      id="lightboxImage"
-      src=""
-      alt="Villa photograph">
+<img id="lightboxImage"
+     src=""
+     alt="Villa photograph">
 
 </div>
 
@@ -2077,89 +2143,955 @@ footer{
 
 <script>
 
-const galleryImages =
-document.querySelectorAll(
-    ".gallery img"
-);
+/* =========================================================
+   TRANSLATIONS
+========================================================= */
 
-const lightbox =
-document.getElementById(
-    "lightbox"
-);
+const translations = {
 
-const lightboxImage =
-document.getElementById(
-    "lightboxImage"
-);
+en:{
 
-const closeLightbox =
-document.getElementById(
-    "closeLightbox"
-);
+pageTitle:
+"Göcek Twin Villas for Sale | İnlice, Fethiye",
+
+description:
+"Two private villas for sale in İnlice near Göcek, Fethiye, Türkiye. Direct sale from owner.",
+
+navVillas:"Villas",
+navGallery:"Gallery",
+navLocation:"Location",
+navContact:"Price & Contact",
+
+exclusive:"EXCLUSIVE PROPERTY FOR SALE",
+twoOne:"TWO VILLAS · ONE PROPERTY",
+mainTitle:"Two Villas for Sale in Göcek – İnlice",
+
+heroText:
+"Two distinctive private residences on the same property in one of Türkiye's most beautiful coastal regions.",
+
+directOwner:"Direct Sale from Owner",
+explore:"Explore the Villas",
+requestPrice:"Request Price",
+
+villaOne:"VILLA ONE",
+villaTwo:"VILLA TWO",
+
+villaOneTitle:"Spacious Triplex Villa",
+villaTwoTitle:"Private Pool Duplex Villa",
+
+villaOneShort:
+"Large private garden, generous living areas and a peaceful natural setting.",
+
+villaTwoShort:
+"A private duplex residence with swimming pool, garden and outdoor living space.",
+
+threeFloors:"3 Floors",
+privatePool:"Private Pool",
+
+summaryVillas:"Villas on the same property",
+villaOneArea:"Villa One living area",
+villaTwoArea:"Villa Two living area",
+
+completeProperty:"THE COMPLETE PROPERTY",
+
+sameProperty:
+"Two Villas on the Same Property",
+
+aerialText1:
+"A distinctive opportunity combining two separate homes in one private setting in İnlice, near Göcek.",
+
+aerialText2:
+"The residences provide flexibility for family living, guest accommodation or investment use.",
+
+rare:"A RARE OPPORTUNITY",
+
+exceptional:
+"Two Homes. One Exceptional Location.",
+
+intro1:
+"Discover a unique opportunity to own two villas on the same property in peaceful İnlice, just outside Göcek.",
+
+intro2:
+"Surrounded by green hills and close to the coast, the property combines privacy, generous living space and convenient access to Göcek Marina and İnlice Beach.",
+
+groundFloor:"Ground Floor",
+firstFloor:"First Floor",
+secondFloor:"Second Floor",
+features:"Features",
+
+v1g1:"Entrance hall",
+v1g2:"Living room",
+v1g3:"Kitchen and dining room",
+v1g4:"Laundry room",
+v1g5:"Fitness room",
+
+v1f1:"Study room",
+v1f2:"Master bedroom with ensuite bathroom",
+v1f3:"Children's room with ensuite bathroom",
+
+v1s1:"Two large bedrooms",
+balcony:"Balcony",
+bathroom:"Bathroom",
+
+v1feature1:"Underfloor heating",
+v1feature2:"Heat pump",
+airConditioning:"Air conditioning",
+largeGarden:"Large private garden",
+
+v2g1:"Bedroom – approximately 15 m²",
+v2g2:"Living room and kitchen – approximately 30 m²",
+v2g3:"Sitting room / additional bedroom and bathroom – approximately 17 m²",
+v2f1:"Bedroom and bathroom – approximately 30 m²",
+
+v2feature1:"Private swimming pool approximately 3.5 × 4.5 m",
+v2feature2:"Open-plan kitchen",
+v2feature3:"Direct access to the pool area",
+v2feature4:"Modern appliances and white goods",
+
+highlights:"PROPERTY HIGHLIGHTS",
+whyStandOut:"Why This Property Stands Out",
+
+highlightIntro:
+"A distinctive two-villa property near Göcek, combining lifestyle and investment potential.",
+
+twoVillasTitle:"Two Villas",
+twoVillasText:"Two separate residences provide flexibility for family and guests.",
+
+directTitle:"Direct from Owner",
+directText:"Contact the owner directly for property details, price and viewing arrangements.",
+
+coastalTitle:"Coastal Location",
+coastalText:"Conveniently located near İnlice Beach and Göcek.",
+
+investmentTitle:"Investment Potential",
+investmentText:"Suitable for private use or potential rental use, subject to local regulations.",
+
+galleryEyebrow:"PROPERTY GALLERY",
+exploreGallery:"Explore the Villas",
+clickPhoto:"Click a photograph to view it larger.",
+
+locationLabel:"LOCATION",
+
+location1:
+"The villas are located in peaceful İnlice, in the Fethiye district of Muğla, Türkiye.",
+
+location2:
+"The property combines privacy and nature with convenient access to Göcek and the coastline.",
+
+location3:
+"İnlice Beach, Göcek Marina and Dalaman International Airport are all within convenient reach.",
+
+turquoise:"Life Near the Turquoise Coast",
+
+privateSale:"PRIVATE SALE",
+interested:"Interested in the Property?",
+priceRequest:"Price on Request",
+
+contactText:
+"Contact the owner directly for the asking price, additional information and viewing arrangements.",
+
+arrangeViewing:"Arrange a Viewing",
+
+footerOwner:
+"Direct sale from owner · Göcek / İnlice / Fethiye, Türkiye"
+
+},
 
 
-galleryImages.forEach(
-image => {
+/* =========================================================
+   GERMAN
+========================================================= */
 
-    image.addEventListener(
-    "click",
-    () => {
+de:{
 
-        lightboxImage.src =
-        image.src;
+pageTitle:
+"Zwei Villen zum Verkauf in Göcek – İnlice",
 
-        lightbox.classList.add(
-            "active"
+description:
+"Zwei private Villen zum Verkauf in İnlice bei Göcek, Fethiye, Türkei. Direktverkauf vom Eigentümer.",
+
+navVillas:"Villen",
+navGallery:"Galerie",
+navLocation:"Lage",
+navContact:"Preis & Kontakt",
+
+exclusive:"EXKLUSIVE IMMOBILIE ZUM VERKAUF",
+twoOne:"ZWEI VILLEN · EIN GRUNDSTÜCK",
+mainTitle:"Zwei Villen zum Verkauf in Göcek – İnlice",
+
+heroText:
+"Zwei individuelle private Villen auf demselben Grundstück in einer der schönsten Küstenregionen der Türkei.",
+
+directOwner:"Direktverkauf vom Eigentümer",
+explore:"Villen entdecken",
+requestPrice:"Preis anfragen",
+
+villaOne:"VILLA EINS",
+villaTwo:"VILLA ZWEI",
+
+villaOneTitle:"Großzügige Triplex-Villa",
+villaTwoTitle:"Duplex-Villa mit privatem Pool",
+
+villaOneShort:
+"Großer privater Garten, großzügige Wohnbereiche und eine ruhige Umgebung.",
+
+villaTwoShort:
+"Private Duplex-Villa mit Swimmingpool, Garten und Außenwohnbereich.",
+
+threeFloors:"3 Etagen",
+privatePool:"Privater Pool",
+
+summaryVillas:"Villen auf demselben Grundstück",
+villaOneArea:"Wohnfläche Villa Eins",
+villaTwoArea:"Wohnfläche Villa Zwei",
+
+completeProperty:"DAS GESAMTE ANWESEN",
+sameProperty:"Zwei Villen auf einem Grundstück",
+
+aerialText1:
+"Eine besondere Gelegenheit mit zwei separaten Häusern auf einem privaten Grundstück in İnlice bei Göcek.",
+
+aerialText2:
+"Die beiden Häuser bieten Flexibilität für Familie, Gäste oder Investitionszwecke.",
+
+rare:"EINE SELTENE GELEGENHEIT",
+exceptional:"Zwei Häuser. Eine außergewöhnliche Lage.",
+
+intro1:
+"Eine besondere Gelegenheit, zwei Villen auf demselben Grundstück im ruhigen İnlice bei Göcek zu erwerben.",
+
+intro2:
+"Umgeben von grünen Hügeln und nahe der Küste verbindet die Immobilie Privatsphäre, großzügige Wohnflächen und eine gute Erreichbarkeit von Göcek Marina und İnlice Beach.",
+
+groundFloor:"Erdgeschoss",
+firstFloor:"Erster Stock",
+secondFloor:"Zweiter Stock",
+features:"Ausstattung",
+
+v1g1:"Eingangsbereich",
+v1g2:"Wohnzimmer",
+v1g3:"Küche und Essbereich",
+v1g4:"Waschküche",
+v1g5:"Fitnessraum",
+
+v1f1:"Arbeitszimmer",
+v1f2:"Hauptschlafzimmer mit eigenem Bad",
+v1f3:"Kinderzimmer mit eigenem Bad",
+
+v1s1:"Zwei große Schlafzimmer",
+balcony:"Balkon",
+bathroom:"Badezimmer",
+
+v1feature1:"Fußbodenheizung",
+v1feature2:"Wärmepumpe",
+airConditioning:"Klimaanlage",
+largeGarden:"Großer privater Garten",
+
+v2g1:"Schlafzimmer – ca. 15 m²",
+v2g2:"Wohnzimmer und Küche – ca. 30 m²",
+v2g3:"Wohn-/Zusatzschlafzimmer und Badezimmer – ca. 17 m²",
+v2f1:"Schlafzimmer und Badezimmer – ca. 30 m²",
+
+v2feature1:"Privater Swimmingpool ca. 3,5 × 4,5 m",
+v2feature2:"Offene Küche",
+v2feature3:"Direkter Zugang zum Poolbereich",
+v2feature4:"Moderne Haushaltsgeräte",
+
+highlights:"IMMOBILIEN-HIGHLIGHTS",
+whyStandOut:"Was diese Immobilie besonders macht",
+
+highlightIntro:
+"Ein außergewöhnliches Anwesen mit zwei Villen nahe Göcek für Lifestyle und Investition.",
+
+twoVillasTitle:"Zwei Villen",
+twoVillasText:"Zwei separate Häuser bieten Flexibilität für Familie und Gäste.",
+
+directTitle:"Direkt vom Eigentümer",
+directText:"Kontaktieren Sie den Eigentümer direkt für Preis, Details und Besichtigung.",
+
+coastalTitle:"Küstenlage",
+coastalText:"Günstige Lage nahe İnlice Beach und Göcek.",
+
+investmentTitle:"Investitionspotenzial",
+investmentText:"Geeignet zur privaten Nutzung oder möglichen Vermietung gemäß den örtlichen Vorschriften.",
+
+galleryEyebrow:"IMMOBILIENGALERIE",
+exploreGallery:"Die Villen entdecken",
+clickPhoto:"Klicken Sie auf ein Foto für eine größere Ansicht.",
+
+locationLabel:"LAGE",
+
+location1:
+"Die Villen befinden sich im ruhigen İnlice im Bezirk Fethiye, Muğla, Türkei.",
+
+location2:
+"Die Immobilie verbindet Privatsphäre und Natur mit guter Erreichbarkeit von Göcek und der Küste.",
+
+location3:
+"İnlice Beach, Göcek Marina und der internationale Flughafen Dalaman sind bequem erreichbar.",
+
+turquoise:"Leben an der türkischen Riviera",
+
+privateSale:"PRIVATVERKAUF",
+interested:"Interesse an der Immobilie?",
+priceRequest:"Preis auf Anfrage",
+
+contactText:
+"Kontaktieren Sie den Eigentümer direkt für Preis, weitere Informationen und Besichtigungstermine.",
+
+arrangeViewing:"Besichtigung vereinbaren",
+
+footerOwner:
+"Direktverkauf vom Eigentümer · Göcek / İnlice / Fethiye, Türkei"
+
+},
+
+
+/* =========================================================
+   RUSSIAN
+========================================================= */
+
+ru:{
+
+pageTitle:
+"Две виллы на продажу в Гёджеке – Инджлидже",
+
+description:
+"Две частные виллы на продажу в Инджлидже рядом с Гёджеком, Фетхие, Турция. Продажа напрямую от владельца.",
+
+navVillas:"Виллы",
+navGallery:"Галерея",
+navLocation:"Расположение",
+navContact:"Цена и контакты",
+
+exclusive:"ЭКСКЛЮЗИВНАЯ НЕДВИЖИМОСТЬ НА ПРОДАЖУ",
+twoOne:"ДВЕ ВИЛЛЫ · ОДИН ОБЪЕКТ",
+mainTitle:"Две виллы на продажу в Гёджеке – Инджлидже",
+
+heroText:
+"Две отдельные частные виллы на одном участке в одном из самых красивых прибрежных районов Турции.",
+
+directOwner:"Продажа напрямую от владельца",
+explore:"Посмотреть виллы",
+requestPrice:"Узнать цену",
+
+villaOne:"ВИЛЛА 1",
+villaTwo:"ВИЛЛА 2",
+
+villaOneTitle:"Просторная трёхэтажная вилла",
+villaTwoTitle:"Двухэтажная вилла с частным бассейном",
+
+villaOneShort:
+"Большой частный сад, просторные жилые помещения и спокойная природная обстановка.",
+
+villaTwoShort:
+"Частная двухэтажная вилла с бассейном, садом и зоной отдыха на открытом воздухе.",
+
+threeFloors:"3 этажа",
+privatePool:"Частный бассейн",
+
+summaryVillas:"Виллы на одном участке",
+villaOneArea:"Жилая площадь виллы 1",
+villaTwoArea:"Жилая площадь виллы 2",
+
+completeProperty:"ВЕСЬ ОБЪЕКТ",
+sameProperty:"Две виллы на одном участке",
+
+aerialText1:
+"Уникальная возможность приобрести два отдельных дома на одном частном участке в Инджлидже рядом с Гёджеком.",
+
+aerialText2:
+"Две резиденции подходят для семейного проживания, размещения гостей или инвестиционных целей.",
+
+rare:"РЕДКАЯ ВОЗМОЖНОСТЬ",
+exceptional:"Два дома. Одно исключительное место.",
+
+intro1:
+"Уникальная возможность приобрести две виллы на одном участке в спокойном Инджлидже рядом с Гёджеком.",
+
+intro2:
+"В окружении зелёных холмов и недалеко от побережья объект сочетает приватность, простор и удобный доступ к марине Гёджека и пляжу Инджлидже.",
+
+groundFloor:"Первый уровень",
+firstFloor:"Второй уровень",
+secondFloor:"Третий уровень",
+features:"Особенности",
+
+v1g1:"Прихожая",
+v1g2:"Гостиная",
+v1g3:"Кухня и столовая",
+v1g4:"Прачечная",
+v1g5:"Фитнес-комната",
+
+v1f1:"Кабинет",
+v1f2:"Главная спальня с собственной ванной",
+v1f3:"Детская спальня с собственной ванной",
+
+v1s1:"Две большие спальни",
+balcony:"Балкон",
+bathroom:"Ванная комната",
+
+v1feature1:"Тёплые полы",
+v1feature2:"Тепловой насос",
+airConditioning:"Кондиционирование",
+largeGarden:"Большой частный сад",
+
+v2g1:"Спальня – около 15 м²",
+v2g2:"Гостиная и кухня – около 30 м²",
+v2g3:"Комната / дополнительная спальня и ванная – около 17 м²",
+v2f1:"Спальня и ванная – около 30 м²",
+
+v2feature1:"Частный бассейн примерно 3,5 × 4,5 м",
+v2feature2:"Кухня открытого типа",
+v2feature3:"Прямой выход к бассейну",
+v2feature4:"Современная бытовая техника",
+
+highlights:"ПРЕИМУЩЕСТВА ОБЪЕКТА",
+whyStandOut:"Почему этот объект особенный",
+
+highlightIntro:
+"Уникальный объект из двух вилл рядом с Гёджеком для отдыха, проживания и инвестиций.",
+
+twoVillasTitle:"Две виллы",
+twoVillasText:"Две отдельные резиденции удобны для семьи и гостей.",
+
+directTitle:"Напрямую от владельца",
+directText:"Свяжитесь напрямую с владельцем для получения цены, информации и организации просмотра.",
+
+coastalTitle:"Рядом с морем",
+coastalText:"Удобное расположение рядом с пляжем Инджлидже и Гёджеком.",
+
+investmentTitle:"Инвестиционный потенциал",
+investmentText:"Подходит для личного использования или потенциальной аренды в соответствии с местными правилами.",
+
+galleryEyebrow:"ГАЛЕРЕЯ",
+exploreGallery:"Посмотреть виллы",
+clickPhoto:"Нажмите на фотографию, чтобы увеличить её.",
+
+locationLabel:"РАСПОЛОЖЕНИЕ",
+
+location1:
+"Виллы расположены в спокойном Инджлидже, район Фетхие, провинция Мугла, Турция.",
+
+location2:
+"Объект сочетает приватность и природу с удобным доступом к Гёджеку и побережью.",
+
+location3:
+"Пляж Инджлидже, марина Гёджека и международный аэропорт Даламан находятся в удобной доступности.",
+
+turquoise:"Жизнь у бирюзового побережья",
+
+privateSale:"ЧАСТНАЯ ПРОДАЖА",
+interested:"Заинтересовались объектом?",
+priceRequest:"Цена по запросу",
+
+contactText:
+"Свяжитесь напрямую с владельцем, чтобы узнать цену, получить дополнительную информацию и договориться о просмотре.",
+
+arrangeViewing:"Организовать просмотр",
+
+footerOwner:
+"Продажа напрямую от владельца · Гёджек / Инджлидже / Фетхие, Турция"
+
+},
+
+
+/* =========================================================
+   UKRAINIAN
+========================================================= */
+
+uk:{
+
+pageTitle:
+"Дві вілли на продаж у Гьоджеку – Інджлідже",
+
+description:
+"Дві приватні вілли на продаж в Інджлідже біля Гьоджека, Фетхіє, Туреччина. Продаж безпосередньо від власника.",
+
+navVillas:"Вілли",
+navGallery:"Галерея",
+navLocation:"Розташування",
+navContact:"Ціна та контакти",
+
+exclusive:"ЕКСКЛЮЗИВНА НЕРУХОМІСТЬ НА ПРОДАЖ",
+twoOne:"ДВІ ВІЛЛИ · ОДИН ОБ'ЄКТ",
+mainTitle:"Дві вілли на продаж у Гьоджеку – Інджлідже",
+
+heroText:
+"Дві окремі приватні вілли на одній ділянці в одному з найкрасивіших прибережних регіонів Туреччини.",
+
+directOwner:"Продаж безпосередньо від власника",
+explore:"Переглянути вілли",
+requestPrice:"Дізнатися ціну",
+
+villaOne:"ВІЛЛА 1",
+villaTwo:"ВІЛЛА 2",
+
+villaOneTitle:"Простора триповерхова вілла",
+villaTwoTitle:"Дворівнева вілла з приватним басейном",
+
+villaOneShort:
+"Великий приватний сад, просторі житлові приміщення та спокійне природне оточення.",
+
+villaTwoShort:
+"Приватна дворівнева вілла з басейном, садом та відкритою зоною відпочинку.",
+
+threeFloors:"3 поверхи",
+privatePool:"Приватний басейн",
+
+summaryVillas:"Вілли на одній ділянці",
+villaOneArea:"Житлова площа вілли 1",
+villaTwoArea:"Житлова площа вілли 2",
+
+completeProperty:"ВЕСЬ ОБ'ЄКТ",
+sameProperty:"Дві вілли на одній ділянці",
+
+aerialText1:
+"Унікальна можливість придбати два окремі будинки на одній приватній ділянці в Інджлідже біля Гьоджека.",
+
+aerialText2:
+"Дві резиденції підходять для сімейного проживання, гостей або інвестицій.",
+
+rare:"РІДКІСНА МОЖЛИВІСТЬ",
+exceptional:"Два будинки. Одне виняткове місце.",
+
+intro1:
+"Унікальна можливість придбати дві вілли на одній ділянці в спокійному Інджлідже біля Гьоджека.",
+
+intro2:
+"Оточений зеленими пагорбами та розташований неподалік узбережжя, об'єкт поєднує приватність, простір і зручний доступ до марини Гьоджека та пляжу Інджлідже.",
+
+groundFloor:"Перший рівень",
+firstFloor:"Другий рівень",
+secondFloor:"Третій рівень",
+features:"Особливості",
+
+v1g1:"Передпокій",
+v1g2:"Вітальня",
+v1g3:"Кухня та їдальня",
+v1g4:"Пральня",
+v1g5:"Фітнес-кімната",
+
+v1f1:"Кабінет",
+v1f2:"Головна спальня з власною ванною",
+v1f3:"Дитяча спальня з власною ванною",
+
+v1s1:"Дві великі спальні",
+balcony:"Балкон",
+bathroom:"Ванна кімната",
+
+v1feature1:"Підігрів підлоги",
+v1feature2:"Тепловий насос",
+airConditioning:"Кондиціонування",
+largeGarden:"Великий приватний сад",
+
+v2g1:"Спальня – приблизно 15 м²",
+v2g2:"Вітальня та кухня – приблизно 30 м²",
+v2g3:"Кімната / додаткова спальня та ванна – приблизно 17 м²",
+v2f1:"Спальня та ванна – приблизно 30 м²",
+
+v2feature1:"Приватний басейн приблизно 3,5 × 4,5 м",
+v2feature2:"Кухня відкритого типу",
+v2feature3:"Прямий вихід до басейну",
+v2feature4:"Сучасна побутова техніка",
+
+highlights:"ПЕРЕВАГИ ОБ'ЄКТА",
+whyStandOut:"Чому цей об'єкт особливий",
+
+highlightIntro:
+"Унікальний об'єкт із двох вілл біля Гьоджека для проживання та інвестицій.",
+
+twoVillasTitle:"Дві вілли",
+twoVillasText:"Дві окремі резиденції забезпечують гнучкість для сім'ї та гостей.",
+
+directTitle:"Безпосередньо від власника",
+directText:"Зв'яжіться безпосередньо з власником для отримання ціни, деталей та організації перегляду.",
+
+coastalTitle:"Біля узбережжя",
+coastalText:"Зручне розташування поруч із пляжем Інджлідже та Гьоджеком.",
+
+investmentTitle:"Інвестиційний потенціал",
+investmentText:"Підходить для приватного використання або потенційної оренди відповідно до місцевих правил.",
+
+galleryEyebrow:"ГАЛЕРЕЯ",
+exploreGallery:"Переглянути вілли",
+clickPhoto:"Натисніть на фотографію, щоб збільшити її.",
+
+locationLabel:"РОЗТАШУВАННЯ",
+
+location1:
+"Вілли розташовані в спокійному Інджлідже, район Фетхіє, провінція Мугла, Туреччина.",
+
+location2:
+"Об'єкт поєднує приватність і природу зі зручним доступом до Гьоджека та узбережжя.",
+
+location3:
+"Пляж Інджлідже, марина Гьоджека та міжнародний аеропорт Даламан знаходяться в зручній доступності.",
+
+turquoise:"Життя біля бірюзового узбережжя",
+
+privateSale:"ПРИВАТНИЙ ПРОДАЖ",
+interested:"Зацікавилися об'єктом?",
+priceRequest:"Ціна за запитом",
+
+contactText:
+"Зв'яжіться безпосередньо з власником, щоб дізнатися ціну, отримати додаткову інформацію та домовитися про перегляд.",
+
+arrangeViewing:"Домовитися про перегляд",
+
+footerOwner:
+"Продаж безпосередньо від власника · Гьоджек / Інджлідже / Фетхіє, Туреччина"
+
+},
+
+
+/* =========================================================
+   TURKISH
+========================================================= */
+
+tr:{
+
+pageTitle:
+"Göcek İnlice Satılık İki Villa | Sahibinden",
+
+description:
+"Göcek İnlice'de aynı mülk üzerinde satılık iki özel villa. Fethiye, Muğla. Sahibinden direkt satış.",
+
+navVillas:"Villalar",
+navGallery:"Galeri",
+navLocation:"Konum",
+navContact:"Fiyat & İletişim",
+
+exclusive:"ÖZEL MÜLK SATIŞTA",
+twoOne:"İKİ VİLLA · TEK MÜLK",
+mainTitle:"Göcek – İnlice'de Satılık İki Villa",
+
+heroText:
+"Türkiye'nin en güzel sahil bölgelerinden birinde, aynı mülk üzerinde iki ayrı özel villa.",
+
+directOwner:"Sahibinden Direkt Satış",
+explore:"Villaları İncele",
+requestPrice:"Fiyat Sor",
+
+villaOne:"VİLLA 1",
+villaTwo:"VİLLA 2",
+
+villaOneTitle:"Geniş Triplex Villa",
+villaTwoTitle:"Özel Havuzlu Dubleks Villa",
+
+villaOneShort:
+"Geniş özel bahçe, ferah yaşam alanları ve sakin doğal çevre.",
+
+villaTwoShort:
+"Özel yüzme havuzu, bahçe ve açık yaşam alanlarına sahip dubleks villa.",
+
+threeFloors:"3 Kat",
+privatePool:"Özel Havuz",
+
+summaryVillas:"Aynı mülk üzerindeki villalar",
+villaOneArea:"Villa 1 yaşam alanı",
+villaTwoArea:"Villa 2 yaşam alanı",
+
+completeProperty:"MÜLKÜN TAMAMI",
+sameProperty:"Aynı Mülk Üzerinde İki Villa",
+
+aerialText1:
+"Göcek yakınındaki İnlice'de, aynı özel mülk içerisinde iki ayrı konutu bir arada sunan özel bir fırsat.",
+
+aerialText2:
+"İki ayrı konut; aile yaşamı, misafir kullanımı veya yatırım amacıyla esnek kullanım imkânı sunuyor.",
+
+rare:"ÖZEL BİR FIRSAT",
+exceptional:"İki Ev. Tek Özel Konum.",
+
+intro1:
+"Göcek'in hemen yakınındaki sakin İnlice'de, aynı mülk üzerinde iki villaya sahip olmak için özel bir fırsat.",
+
+intro2:
+"Yeşil tepelerle çevrili ve sahile yakın olan mülk; mahremiyet, geniş yaşam alanları ve Göcek Marina ile İnlice Plajı'na kolay ulaşımı bir arada sunuyor.",
+
+groundFloor:"Zemin Kat",
+firstFloor:"Birinci Kat",
+secondFloor:"İkinci Kat",
+features:"Özellikler",
+
+v1g1:"Giriş holü",
+v1g2:"Salon",
+v1g3:"Mutfak ve yemek odası",
+v1g4:"Çamaşır odası",
+v1g5:"Fitness odası",
+
+v1f1:"Çalışma odası",
+v1f2:"Ebeveyn banyolu ana yatak odası",
+v1f3:"Ebeveyn banyolu çocuk odası",
+
+v1s1:"İki büyük yatak odası",
+balcony:"Balkon",
+bathroom:"Banyo",
+
+v1feature1:"Yerden ısıtma",
+v1feature2:"Isı pompası",
+airConditioning:"Klima",
+largeGarden:"Geniş özel bahçe",
+
+v2g1:"Yatak odası – yaklaşık 15 m²",
+v2g2:"Salon ve mutfak – yaklaşık 30 m²",
+v2g3:"Oturma odası / ek yatak odası ve banyo – yaklaşık 17 m²",
+v2f1:"Yatak odası ve banyo – yaklaşık 30 m²",
+
+v2feature1:"Yaklaşık 3,5 × 4,5 m özel yüzme havuzu",
+v2feature2:"Açık plan mutfak",
+v2feature3:"Havuz alanına direkt çıkış",
+v2feature4:"Modern beyaz eşya ve cihazlar",
+
+highlights:"MÜLKÜN ÖNE ÇIKAN ÖZELLİKLERİ",
+whyStandOut:"Bu Mülkü Özel Yapan Nedir?",
+
+highlightIntro:
+"Göcek yakınında yaşam ve yatırım fırsatını bir araya getiren iki villalı özel bir mülk.",
+
+twoVillasTitle:"İki Villa",
+twoVillasText:"İki ayrı konut aile ve misafir kullanımı için esneklik sağlar.",
+
+directTitle:"Sahibinden",
+directText:"Fiyat, detaylar ve gösterim için doğrudan mülk sahibiyle iletişime geçin.",
+
+coastalTitle:"Sahil Konumu",
+coastalText:"İnlice Plajı ve Göcek'e yakın konum.",
+
+investmentTitle:"Yatırım Potansiyeli",
+investmentText:"Yerel mevzuata uygun olmak kaydıyla özel kullanım veya potansiyel kiralama için uygundur.",
+
+galleryEyebrow:"MÜLK GALERİSİ",
+exploreGallery:"Villaları İnceleyin",
+clickPhoto:"Büyütmek için fotoğrafa tıklayın.",
+
+locationLabel:"KONUM",
+
+location1:
+"Villalar Muğla'nın Fethiye ilçesine bağlı sakin İnlice bölgesinde bulunmaktadır.",
+
+location2:
+"Mülk, doğa ve mahremiyeti Göcek ve sahil bölgesine kolay ulaşım ile birleştiriyor.",
+
+location3:
+"İnlice Plajı, Göcek Marina ve Dalaman Uluslararası Havalimanı kolay ulaşım mesafesindedir.",
+
+turquoise:"Turkuaz Sahilin Yanında Yaşam",
+
+privateSale:"SAHİBİNDEN SATIŞ",
+interested:"Mülkle İlgileniyor musunuz?",
+priceRequest:"Fiyat İçin İletişime Geçin",
+
+contactText:
+"Satış fiyatı, ek bilgiler ve gösterim randevusu için doğrudan mülk sahibiyle iletişime geçin.",
+
+arrangeViewing:"Gösterim Randevusu",
+
+footerOwner:
+"Sahibinden direkt satış · Göcek / İnlice / Fethiye, Türkiye"
+
+}
+
+};
+
+
+/* =========================================================
+   LANGUAGE FUNCTION
+========================================================= */
+
+function setLanguage(lang){
+
+    const t = translations[lang];
+
+    if(!t){
+        return;
+    }
+
+    document.documentElement.lang = lang;
+
+    document.title = t.pageTitle;
+
+    document
+        .getElementById("metaDescription")
+        .setAttribute(
+            "content",
+            t.description
         );
 
-    });
 
-});
+    document
+        .querySelectorAll("[data-i18n]")
+        .forEach(element => {
+
+            const key =
+                element.getAttribute(
+                    "data-i18n"
+                );
+
+            if(t[key]){
+                element.textContent = t[key];
+            }
+
+        });
 
 
-closeLightbox.addEventListener(
-"click",
-() => {
+    document
+        .querySelectorAll(".lang-btn")
+        .forEach(button => {
 
-    lightbox.classList.remove(
-        "active"
+            button.classList.remove(
+                "active"
+            );
+
+            if(
+                button.dataset.lang === lang
+            ){
+                button.classList.add(
+                    "active"
+                );
+            }
+
+        });
+
+
+    localStorage.setItem(
+        "villaLanguage",
+        lang
+    );
+
+}
+
+
+/* =========================================================
+   LANGUAGE BUTTONS
+========================================================= */
+
+document
+.querySelectorAll(".lang-btn")
+.forEach(button => {
+
+    button.addEventListener(
+        "click",
+        () => {
+
+            setLanguage(
+                button.dataset.lang
+            );
+
+        }
     );
 
 });
 
 
-lightbox.addEventListener(
-"click",
-event => {
+/* =========================================================
+   LOAD SAVED LANGUAGE
+========================================================= */
 
-    if(
-        event.target === lightbox
-    ){
+const savedLanguage =
+    localStorage.getItem(
+        "villaLanguage"
+    );
+
+if(
+    savedLanguage &&
+    translations[savedLanguage]
+){
+    setLanguage(savedLanguage);
+}
+
+
+/* =========================================================
+   GALLERY LIGHTBOX
+========================================================= */
+
+const galleryImages =
+    document.querySelectorAll(
+        ".gallery img"
+    );
+
+const lightbox =
+    document.getElementById(
+        "lightbox"
+    );
+
+const lightboxImage =
+    document.getElementById(
+        "lightboxImage"
+    );
+
+const closeLightbox =
+    document.getElementById(
+        "closeLightbox"
+    );
+
+
+galleryImages.forEach(image => {
+
+    image.addEventListener(
+        "click",
+        () => {
+
+            lightboxImage.src =
+                image.src;
+
+            lightbox.classList.add(
+                "active"
+            );
+
+        }
+    );
+
+});
+
+
+closeLightbox.addEventListener(
+    "click",
+    () => {
 
         lightbox.classList.remove(
             "active"
         );
 
     }
+);
 
-});
+
+lightbox.addEventListener(
+    "click",
+    event => {
+
+        if(
+            event.target === lightbox
+        ){
+
+            lightbox.classList.remove(
+                "active"
+            );
+
+        }
+
+    }
+);
 
 
 document.addEventListener(
-"keydown",
-event => {
+    "keydown",
+    event => {
 
-    if(
-        event.key === "Escape"
-    ){
+        if(
+            event.key === "Escape"
+        ){
 
-        lightbox.classList.remove(
-            "active"
-        );
+            lightbox.classList.remove(
+                "active"
+            );
+
+        }
 
     }
-
-});
+);
 
 </script>
 
