@@ -1,0 +1,161 @@
+:root{
+  --green:#123c32; --dark:#082b23; --dark2:#051d18; --gold:#d4ad5d;
+  --cream:#f7f5ef; --light:#f1f5f2; --text:#1d332b; --muted:#697970; --white:#fff;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:Arial,Helvetica,sans-serif;background:#fff;color:var(--text);line-height:1.6}
+img{display:block;max-width:100%}
+a{text-decoration:none}
+nav{position:sticky;top:0;z-index:1500;min-height:58px;display:flex;justify-content:space-between;align-items:center;gap:20px;padding:9px 5%;background:var(--dark);box-shadow:0 3px 15px rgba(0,0,0,.12)}
+.logo{color:#fff;font-size:21px;font-weight:900;letter-spacing:1.7px;white-space:nowrap}
+.nav-right{display:flex;align-items:center;gap:18px}
+.nav-links{display:flex;align-items:center;gap:24px}
+.nav-links a{color:#fff;font-size:13px;font-weight:800}
+.nav-links a:hover{color:var(--gold)}
+.language-switcher{display:flex;align-items:center;gap:2px;padding:3px;border:1px solid rgba(255,255,255,.16);border-radius:7px;background:rgba(255,255,255,.05)}
+.language-switcher a{border-radius:4px;padding:6px 8px;color:#fff;font-size:11px;font-weight:800}
+.language-switcher a:hover{background:rgba(255,255,255,.12)}
+.language-switcher a.active{color:#14281f;background:var(--gold)}
+.hero{width:100%;padding:25px 20px 27px;text-align:center;color:#fff;background:linear-gradient(135deg,#16483b 0%,#092b23 62%,#06251e 100%)}
+.sale-badge{display:inline-block;margin-bottom:7px;padding:5px 15px;border:1px solid rgba(255,255,255,.42);font-size:10px;font-weight:800;letter-spacing:3px}
+.hero-kicker{margin-bottom:5px;color:#e6c578;font-size:13px;font-weight:900;letter-spacing:3px}
+.hero h1{max-width:940px;margin:0 auto 10px;font-size:clamp(35px,4vw,52px);line-height:1.04;letter-spacing:-1px}
+.hero-description{max-width:830px;margin:0 auto 5px;color:#edf3f0;font-size:clamp(15px,1.5vw,18px)}
+.owner-text{margin-top:6px;color:#f1cf85;font-size:16px;font-weight:900}
+.hero-buttons{margin-top:13px}
+.button{display:inline-block;margin:4px;padding:11px 23px;border-radius:5px;font-size:14px;font-weight:900;transition:.2s}
+.button:hover{transform:translateY(-2px)}
+.button-light{color:var(--dark);background:#fff}
+.button-outline{color:#fff;border:2px solid #fff;background:transparent}
+.button-gold{color:#15261f;background:var(--gold)}
+.button-whatsapp{color:#fff;border:2px solid #25D366;background:#25D366}
+.main-villas{width:100%;padding:25px 5% 42px;background:var(--cream)}
+.main-villa-grid{width:min(1450px,100%);margin:0 auto;display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:22px;align-items:stretch}
+.property-card{width:100%;min-width:0;display:flex;flex-direction:column;overflow:hidden;border-radius:14px;background:#fff;box-shadow:0 14px 38px rgba(25,55,44,.12)}
+.property-image-wrap{position:relative;width:100%;height:365px;overflow:hidden;background:#e7ece9}
+.villa-one-card .property-image-wrap img{width:100%;height:100%;object-fit:cover;object-position:center center;filter:brightness(1.03) contrast(1.02) saturate(1.02)}
+.villa-two-card .property-image-wrap::before{content:"";position:absolute;inset:-25px;background:url("/villa-two-new.jpg?v=1300") center center/cover no-repeat;filter:blur(18px) brightness(.80) saturate(1.05);transform:scale(1.08);z-index:0}
+.villa-two-card .property-image-wrap img{position:absolute;z-index:2;top:0;left:0;width:100%;height:100%;object-fit:contain;object-position:center top;filter:brightness(1.12) contrast(1.04) saturate(1.05)}
+.property-content{flex:1;display:flex;flex-direction:column;padding:19px 21px 20px}
+.property-label{margin-bottom:4px;color:var(--gold);font-size:11px;font-weight:900;letter-spacing:2px}
+.property-content h2{margin-bottom:6px;color:var(--green);font-size:25px;line-height:1.2}
+.property-content p{margin-bottom:15px;color:var(--muted);font-size:14px}
+.property-stats{display:flex;flex-wrap:wrap;gap:8px;margin-top:auto}
+.property-stat{padding:6px 10px;border:1px solid #dae3de;border-radius:5px;background:var(--light);color:var(--green);font-size:12px;font-weight:800}
+.summary{padding:34px 6%;background:#fff}
+.summary-grid{width:min(1100px,100%);margin:auto;display:grid;grid-template-columns:repeat(4,1fr);overflow:hidden;border-radius:10px;box-shadow:0 8px 28px rgba(20,50,40,.08)}
+.summary-item{padding:21px 12px;text-align:center;border-right:1px solid #e6ece8}
+.summary-item:last-child{border-right:0}
+.summary-item strong{display:block;margin-bottom:3px;color:var(--green);font-size:21px}
+.summary-item span{color:var(--muted);font-size:13px}
+section{padding:65px 7%}
+.container{width:min(1200px,100%);margin:auto}
+.section-heading{margin-bottom:38px;text-align:center}
+.section-heading h2{margin-bottom:10px;color:var(--green);font-size:clamp(31px,4vw,44px);line-height:1.15}
+.section-heading p{max-width:760px;margin:auto;color:var(--muted)}
+.eyebrow{margin-bottom:7px;color:var(--gold);font-size:11px;font-weight:900;letter-spacing:2px}
+.aerial-section{padding:60px 6%;background:var(--light)}
+.aerial-grid{width:min(1400px,100%);margin:auto;display:grid;grid-template-columns:1.6fr .8fr;gap:46px;align-items:center}
+.aerial-photo{padding:9px;border-radius:14px;background:#fff;box-shadow:0 14px 38px rgba(20,50,40,.11)}
+.aerial-photo img{width:100%;border-radius:8px}
+.aerial-text h2{margin-bottom:15px;color:var(--green);font-size:clamp(31px,3vw,44px);line-height:1.12}
+.aerial-text p{margin-bottom:14px;color:#596960;font-size:16px}
+.intro-copy{max-width:930px;margin:auto;text-align:center;color:#45594f;font-size:17px}
+.intro-copy p{margin-bottom:15px}
+.villa-detail{display:grid;grid-template-columns:1fr 1fr;margin-bottom:50px;overflow:hidden;border-radius:13px;background:var(--light);box-shadow:0 12px 36px rgba(20,50,40,.08)}
+.villa-detail.reverse .villa-photo{order:2}
+.villa-detail.reverse .villa-info{order:1}
+.villa-photo{min-height:500px;overflow:hidden;background:#e4e9e6}
+.villa-photo img{width:100%;height:100%;object-fit:cover}
+.villa-detail.reverse .villa-photo img{object-position:center top;filter:brightness(1.08) contrast(1.03) saturate(1.04)}
+.villa-info{padding:42px 40px}
+.villa-label{margin-bottom:4px;color:var(--gold);font-size:11px;font-weight:900;letter-spacing:2px}
+.villa-info h2{margin-bottom:10px;color:var(--green);font-size:clamp(29px,3vw,39px);line-height:1.1}
+.stats{display:flex;flex-wrap:wrap;gap:8px;margin:17px 0 21px}
+.stat{padding:6px 10px;border:1px solid #dce4e0;background:#fff;font-size:12px;font-weight:800}
+.villa-info h3{margin:17px 0 5px;color:var(--green);font-size:16px}
+.villa-info ul{padding-inline-start:20px}
+.villa-info li{margin-bottom:4px}
+.highlights{color:#fff;background:linear-gradient(135deg,#173d32,#0d2922)}
+.highlights .section-heading h2{color:#fff}
+.highlights .section-heading p{color:#d4e0db}
+.highlight-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:18px}
+.highlight-card{padding:25px;border:1px solid rgba(255,255,255,.16);border-radius:9px;background:rgba(255,255,255,.025)}
+.highlight-card h3{margin-bottom:7px;color:#e2c680}
+.highlight-card p{color:#e1e9e5}
+.gallery{columns:3;column-gap:12px}
+.gallery img{width:100%;margin-bottom:12px;break-inside:avoid;border-radius:8px;cursor:pointer;box-shadow:0 5px 18px rgba(0,0,0,.08);transition:.2s}
+.gallery img:hover{transform:translateY(-2px)}
+.lightbox{position:fixed;inset:0;z-index:3000;display:none;align-items:center;justify-content:center;padding:25px;background:rgba(0,0,0,.94)}
+.lightbox.active{display:flex}
+.lightbox img{width:auto;height:auto;max-width:95%;max-height:90vh}
+.close-lightbox{position:absolute;top:14px;right:27px;color:#fff;font-size:43px;cursor:pointer}
+.location{background:var(--light)}
+.location-grid{display:grid;grid-template-columns:.85fr 1.15fr;gap:46px;align-items:center}
+.location h2{margin-bottom:14px;color:var(--green);font-size:clamp(31px,4vw,43px)}
+.location p{margin-bottom:12px;color:#53665c}
+.location img{width:100%;border-radius:10px;box-shadow:0 12px 30px rgba(20,50,40,.10)}
+.location-points{display:grid;grid-template-columns:1fr 1fr;gap:8px;margin-top:19px}
+.location-point{padding:11px;background:#fff;color:var(--green);font-weight:800}
+.beach-banner{min-height:410px;display:flex;align-items:flex-end;padding:45px 7%;color:#fff;background:linear-gradient(rgba(0,0,0,.04),rgba(0,0,0,.45)),url("/ince-beach.jpg?v=1300") center center/cover no-repeat}
+.beach-banner h2{font-size:clamp(30px,4vw,44px)}
+.contact{text-align:center;color:#fff;background:var(--dark)}
+.contact h2{margin-bottom:8px;font-size:clamp(35px,5vw,52px)}
+.price{margin-bottom:14px;color:#e3c478;font-size:22px;font-weight:900}
+.contact-description{max-width:690px;margin:0 auto 23px;color:#d5dfdb}
+.contact-info{width:min(780px,100%);margin:30px auto 0;display:grid;grid-template-columns:1fr 1fr;gap:14px}
+.contact-info-box{padding:17px 20px;border:1px solid rgba(255,255,255,.15);border-radius:8px;background:rgba(255,255,255,.05)}
+.contact-info-label{display:block;margin-bottom:4px;color:var(--gold);font-size:11px;font-weight:900;letter-spacing:1.5px}
+.contact-info-box a{color:#fff;font-size:14px;font-weight:800;word-break:break-word}
+.direct-owner-footer{margin-top:22px;color:#adbbb5;font-size:13px}
+.floating-whatsapp{position:fixed;right:22px;bottom:22px;z-index:999999;display:flex;align-items:center;gap:9px;min-height:55px;padding:10px 18px 10px 11px;border:3px solid #fff;border-radius:999px;background:#25D366;color:#fff;font-size:15px;font-weight:900;box-shadow:0 8px 28px rgba(0,0,0,.35);transition:.2s}
+.floating-whatsapp:hover{transform:translateY(-3px);background:#20be5b}
+.whatsapp-icon{width:34px;height:34px;display:flex;align-items:center;justify-content:center;border-radius:50%;background:#fff;color:#25D366;font-weight:900}
+footer{padding:22px 22px 85px;text-align:center;color:#aab8b3;background:var(--dark2);font-size:12px}
+[dir="rtl"] .nav-right{flex-direction:row-reverse}
+[dir="rtl"] .language-switcher{direction:ltr}
+[dir="rtl"] .villa-detail.reverse .villa-photo{order:2}
+[dir="rtl"] .villa-detail.reverse .villa-info{order:1}
+[dir="rtl"] .close-lightbox{right:auto;left:27px}
+[dir="rtl"] .floating-whatsapp{right:auto;left:22px}
+@media(max-width:1100px){.nav-links{display:none}}
+@media(max-width:950px){
+  .main-villa-grid{grid-template-columns:1fr}
+  .property-image-wrap{height:400px}
+  .summary-grid{grid-template-columns:repeat(2,1fr)}
+  .aerial-grid{grid-template-columns:1fr}
+  .aerial-text{text-align:center}
+  .villa-detail{grid-template-columns:1fr}
+  .villa-detail.reverse .villa-photo,.villa-detail.reverse .villa-info{order:initial}
+  .highlight-grid{grid-template-columns:repeat(2,1fr)}
+  .gallery{columns:2}
+  .location-grid{grid-template-columns:1fr}
+}
+@media(max-width:650px){
+  nav{padding:10px 3%}
+  .logo{font-size:14px;letter-spacing:1px}
+  .nav-right{gap:5px}
+  .language-switcher{padding:2px;gap:0}
+  .language-switcher a{padding:4px 5px;font-size:9px}
+  .hero{padding:18px 13px 20px}
+  .hero h1{font-size:31px}
+  .hero-description{font-size:14px}
+  .main-villas{padding:18px 4% 35px}
+  .property-image-wrap{height:270px}
+  .property-content{padding:18px}
+  .property-content h2{font-size:22px}
+  .summary-grid{grid-template-columns:1fr}
+  .summary-item{border-right:0;border-bottom:1px solid #e9eeeb}
+  section{padding:55px 6%}
+  .aerial-section{padding:47px 5%}
+  .villa-photo{min-height:300px}
+  .villa-info{padding:30px 21px}
+  .highlight-grid{grid-template-columns:1fr}
+  .gallery{columns:1}
+  .location-points{grid-template-columns:1fr}
+  .contact-info{grid-template-columns:1fr}
+  .floating-whatsapp{right:12px;bottom:12px;padding:9px}
+  [dir="rtl"] .floating-whatsapp{right:auto;left:12px}
+  .floating-whatsapp-text{display:none}
+}
