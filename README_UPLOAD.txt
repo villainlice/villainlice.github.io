@@ -1,6 +1,11 @@
-GÖCEK TWIN VILLAS - INTERNATIONAL SEO V2
+GÖCEK TWIN VILLAS — INTERNATIONAL SEO V3
 
-Replace/upload these files to the ROOT of your GitHub repository:
+Changes in V3:
+- “Two villas / one property” wording changed to “Two villas on the same plot” in all 6 languages.
+- Added a compact buyer-trust strip: direct from owner, same plot, location access, WhatsApp/email contact.
+- Existing multilingual SEO, hreflang, sitemap and images are preserved.
+
+Upload these files/folders to the ROOT of the GitHub repository:
 - index.html
 - style.css
 - gallery.js
@@ -12,8 +17,4 @@ Replace/upload these files to the ROOT of your GitHub repository:
 - uk/index.html
 - ar/index.html
 
-Keep all existing villa JPG files and CNAME.
-
-This version adds localized buyer-search content and FAQs for English, German, Russian, Ukrainian and Arabic pages, plus regional hreflang and an expanded multilingual sitemap.
-
-After upload, test all six URLs, then resubmit https://gocektwinvillas.com/sitemap.xml in Google Search Console.
+Keep CNAME and all existing villa image files.

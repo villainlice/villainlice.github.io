@@ -173,3 +173,14 @@ footer{padding:22px 22px 85px;text-align:center;color:#aab8b3;background:var(--d
 .faq-item h3{color:#123c32;font-size:16px;line-height:1.35;margin-bottom:7px}
 .faq-item p{color:#607169;font-size:14px}
 @media(max-width:850px){.faq-grid{grid-template-columns:1fr}}
+
+
+/* Buyer trust strip */
+.trust-strip{padding:34px 6%;background:#fff;border-top:1px solid #e8eeeb;border-bottom:1px solid #e8eeeb}
+.trust-title{text-align:center;margin-bottom:18px;color:var(--gold);font-size:11px;font-weight:900;letter-spacing:2px}
+.trust-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:12px}
+.trust-card{padding:18px 16px;border:1px solid #dde6e1;border-radius:10px;background:#f8faf9;text-align:center}
+.trust-card h3{margin-bottom:6px;color:var(--green);font-size:15px}
+.trust-card p{margin:0;color:#607169;font-size:13px;line-height:1.45}
+@media(max-width:950px){.trust-grid{grid-template-columns:repeat(2,1fr)}}
+@media(max-width:650px){.trust-grid{grid-template-columns:1fr}.trust-strip{padding:28px 5%}}
