@@ -1,22 +1,19 @@
-GÖCEK TWIN VILLAS – INTERNATIONAL SEO V4
+GÖCEK TWIN VILLAS — INTERNATIONAL SEO V5
 
-Bu sürüm V3 üzerine şunları ekler:
-- Tüm dillerde “aynı parselde iki villa” ifadesi tutarlı hale getirildi.
-- Türkçe sayfaya SEO metni ve Sık Sorulan Sorular bölümü eklendi.
-- 6 dil sayfasına FAQPage yapılandırılmış verisi eklendi.
-- İletişim bölümünden önce doğrudan sahibinden fiyat sorma CTA alanı eklendi.
-- sitemap.xml lastmod tarihi güncellendi.
+Upload ALL files/folders in this package to the ROOT of the GitHub repository.
 
-GitHub repo ROOT dizinine yükleyin:
-- index.html
-- style.css
-- gallery.js
-- sitemap.xml
-- robots.txt
-- en/index.html
-- de/index.html
-- ru/index.html
-- uk/index.html
-- ar/index.html
+V5 changes:
+- Villa 1 photos now show the complete villa instead of cropping it.
+- Villa 1 and Villa 2 detail photos use contain + soft background fill.
+- Mobile photo height improved.
+- Image alt texts localized for TR/EN/DE/RU/UK/AR.
+- Lazy loading and async decoding added below the fold.
+- First property image preloaded / prioritized.
+- Cache version bumped to v=1500.
+- “same property” wording normalized to “same plot / same parcel”.
+- Includes the two latest approved edited images:
+  villa-garden-exterior.jpg
+  villa-aerial-overview.jpg
 
-MEVCUT CNAME VE FOTOĞRAFLARI SİLMEYİN.
+IMPORTANT: Keep CNAME and all other existing image files in the repository.
+After commit, wait 1–2 minutes and press Ctrl+F5 on the website.
