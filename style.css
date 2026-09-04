@@ -159,3 +159,17 @@ footer{padding:22px 22px 85px;text-align:center;color:#aab8b3;background:var(--d
   [dir="rtl"] .floating-whatsapp{right:auto;left:12px}
   .floating-whatsapp-text{display:none}
 }
+
+/* International-market SEO content */
+.market-seo{background:#fff;padding-top:58px;padding-bottom:58px}
+.market-copy{max-width:960px;margin:0 auto;text-align:center;color:#45594f;font-size:17px}
+.market-copy p{margin-bottom:14px}
+.market-keywords{display:flex;flex-wrap:wrap;justify-content:center;gap:9px;margin-top:23px}
+.market-keywords span{display:inline-block;padding:7px 11px;border:1px solid #d8e3dd;border-radius:999px;background:#f3f7f5;color:#123c32;font-size:12px;font-weight:800}
+.faq-wrap{max-width:1000px;margin:42px auto 0}
+.faq-wrap>h2{text-align:center;color:#123c32;font-size:clamp(25px,3vw,34px);margin-bottom:20px}
+.faq-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}
+.faq-item{padding:20px;border:1px solid #e0e8e4;border-radius:10px;background:#f7f9f8}
+.faq-item h3{color:#123c32;font-size:16px;line-height:1.35;margin-bottom:7px}
+.faq-item p{color:#607169;font-size:14px}
+@media(max-width:850px){.faq-grid{grid-template-columns:1fr}}

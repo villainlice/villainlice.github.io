@@ -1,6 +1,6 @@
-GÖCEK TWIN VILLAS - MULTILINGUAL SEO PACKAGE
+GÖCEK TWIN VILLAS - INTERNATIONAL SEO V2
 
-Upload these files/folders to the ROOT of your GitHub repository:
+Replace/upload these files to the ROOT of your GitHub repository:
 - index.html
 - style.css
 - gallery.js
@@ -12,24 +12,8 @@ Upload these files/folders to the ROOT of your GitHub repository:
 - uk/index.html
 - ar/index.html
 
-Keep your existing image files in the repository root:
-- villa-garden-exterior.jpg
-- villa-two-new.jpg
-- villa-pool-terrace.jpg
-- villa-interior-living.jpg
-- villa-interior-collage.jpg
-- villa-bedroom-bathroom.jpg
-- villa-drone-view.jpg
-- villa-aerial-overview.jpg
-- villa-location-map.jpg
-- ince-beach.jpg
+Keep all existing villa JPG files and CNAME.
 
-After upload, test:
-https://gocektwinvillas.com/
-https://gocektwinvillas.com/en/
-https://gocektwinvillas.com/de/
-https://gocektwinvillas.com/ru/
-https://gocektwinvillas.com/uk/
-https://gocektwinvillas.com/ar/
-https://gocektwinvillas.com/sitemap.xml
-https://gocektwinvillas.com/robots.txt
+This version adds localized buyer-search content and FAQs for English, German, Russian, Ukrainian and Arabic pages, plus regional hreflang and an expanded multilingual sitemap.
+
+After upload, test all six URLs, then resubmit https://gocektwinvillas.com/sitemap.xml in Google Search Console.
