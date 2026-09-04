@@ -1,11 +1,13 @@
-GÖCEK TWIN VILLAS — INTERNATIONAL SEO V3
+GÖCEK TWIN VILLAS – INTERNATIONAL SEO V4
 
-Changes in V3:
-- “Two villas / one property” wording changed to “Two villas on the same plot” in all 6 languages.
-- Added a compact buyer-trust strip: direct from owner, same plot, location access, WhatsApp/email contact.
-- Existing multilingual SEO, hreflang, sitemap and images are preserved.
+Bu sürüm V3 üzerine şunları ekler:
+- Tüm dillerde “aynı parselde iki villa” ifadesi tutarlı hale getirildi.
+- Türkçe sayfaya SEO metni ve Sık Sorulan Sorular bölümü eklendi.
+- 6 dil sayfasına FAQPage yapılandırılmış verisi eklendi.
+- İletişim bölümünden önce doğrudan sahibinden fiyat sorma CTA alanı eklendi.
+- sitemap.xml lastmod tarihi güncellendi.
 
-Upload these files/folders to the ROOT of the GitHub repository:
+GitHub repo ROOT dizinine yükleyin:
 - index.html
 - style.css
 - gallery.js
@@ -17,4 +19,4 @@ Upload these files/folders to the ROOT of the GitHub repository:
 - uk/index.html
 - ar/index.html
 
-Keep CNAME and all existing villa image files.
+MEVCUT CNAME VE FOTOĞRAFLARI SİLMEYİN.

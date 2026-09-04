@@ -184,3 +184,9 @@ footer{padding:22px 22px 85px;text-align:center;color:#aab8b3;background:var(--d
 .trust-card p{margin:0;color:#607169;font-size:13px;line-height:1.45}
 @media(max-width:950px){.trust-grid{grid-template-columns:repeat(2,1fr)}}
 @media(max-width:650px){.trust-grid{grid-template-columns:1fr}.trust-strip{padding:28px 5%}}
+
+/* Direct-owner CTA before contact */
+.pre-contact-cta{padding:38px 6%;background:#f2f6f3;border-top:1px solid #e0e8e4;border-bottom:1px solid #e0e8e4}
+.pre-contact-inner{max-width:980px;margin:0 auto;display:flex;align-items:center;justify-content:space-between;gap:22px}
+.pre-contact-inner h2{margin:0;color:var(--green);font-size:clamp(24px,3vw,34px);line-height:1.2}
+@media(max-width:720px){.pre-contact-inner{flex-direction:column;text-align:center}}
