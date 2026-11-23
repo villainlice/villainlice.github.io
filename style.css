@@ -279,3 +279,37 @@ footer{padding:22px 22px 85px;text-align:center;color:#aab8b3;background:var(--d
   .gtv-cookie-actions button{flex:1}
   .gtv-cookie-copy p{font-size:12px}
 }
+
+
+/* V15 fixes: contrast, a11y, cookie banner / WhatsApp overlap */
+:focus-visible{outline:3px solid #d4ad5d;outline-offset:2px}
+.property-label,.villa-label,.eyebrow,.trust-title{color:#7d5f18}
+.highlights .eyebrow,.contact .eyebrow,.hero .eyebrow{color:var(--gold)}
+.button-whatsapp{background:#0f7a3d;border-color:#0f7a3d;color:#fff}
+.floating-whatsapp{background:#0f7a3d;color:#fff}
+.floating-whatsapp:hover{background:#0c6a34}
+.whatsapp-icon{color:#0f7a3d}
+.whatsapp-icon svg{display:block}
+footer a{color:inherit;text-decoration:underline}
+.gallery img{cursor:zoom-in}
+.close-lightbox{line-height:1;padding:4px 10px}
+.gtv-cookie-banner{z-index:1000001}
+.gtv-cookie-copy a{color:#f1d493;text-decoration:underline;font-weight:800}
+.gtv-cookie-actions button{min-height:42px;font-size:14px}
+.gtv-cookie-reject{border:1px solid #fff;background:#fff;color:#082b23}
+.gtv-cookie-settings{font-size:12px;padding:8px 11px;z-index:999998}
+body.gtv-banner-open .floating-whatsapp{bottom:calc(var(--gtv-banner-h,0px) + 22px)}
+@media(max-width:650px){
+  .language-switcher a{font-size:10px}
+  body.gtv-banner-open .floating-whatsapp{bottom:calc(var(--gtv-banner-h,0px) + 12px)}
+}
+/* policy / 404 pages */
+.doc{max-width:820px;margin:0 auto;padding:46px 6% 70px}
+.doc h1{margin-bottom:6px;color:var(--green);font-size:clamp(28px,4vw,38px);line-height:1.15}
+.doc .updated{margin-bottom:26px;color:var(--muted);font-size:14px}
+.doc h2{margin:28px 0 8px;color:var(--green);font-size:21px}
+.doc p,.doc li{margin-bottom:10px}
+.doc ul{margin:0 0 10px 22px}
+[dir="rtl"] .doc ul{margin:0 22px 10px 0}
+.doc a{color:#0f5c46;text-decoration:underline}
+.doc .back{display:inline-block;margin-top:26px;font-weight:800}

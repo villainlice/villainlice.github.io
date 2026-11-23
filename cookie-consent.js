@@ -48,6 +48,15 @@
     }
   };
 
+  const privacy = {
+    tr: ['/gizlilik/', 'Gizlilik ve Çerez Politikası'],
+    en: ['/en/privacy/', 'Privacy & Cookie Policy'],
+    de: ['/de/datenschutz/', 'Datenschutz & Cookies'],
+    ru: ['/ru/privacy/', 'Политика конфиденциальности и cookie'],
+    uk: ['/uk/privacy/', 'Політика конфіденційності та cookie'],
+    ar: ['/ar/privacy/', 'سياسة الخصوصية وملفات الارتباط']
+  };
+
   function getLang() {
     const raw = (document.documentElement.lang || 'en').toLowerCase();
     if (raw.startsWith('tr')) return 'tr';
@@ -68,6 +77,12 @@
     window.dataLayer = window.dataLayer || [];
     window.gtag = window.gtag || function(){ dataLayer.push(arguments); };
     gtag('js', new Date());
+    gtag('consent', 'default', {
+      analytics_storage: 'granted',
+      ad_storage: 'denied',
+      ad_user_data: 'denied',
+      ad_personalization: 'denied'
+    });
     gtag('config', GA_ID);
 
     const ga = document.createElement('script');
@@ -81,12 +96,65 @@
       t=l.createElement(r);t.async=1;t.src='https://www.clarity.ms/tag/'+i;
       y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
     })(window, document, 'clarity', 'script', CLARITY_ID);
+
+    applyConsentState(true);
+  }
+
+  // Tells Clarity (required for EEA/UK/CH visitors) and GA about the visitor's decision.
+  function applyConsentState(granted) {
+    try {
+      if (typeof window.clarity === 'function') {
+        window.clarity('consentv2', {
+          ad_Storage: 'denied',
+          analytics_Storage: granted ? 'granted' : 'denied'
+        });
+      }
+    } catch (e) {}
+    if (typeof window.gtag === 'function') {
+      window.gtag('consent', 'update', {
+        analytics_storage: granted ? 'granted' : 'denied',
+        ad_storage: 'denied',
+        ad_user_data: 'denied',
+        ad_personalization: 'denied'
+      });
+    }
+    window['ga-disable-' + GA_ID] = !granted;
+    if (!granted) clearAnalyticsCookies();
+  }
+
+  function clearAnalyticsCookies() {
+    try {
+      const host = location.hostname;
+      const apex = host.replace(/^www\./, '');
+      const domains = [host, '.' + host, apex, '.' + apex];
+      document.cookie.split(';').forEach((c) => {
+        const name = c.split('=')[0].trim();
+        if (/^_ga/.test(name) || name === '_gid' || name === '_gat' || name === '_clck' || name === '_clsk') {
+          domains.forEach((d) => {
+            document.cookie = name + '=; expires=Thu, 01 Jan 1970 00:00:00 GMT; path=/; domain=' + d;
+          });
+          document.cookie = name + '=; expires=Thu, 01 Jan 1970 00:00:00 GMT; path=/';
+        }
+      });
+    } catch (e) {}
   }
 
   function setConsent(value) {
+    const wasTrackingLoaded = trackingLoaded;
     try { localStorage.setItem(STORAGE_KEY, value); } catch (e) {}
     hideBanner();
-    if (value === 'accepted') loadTracking();
+    if (value === 'accepted') {
+      if (trackingLoaded) applyConsentState(true); else loadTracking();
+    } else {
+      if (trackingLoaded) applyConsentState(false);
+      else clearAnalyticsCookies();
+      // Injected analytics scripts cannot reliably be unloaded from the page.
+      // After withdrawal, reload with stored rejection so neither service loads.
+      if (wasTrackingLoaded) {
+        window.location.reload();
+        return;
+      }
+    }
     showSettingsButton();
   }
 
@@ -97,6 +165,8 @@
   function hideBanner() {
     const el = document.getElementById('gtv-cookie-banner');
     if (el) el.remove();
+    document.body.classList.remove('gtv-banner-open');
+    document.body.style.removeProperty('--gtv-banner-h');
   }
 
   function showSettingsButton() {
@@ -106,6 +176,7 @@
     b.id = 'gtv-cookie-settings';
     b.type = 'button';
     b.className = 'gtv-cookie-settings';
+    b.setAttribute('aria-label', messages[lang].settings);
     b.textContent = messages[lang].settings;
     b.addEventListener('click', () => {
       try { localStorage.removeItem(STORAGE_KEY); } catch (e) {}
@@ -125,6 +196,7 @@
     wrap.id = 'gtv-cookie-banner';
     wrap.className = 'gtv-cookie-banner';
     wrap.setAttribute('role', 'dialog');
+    wrap.setAttribute('aria-label', m.title);
     wrap.setAttribute('aria-live', 'polite');
     if (isRTL) wrap.setAttribute('dir', 'rtl');
 
@@ -132,7 +204,7 @@
       <div class="gtv-cookie-inner">
         <div class="gtv-cookie-copy">
           <strong>${m.title}</strong>
-          <p>${m.text}</p>
+          <p>${m.text} <a href="${privacy[lang][0]}">${privacy[lang][1]}</a></p>
         </div>
         <div class="gtv-cookie-actions">
           <button type="button" class="gtv-cookie-reject">${m.reject}</button>
@@ -145,6 +217,16 @@
     wrap.querySelector('.gtv-cookie-reject').addEventListener('click', () => setConsent('rejected'));
 
     document.body.appendChild(wrap);
+
+    // Keep the floating WhatsApp button clear of the banner.
+    const setOffset = () => {
+      if (!document.body.contains(wrap)) return;
+      const bottom = window.innerWidth <= 720 ? 10 : 18;
+      document.body.style.setProperty('--gtv-banner-h', (wrap.offsetHeight + bottom) + 'px');
+    };
+    document.body.classList.add('gtv-banner-open');
+    setOffset();
+    window.addEventListener('resize', setOffset);
   }
 
   document.addEventListener('DOMContentLoaded', () => {
