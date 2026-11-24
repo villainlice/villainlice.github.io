@@ -25,7 +25,7 @@
 
   function open(img) {
     lastFocus = document.activeElement;
-    lightboxImage.src = img.src;
+    lightboxImage.src = img.getAttribute("src") || img.src;
     lightboxImage.alt = img.alt;
     lightbox.classList.add("active");
     closeBtn.focus();
